@@ -19,11 +19,13 @@
 \usepackage[bookmarksopen,bookmarksnumbered,linktocpage]{hyperref}
 
 \addbibresource{malliopas.bib} % Lähdetietokannan tiedostonimi
+% Estää tekstin pommpimisen marginaalien yli, mutta voi aiheuttaa muita ongelmia.
+\sloppy
 
 \begin{document}
 
-\title{Kirjallisuuskartoitus laadullisten simulaatioiden käyttöön}
-\translatedtitle{A literature review about using simulations in qualitative research}
+\title{Kirjallisuuskartoitus laadullisten simulaatioiden käytöstä tieteellisissä tutkimuksissa}
+\translatedtitle{TODO}
 \studyline{Tietotekniikka}
 \avainsanat{%
   Laadullinen tutkimus,
@@ -50,35 +52,69 @@
 \mainmatter
 
 \chapter{Johdanto} \label{johdanto}
-Usein tieteellisiä tutkimuksia puhutessa viitataan joko empiirisiin tai teoreettisiin tutkimuksiin. Empiirisessä tutkimuksessa tehdään ja kerätään havaintoja sekä analysoidaan ja mitataan tutkimuksen kohteena olevaa tapahtumaa tai järjestelmää. Teoreettisessa tutkimuksessa pyritään hahmottamaan malleja ja rakenteita aiemman tutkimuskirjallisuuden pohjalta. Tutkimusmenetelmät empiirisille tutkimuksille voivat olla tyypiltään \textit{laadullisia (eng. qualitative)} tai \textit{määrällisiä (eng. quantitative)}.
+Usein tieteellisiä tutkimuksia puhutessa viitataan joko empiirisiin 
+tai teoreettisiin tutkimuksiin. Empiirisessä tutkimuksessa tehdään 
+ja kerätään havaintoja sekä analysoidaan 
+ja mitataan tutkimuksen kohteena olevaa tapahtumaa tai järjestelmää. 
+Tutkimusmenetelmät empiirisille tutkimuksille voivat olla 
+tyypiltään \textit{laadullisia (eng. qualitative)} 
+tai \textit{määrällisiä (eng. quantitative)}. 
+Vertauksena teoreettisessa tutkimuksessa pyritään hahmottamaan 
+malleja ja rakenteita aiemman tutkimuskirjallisuuden pohjalta. 
 
-Yksi tunnettu menetelmä empiirisille tutkimuksille on tietokonesimulaatio. Tietokonesimulaatio on ohjelma, jolla pyritään mallintamaan reaalimaailman käyttäytymistä. 
-Simulaatiot perustuvat luotuihin malleihin, jotka pyrkivät kuvaamaan halutun kohteen käyttäytymistä. Mallin luomista kutsutaan mallintamiseksi, joka on erittäin tärkeä prosessi simulointia, sillä se määrittää mitä ja miten järjestelmää simuloidaan.  
+Empiirisesten tutkimusten laadullisissa tutkimuksissa pyritään tutkimaan subjektiivisia kokemuksia, merkityksiä ja sosiaalisia ilmiöitä. Määrällisissä tutkimuksissa keskitytään
+numeerisen datan mittaamiseen ja analysointiin sekä muuttujien välisten suhteiden määrittämiseen. 
+Laadullisten tutkimuksien tutkimuskysymyksissä usein kysytään "miksi" ja "miten", 
+kun taas määrällisissä tutkimuksissa enemmän nousevat esiin "milloin" ja "missä".
+
+\textbf{TODO: simulaatio kolmanneksi laskennalliseksi tieteeksi?}
+Yksi tunnettu menetelmä empiirisille tutkimuksille on simulointi.
+Simulointia varten yleensä luodaan on ohjelma, 
+jolla pyritään jäljittelemään reaalimaailman järjestelmän käyttäytymistä.
+On olemassa myös muunlaisia simulointitapoja kuin tietokoneella ajettavat ohjelmat, mutta 
+tässä tutkimuksessä keskitytään tietokoneella ajattaviin simulaatiohjelmiin.
+
+\textbf{TODO: Avataan laadullisia malleja ja niiden käyttötarkoituksia.}
+Simulaatiot perustuvat luotuihin malleihin, 
+jotka pyrkivät kuvaamaan halutun kohteen käyttäytymistä. 
+Mallin luomista kutsutaan mallintamiseksi, joka on erittäin tärkeä prosessi simulointia,
+sillä se määrittää mitä ja miten tutkittavaa järjestelmää simuloidaan.  
 
 Simulaatioilla kyetään keräämään dataa ja havaintoja tutkittavasta aiheesta suhteellisen helposti ja halvalla, mikä tekee siitä oleellisen tutkimusmenetelmän tieteellisiin tutkimuksiin. Simulaatiot perustuvat malleihin, jotka pyrkivät mallintamaan kohteeseen tai järjestelmään tyypillisiä ominaisuuksia. Yksinkertaisimmillaan simulaatio on ohjelma, joka mallintaa tapahtumaa. Ohjelmalle syötetään tapahtuman muuttujat ja ohjelma antaa lopputuloksen siitä, mitä simulaation mallin mukaan tulisi tapahtumaan. 
 
 Simulaatioiden avulla tutkijat voivat suorittaa kokeita, jotka voivat olla epäkäytännöllisiä tai mahdottomia todellisessa maailmassa, säilyttäen samalla laajan tilastollisen analyysin. Koska määrällisessä tutkimuksessa pyritään selittämään ilmiöitä perustuen dataan ja datan väliseen suhteeseen, niin simulaatiot ja simulointi on erittäin oleellisia työkaluja määrällisille tutkimuksille. 
 
-Simulaatioiden käyttö laadullisissa tutkimuksissa on monimutkaisempi asia, jonka mahdollisuus taas riippuu laadullisen tutkimuksen tyypistä ja kohteesta. Simulaatioiden käyttö laadullisissa tutkimuksissa on kuitenkin laaja alue, esimerkiksi \textcite{eldabi2002quantitative} ehdottivat tutkimuksessaan miten simulaatioilla voidaan välttää laadullisten menetelmien tyypillisiä ongelmia, kuten työlästä datan keruuta. \textcite{kuipers1986qualitative} esittivät termin \textit{laadullinen simulaatio (eng. qualitative simulation)}, mikä viittaa simulaatioihin, jotka eivät tarvitse tarkkoja numeerisia parametreja toimiakseen, mikä tekee niistä oleellisen laadullisille tutkimuksille.
+Simulaatioiden käyttö laadullisissa tutkimuksissa on monimutkaisempi asia, 
+jonka mahdollisuus taas riippuu laadullisen tutkimuksen tyypistä ja kohteesta. 
+Simulaatioiden käyttö laadullisissa tutkimuksissa on kuitenkin laaja alue, 
+esimerkiksi \textcite{eldabi2002quantitative} ehdottivat tutkimuksessaan miten simulaatioilla voidaan välttää laadullisten menetelmien tyypillisiä ongelmia, kuten työlästä datan keruuta. \textcite{kuipers1986qualitative} esittivät termin \textit{laadullinen simulaatio (eng. qualitative simulation)}, mikä viittaa simulaatioihin, jotka eivät tarvitse tarkkoja numeerisia parametreja toimiakseen, mikä tekee niistä oleellisen laadullisille tutkimuksille.
 
 Laadulliset simulaatiot ovat hyödyllisiä monessa eri tilanteessa. Jos tutkimuskohteen tiedossa on aukkoja tai ei muuten pystytä antamaan tarkkoja parametrejä simulaatiolle, eli ei voida toteuttaa normaalia määrällistä simulaatiota. Näissä tapauksissa laadullisen simulaation toteuttaminen voi olla kuitenkin mahdollista. Usein myös laajoissa kompleksisissa kohteissa on erittäin vaikeaa tehdä normaalia simulaatiota, joten laadullinen simulaatio voi olla järkevämpi vaihtoehto.
 
 Laadullisille simulaatioille on myös toteutettu työkaluja, kuten Garp3-ohjelmisto \parencite{bredeweg2007garp3} ja QSIM-algoritmi \parencite{helgstrand2004qsim} ovat tarkoitettu laadullisten simulaatioiden toteutettamiseen. Lisäksi on myös useita laadullisia tutkimuksia, joissa on käytetty laadullisia simulaatioita. Esimerkiksi \textcite{cao2019depth} tekivät tutkimuksen kaivosmiesten turvallisuuskäyttäytymisestä käyttäen simulaatiota ja tämän perusteella päätellen, miten ongelmatilanteissa tulisi reagoida. 
 
-Tämän tutkimuksen tavoitteena on toteuttaa systemaattinen kirjallisuuskartoitus laadullisten simulaatioiden käytöstä ja kerätyn aineiston perusteella vastata seuraaviin kysymyksiin:
+Tämän tutkimuksen tavoitteena on toteuttaa systemaattinen kirjallisuuskartoitus laadullisten simulaatioiden käytöstä ja kerätyn aineiston perusteella vastata seuraavaan pääkysymykseen:
+\begin{itemize}
+    \item Millaisia tuloksia laadullisilla simulaatioilla pyritään hakemaan?
+\end{itemize}
+
+Tämän kysymyksen vastaamiseen on myös luotu kaksi apukysymystä:
 \begin{itemize}
     \item Minkä alan tutkimuksissa on eniten käytetty laadullisia simulaatioita?
     \item Mitä eri työkaluja löytyy laadullisten simulaatioiden luomiseen?
-    \item Millaisia tuloksia laadullisilla simulaatioilla pyritään hakemaan?
 \end{itemize}
 
 Luvussa 2 kerrotaan simulaatioista ja laadullisista simulaatioista yleisesti. Luvussa 3 käydään läpi tutkimuksen asetelma ja käytetyt menetelmät. Luvussa 4 esitellään kirjallisuuskartoituksen tulokset. Luvussa 5 pohditaan tulosten merkitystä ja luvussa 6 on tutkimuksen yhteenveto.
 
 \chapter{Mallintaminen ja simulaatiot}
-Tässä kappaleessa käydään läpi gradulle oleellisten asioiden taustaa. Luvussa \ref{mallintaminen} kerrotaan mallintamisesta ja miksi se on oleellista simuloinnin näkökulmasta. Luku \ref{simulaatio} kertoo lyhyesti simulaation historiasta ja kehityksestä. Luku \ref{laadullinen simulaatio} kertoo mikä on laadullinen simulaatio ja sen historiasta.
+\textbf{TODO: laajennetaan osioita}
+Tässä luvussa käydään läpi gradulle oleellisten asioiden taustaa. 
+Kappaleessa \ref{mallintaminen} kerrotaan mallintamisesta  ja miksi se on oleellista simuloinnin näkökulmasta. 
+Kappale \ref{simulaatio} kertoo lyhyesti simulaation historiasta ja kehityksestä. 
+Kappale \ref{laadullinen simulaatio} kertoo mikä on laadullinen simulaatio ja sen historiasta.
 
 \section{Mallintaminen} \label{mallintaminen}
-Mallintaminen on prosessi, jolla pyritään tuottamaan malli. Malli on jäljitelmä halutun järjestelmän toimintannasta. \parencite{maria1997introduction}. Oleellisen mallin pitää olla lähellä todellista järjestelmää ja sisältää suurimman osan sen tärkeimmistä ominaisuuksista, mutta mallin ei pidä olla myöskään liian monimutkainen, jotta sen ymmärtäminen ja testaaminen olisi mahdollista \parencite{maria1997introduction}. 
+Mallintaminen on prosessi, jolla pyritään tuottamaan malli, joka on jäljitelmä halutun järjestelmän toimintannasta. \parencite{maria1997introduction}. Oleellisen mallin pitää olla lähellä todellista järjestelmää ja sisältää suurimman osan sen tärkeimmistä ominaisuuksista, mutta mallin ei pidä olla myöskään liian monimutkainen, jotta sen ymmärtäminen ja testaaminen olisi mahdollista \parencite{maria1997introduction}. 
 \textcite{maria1997introduction} mukaan mallintaminen on tärkein osuus simulaatiotutkimuksessa. Simulaatiota varten luotua mallia kutsutaan simulaatiomalliksi.
 
 Simulaatiomalleja on useita eri tyyppejä. Kuten determistinen, jonka syöte- ja tulosmuuttujat ovat kiinteitä arvoja. Stokastinen, jossa ainakin yksi syöte- tai tulosmuuttuja on satunnainen. Staattinen, jossa ajankulua ei oteta huomioon tai dynaaminen, jossa ajankulu vaikuttaa muuttujiin. Mallin usein ovat stakastisia ja dynaamisia \parencite{maria1997introduction}. Simulaatiot usein perustuvat simulaatiomalleihin. Simulaatiomalli sisältää yleensä parametreja, jotka mahdollistavat
@@ -88,13 +124,13 @@ mallin uudelleenkäyttämisen \parencite{introduction2005simulation}.
 ja osien toiminnalliset suhteet. Mallintamisprosessi tiivistetysti etenee askeleittain, alkaen ongelman tunnistamisella ja muotoilulla, jonka perusteella toteutetaan datan keruu, josta malli muotoillaan, kehitetään ja validoitaan, lopuksi mallin toiminta ja logiikka dokumentoidaan myöhempää käyttöä varten.
 
 \section{Simulaatio} \label{simulaatio}
-Simulaatio viittaa reaalimaailman prosessin tai järjestelmän jäljittelyyn \parencite{banks1999introduction}. Käsitteenä simulaatio on ollut jo useampaa sataa vuotta, yksi varhaisimmista tiedetyistä simulaatio metodeista on Monte Carlo-metodi, joka sai alkunsa vuonna 1777 \parencite{HistoryOfSimulation}. 1940-luvun puolivälissä simulaatiot saivat kaksi suurta kehitysaskelta, ensimmäisten tietokoneiden rakentaminen ja Monte Carlo-metodin ensimmäiset toteutukset tietokoneen avulla \parencite{HistoryOfSimulation}. 
+Simulaatio viittaa reaalimaailman prosessin tai järjestelmän jäljittelyyn \parencite{banks1999introduction}. Käsitteenä simulaatio on ollut jo useampaa sataa vuotta, yksi varhaisimmista tiedetyistä simulaatio metodeista on Monte Carlo-metodi (\textbf{TODO: avaa Monte Carlo metodia}), joka sai alkunsa vuonna 1777 \parencite{HistoryOfSimulation}. 1940-luvun puolivälissä simulaatiot saivat kaksi suurta kehitysaskelta, ensimmäisten tietokoneiden rakentaminen ja Monte Carlo-metodin ensimmäiset toteutukset tietokoneen avulla \parencite{HistoryOfSimulation} (\textbf{TODO: käytä alkuperäisempää lähdettä, löytyy samasta}). 
 
 \cite{banks1999introduction} mukaan simulaatiolla on useampi eri hyöty, mitä tulee sen käytössä tutkimusten työkaluna. Simulaatioilla voidaan säästää resursseja, sillä ei tarvitse hankkia materiaaleja erikseen testaamista varten. Simulaatioilla voidaan nopeuttaa sen jäljittelemiä reaalimaailman toimintoja, mikä säästää aikaa jos tutkittava tapahtuma vie paljon aikaa reaalimaailmassa. Simulaatioilla voidaan tutkia tapahtumien syitä tarkemmin, koska simulaation tekijällä on hallitsemus mitä simulaatiossa tapahtuu. Simulaatioilla voidaan helposti analysoida miten eri muuttuvat tekijät voivat vaikuttaa tapahtumiin. 
 
 
 \section{Laadullinen simulaatio} \label{laadullinen simulaatio}
-Laadullinen simulaatio viittaa simulaatioon, joka on keskeinen päättelyprosessi laadullisessa kausaalisessa päättelyssä \parencite{kuipers1986qualitative}. Laadullinen simulointi on mallinnustapa, joka korostaa järjestelmän käyttäytymisen laadullisia näkökohtia tarkkojen numeeristen arvojen sijaan. Usein tämän kaltaiset simulaatiot määritellään osana \textit{laadullisen päättelyn (eng. qualitative reasoning)} tieteenalaa
+Laadullinen simulaatio viittaa simulaatioon, joka on keskeinen päättelyprosessi laadullisessa kausaalisessa päättelyssä \parencite{kuipers1986qualitative} (\textbf{TODO: avaa laadullista kausaalista päättelyä}). Laadullinen simulointi on mallinnustapa, joka korostaa järjestelmän käyttäytymisen laadullisia näkökohtia tarkkojen numeeristen arvojen sijaan. Usein tämän kaltaiset simulaatiot määritellään osana \textit{laadullisen päättelyn (eng. qualitative reasoning)} tieteenalaa
 %
 \parencites%
   {parallelQualitativeSimulation1997}%
@@ -105,6 +141,7 @@ Laadullinen päättely viittaa tieteellisiin tapoihin joilla voidaan tutkia kohd
 
 Laadullisella simulaatiolla voidaan tutkia tietyn järjestelmän dynamiikkaa ilman tarkkoja parametriarvoja \parencite{cosme2023history}. On myös mahdollista toteuttaa simulaatio, joka on ominaisuuksiltaan sekä laadullinen että määrällinen. Näistä simulaatioista käytetään termiä \textit{ puoli-määrällinen simulaatio (eng.semi-quantitative simulation)}\parencite{semiHybrid1997qualitative}.
 
+\textbf{TODO: työkalut omaksi luvuksi, kun on peruskuva annettu}
 Laadullisten simulaatioiden luonttin löytyy useita eri metodeja ja työkaluja.
 Esimerkiksi Qsim on algoritmi, jolla voidaan luoda laadullisia malleja simulaatioille \parencite{kuipers1986qualitative}. Lisäksi on myös \textit{sumeaan teoriaan (eng. fuzzy set theory)} perustuva \textit{sumea laadullinen simulaatioalgoritmi (eng.fuzzy qualitative simulation algorithm)} auttaa myös toteuttamaan laadullisia malleja \parencite{shen1993fuzzy}.
 
@@ -124,20 +161,22 @@ tapauksissa joissa täytyy toteuttaa täysin laadullinen simulaatio, niin koneel
 Tutkimus keskittyy suurimmin osin QSIM-algoritmin kritiikkiin, mutta \textcite{soundQualSimImpossible} esittivät myös yleisempiä ongelmia laadulliseen simulaatioon, kuten tutkijoilta puuttuu usein täydellinen tieto muotoillakseen tarkkoja numeerisia yhtälöitä ja laadullisessa päättelyssä voidaan käyttää heikkoja esityksiä epätäydellisten järjestelmien mallintamiseen.
 
  \section{Tutkielman tarkoitus}
+ \textbf{TODO: Tämähän ei aiheena suoraan istu luvun otsikon alle vaan on enemmän johdantoa seuraavaan lukuun.}
 Vaikka laadullinen mallinnus ja simulointi on laaja alue, josta löytyy tutkimuksia useammalta eri tieteenalalta, aiheesta ei ole löytynyt aikaisempaa yleiskatsausta. Aiheeseesta on tehty tutkimuksia esimerkiksi eri laadullisten simulaatioiden tarkkuudesta \parencite{FisherManagmentTechniques2024} ja eri laadullisten simulaatioiden menetelmien toimivuudesta \parencite{qualitativeSimTechniquesAssesment1992}, mutta tämän tutkielman kirjoitus ajankohdalla ei löytynyt laajempaa yleiskatsausta mitä tulee laadullisten simulaatioiden levinneisyyteen, työkaluihin ja käyttötarkoituksiin.  
 
 Gradun tavoitteena on saada kyseinen yleiskatsaus laadullisista simulaatioista systemaattisen kirjallisuuskartoitusta käyttäen, jotta saataisiin haluttu yleiskäsitys millä aloilla laadulliset simulaatioit ovat levinneet eniten, miten paljon laadullisten simulaatioiden luontiin ja mallintamiseen löytyy työkaluja ja ohjeita sekä minkäkaltaisia tuloksia laadullisilla simulaatioilla etsitään.
 
 
 \chapter{Tutkimusasetelma}
-Tässä kappaleessa käydään läpi valittu tutkimusasetelma ja sen vaiheet. Luvussa \ref{tutkimusmenetelmä} kerrotaan valitusta tutkimusmenetelmästä ja miksi se on valittu. Luvussa \ref{hakukoneiden valinta} käydään läpi tutkimuksen hakukohteissa käytetyt avaintermit ja hakujen rajaukset. Luvussa \ref{valintakriteerit} kerrotaan tutkimuksessa käytetyt kriteerit tutkimusaineistoon sopivista artikkeleista. Luku \ref{valintaprosessi} kertoo aineiston keruun prosessista ja \ref{aineiston analysointi} kuvailee miten kerättyä aineisto analysoitiin.
+Tässä luvussa käydään läpi valittu tutkimusasetelma ja sen vaiheet. Kappaleessa \ref{tutkimusmenetelmä} kerrotaan valitusta tutkimusmenetelmästä ja miksi se on valittu. Kappaleessa \ref{hakukoneiden valinta} käydään läpi tutkimuksen hakukohteissa käytetyt avaintermit ja hakujen rajaukset. Kappaleessa \ref{valintakriteerit} kerrotaan tutkimuksessa käytetyt kriteerit tutkimusaineistoon sopivista artikkeleista. Kappale \ref{valintaprosessi} kertoo aineiston keruun prosessista ja \ref{aineiston analysointi} kuvailee miten kerättyä aineisto analysoitiin.
 
 \section{Tutkimusmenetelmä} \label{tutkimusmenetelmä}
+\textbf{TODO: avataan metodia lähteeseen perustuen.}
 Tutkielman menetelmäksi valittiin kirjallisuuskartoitus, koska halusin saada yleiskuvan laadullisten simulaatioiden käytöstä tieteellisenä tutkimusmenetelmänä. \textcite{keele2007guidelines} mukaan systemaattisella kirjallisuuskartoituksella voidaan saadaan laaja yleiskatsaus tutkimuskohteesta, mikä tekee siitä oleellisen menetelmän tutkimukselle. Systemaattinen kirjallisuuskartoitus antaa halutun yleiskuvan laadullisista simulaatioista ja menetelmä sopii hyvin vastaamaan luvussa \ref{johdanto} esitettyihin tutkimuskysymyksiin.
 
 
 \section{Hakukoneiden valinta} \label{hakukoneiden valinta}
-Laadulliset simulaatiot aiheena oli odotettua laajempi, joten gradun resurssien takia haku jouduttiin rajaamaan yhteen tutkimustietokantaa. Hakukriteereitä rajatessa, tutkimuksessa testattiin valitun hakukohteen ScienceDirectin lisäksi IEEE Xplore-tutkimustietokantaa \footnote{\url{https://ieeexplore.ieee.org/}} ja Google Scholarin sekä Jyväskylän yliopiston (JYKDOK) \footnote{\url{https://jyu.finna.fi/}} hakukoneita. Näistä IEEE Xplore ja JYKDOK jäivät liian vähäisiksi. Google Scholarin hauissa taas saatujen artikkelien määrä oli liian suuri, mitä hankaloitsi Scholarin vajaat hakujen rajausvaihtoehdot. Testatut hakukoneet ja niiden tuloset on esillä taulukossa \ref{table: hakutulokset}.
+Hakukriteereitä rajatessa, tutkimuksessa testattiin valitun hakukohteen ScienceDirectin lisäksi IEEE Xplore-tutkimustietokantaa \footnote{\url{https://ieeexplore.ieee.org/}} ja Google Scholarin sekä Jyväskylän yliopiston (JYKDOK) \footnote{\url{https://jyu.finna.fi/}} hakukoneita. Näistä IEEE Xplore ja JYKDOK jäivät liian vähäisiksi. Google Scholarin hauissa taas saatujen artikkelien määrä oli liian suuri, mitä hankaloitsi Scholarin vajaat hakujen rajausvaihtoehdot. Testatut hakukoneet ja niiden tuloset on esillä taulukossa \ref{table: hakutulokset}.
 
 Tutkimukset aineistoon kerättiin ScienceDirect-tutkimustietokannasta \footnote{\url{https://www.sciencedirect.com/}}. Hakuterminä käytettiin "qualitative simulation" ja haun rajaamisessa artikkelit rajattiin englannin kielisiin tutkimusartikkeleihin vuosina 2000-2024. 
 
@@ -154,6 +193,8 @@ ScienceDirect      & 677                   \\ \hline
 \caption{Hakutulosten määrä hakukohteista}
 \label{table: hakutulokset}
 \end{table}
+
+Laadulliset simulaatiot aiheena oli odotettua laajempi, joten gradun resurssien takia haku jouduttiin rajaamaan ScienceDirectin tutkimustietokantaan.
 
 \section{Aineiston valintakriteerit} \label{valintakriteerit}
 Tutkimuksen aineistoon pyritään keräämään tutkmuksia, joissa jonain tutkimuksen metodeista, joko pää- tai sivumetodina, on käytetty laadullista simulaatiota.
@@ -183,17 +224,26 @@ Aineisto kerättiin Mendeley-viittaushallintaohjelmistolla\footnote{\url{https:/
     \item Onko artikkelin metodeissa mainittu laadullisen simulaation käyttö?
 \end{enumerate}
 
-Ensimmäisestä 677 artikkelista sopiviksi valittiin 244. Näistä tarkemmin katsottuna karsittiin pois 53 artikkelia, eli aineistoon jäi lopuksi 191 artikkelia.
+Ensimmäisestä 677 artikkelista seulottiin tarkempaan tarkasteluun 
+sopiviksi 244 artikkelia. Näistä tarkemmin katsottuna karsittiin pois 57 artikkelia, 
+eli aineistoon jäi lopuksi 187 artikkelia. Syitä artikkelien pois jäämiseksi oli, 
+että ne eivät käyttäneet tietokonesimulaatiota, 
+viittasivat vain toisen tekemään simulaatioon tai
+viittasivat laadullisiin simulaatioihin yleisesti.
+
 
 \section{Tiedon kerääminen aineistosta} \label{aineiston analysointi}
-Ensimmäistä tutkimuskysymystä varten jokaiseen artikkeliin merkittiin tagilla tieteenala, mitä artikkelin tutkimus koski. Mendeley-ohjelmalla pystyttiin tagien kautta katsomaan kuinka monta artikkelia oli per ala, jotka merkittiin taulukkoon. Toista tutkimuskysymystä varten artikkeleista haettiin viittauksia ohjeisiin ja työkaluihin. Löydetyt ohjeet ja työkalut merkittiin artikkeleiden tageihin, jotka koostettiin taulukkoon.
+Päätutkimuskysymystä varten artikkeleista merkittiin lyhyt kooste mitä tietoa tai lopputulosta oltiin käytetyllä laadullisella simulaatiolla etsitty. Koosteista etsittiin yhteensopivuuksia kategorisointia varten. Sopivat kategoriat kerättiin taulokkoon, johon merkittiin artikkelien lukumäärät. Tämän metodin testaamista varten tutkimusaineistosta otettiin ensimmäiseksi satunnaisesti 20 artikkelia, joista kerättiin tieto, mitä tuloksia laadullisilla simulaatioilla haluttiin. Tämän jälkeen etsittiin yhtäläisyykset ja näistä saatiin alustavat kategoriat. Luvun \ref{simulaatiotulokset} taulukosta \ref{table: tuloksien kategoriat} on esitetty tutkimusten tuloksista löydetyt kategoriat.
 
-Kolmasta tutkimuskysymystä varten artikkeleista merkittiin lyhyt kooste mitä tietoa tai lopputulosta oltiin käytetyllä laadullisella simulaatiolla etsitty. Koosteista etsittiin yhteensopivuuksia kategorisointia varten. Sopivat kategoriat kerättiin taulokkoon, johon merkittiin artikkelien lukumäärät. Tämän metodin testaamista varten tutkimusaineistosta otettiin ensimmäiseksi satunnaisesti 20 artikkelia, joista kerättiin tieto, mitä tuloksia laadullisilla simulaatioilla haluttiin. Tämän jälkeen etsittiin yhtäläisyykset ja näistä saatiin alustavat kategoriat. Luvun \ref{simulaatiotulokset} taulukosta \ref{table: tuloksien kategoriat} on esitetty tutkimusten tuloksista löydetyt kategoriat.
+\textbf{TODO: Mistä tuo tieteenala tuli (mikä luokitus ja mikä oli sen peruste, Science Directin oma vai jokin muu). Luokiteltiin alunperin ScienceDirectin mukaan, mutta osissa ei ollut mitään luokitusta. Luokitus joudutaan varmaan katsomaan uudelleen.}
+Ensimmäistä sivukysymystä varten jokaiseen artikkeliin merkittiin tagilla tieteenala, mitä artikkelin tutkimus koski. Mendeley-ohjelmalla pystyttiin tagien kautta katsomaan kuinka monta artikkelia oli per ala, jotka merkittiin taulukkoon. Toista sivukysymystä varten artikkeleista haettiin viittauksia ohjeisiin ja työkaluihin. Löydetyt ohjeet ja työkalut merkittiin artikkeleiden tageihin, jotka koostettiin taulukkoihin.
+
 
 \chapter{Tulokset}
-Tässä kappaleessa esitellään kerätyn aineiston lopputulokset. Luvussa \ref{tieteenalat} esitellään tutkimusartikkeleiden päätieteenalat ja niiden lukumäärät. Luku \ref{tyokalut} käy läpi artikkeleista löydetyt ja tunnistetut algoritmit, ohjemistot ja ohjelmistokehykset. Luku \ref{simulaatiotulokset} kuvailee tutkimusartikkeleista löydetyt kategoriat ja niiden lukumäärät.
+Tässä luvussa esitellään kerätyn aineiston lopputulokset. Kappaleessa \ref{tieteenalat} esitellään tutkimusartikkeleiden päätieteenalat ja niiden lukumäärät. Kappale \ref{tyokalut} käy läpi artikkeleista löydetyt ja tunnistetut algoritmit, ohjemistot ja ohjelmistokehykset. Kappale \ref{simulaatiotulokset} kuvailee tutkimusartikkeleista löydetyt kategoriat ja niiden lukumäärät.
 
 \section{Tieteenalat} \label{tieteenalat}
+\textbf{TODO: Nämä ovat ihan perseellään.}
 Löydetyt tieteen alat ja artikkelien lukumäärät aloittan on esitetty taulukoissa insinööri tieteet \ref{table:engineering} (eng. engineering sciences), luonnontieteet \ref{table:naturalscience} (eng. natural sciences) ja sosiaali- sekä humanistitieteet\ref{table:socialscience} (eng. social and humanistic sciences).
 
 \begin{table}[htbp]
@@ -266,6 +316,7 @@ Urban Studies & 4 \\
 
 \clearpage
 \section{Laadullisten simulaatioiden ohjeet ja työkalut} \label{tyokalut}
+\textbf{TODO: Tämä voi tarkentua, jos miettii järjestyksen uusiksi ja pyrkii sitomaan sekä työn tavoitteisiin että tieteenaloihin.}
 Seuraavissa listoissa on esitetty tutkimuksista tunnistetut työkalut ja ohjeistukset laadullisten simulaatioiden luomiseen. Nämä ovat jaettu kahteen kategoriaan, ohjelmistot ja mallintamisen työkalut. Kategoriaan "ohjelmistot" kuuluvat tietokoneohjelmat ja ohjelmistot joiden avulla voidaan joko luoda tai ajaa laadullisia simulaatioita.
 Kategoriaan "mallintaminen" kuuluvat metodit ja algoritmit joiden avulla voidaan mallintaa laadullisia malleja.
 
@@ -413,18 +464,31 @@ Mallintamisessa auttavat ohjelmat:
 Seuraava lista sisältää selitykset taulukon \ref{table: tuloksien kategoriat} kategoriolle.
 Tutkimuksen etsityt tulokset voivat sopia myös useampaan eri kategoriaan samaan aikaan. 
 
+TODO: siivoa numerointia
 \begin{enumerate}
-    \item Artikkelit viittaavat tutkimuksiin missä pyritään selvittämään mitä tapahtuu jos järjestelmässä tapahtuu jotain epätoivottua. Esimerkiksi tutkimuksessa \cite{hu2015cusp} tutkittiin mitä organisaatiossa voi tapahtua jos työntekijä poistuu organisaatiosta äkillisesti.
-    \item Tutkimuksissa etsitään mahdollisia vikojen syitä tai niiden mahdollisuuksia. Usein tästä puhutaan termillä \textit{ vian diagnoosi (eng. fault diagnosis)}. Vian diagnoosia on mahdollista toteuttaa laadullisen simulaation avulla.
-    \item Tutkimukset, joissa haluttiin vähentää tutkimuskohteen tiedon aukkoja simulaation avulla, esim. miten kohteen eri ominaisuudet vaikuttavat toisiinsa tai ylipäätänsi miksi saavuttiin lopputulokseen.
-    \item Tutkimukset joissa käytettiin 2 tai useampaa menetelmää, joista yksi oli laadullinen simulaatio. Tutkimuksissa verrattiin muista menetelmistä saatuja tuloksia laadullisen simulaation saamaan ja pyrittiin varmentamaan joko simulaation tarkkuutta tai tulosten oikeellisuutta.
-    \item Tutkimukset missä haluttiin katsoa miten olosuhteiden muuttuminen vaikuttaa tutkimuskohteeseen, esimerkiksi miten veden saasteisuus vaikuttaa vesistön kalakantaan.
-    \item Tutkimukset, joissa haluttiin selvittää miten parantaa jotain tiettyä tapaa tai metodia, esimerkiksi tutkimuksessa \textcite{zhang2015automatic} luotiin työkalu HAZOP, jolla voidaan automatisoida kemiallisen tuotannon vaarakohteiden löytämistä. Yksi HAZOP:in käyttämistä menetelmistä on laadullinen simulaatio.
-    \item Tutkimukset kohdistuivat tutkimuksiin, joissa pyritiin luomaan työkaluja tai metodeja juuri laadullisten simulaatioiden luontiin.
-    \item Tutkimukset, joissa käytiin läpi useampaa eri laadullista simulaatioita tai malleja ja näiden toimintaa verrattiin keskenään.
-    \item Tutkimukset, joissa laadullisella simulaatiolla haluttiin ennustaa järjestelmän toimintaa.
+    \item Järjestelmän toiminnan selkentäminen
+    \begin{enumerate}
+        \item 3. Tutkimukset, joissa haluttiin vähentää tutkimuskohteen tiedon aukkoja simulaation avulla, esim. miten kohteen eri ominaisuudet vaikuttavat toisiinsa tai ylipäätänsä miksi saavuttiin lopputulokseen.
+        \item 5. Tutkimukset missä haluttiin katsoa miten olosuhteiden muuttuminen vaikuttaa tutkimuskohteeseen, esimerkiksi miten veden saasteisuus vaikuttaa vesistön kalakantaan.
+        \item 9. Tutkimukset, joissa laadullisella simulaatiolla haluttiin ennustaa järjestelmän toimintaa.
+    \end{enumerate}
+    \item Järjestelmän vian tai epätoivotun toiminnan selvittäminen
+    \begin{enumerate}
+        \item 1. Artikkelit viittaavat tutkimuksiin missä pyritään selvittämään mitä tapahtuu jos järjestelmässä tapahtuu jotain epätoivottua. Esimerkiksi tutkimuksessa \cite{hu2015cusp} tutkittiin mitä organisaatiossa voi tapahtua jos työntekijä poistuu organisaatiosta äkillisesti.
+        \item 2. Tutkimuksissa etsitään mahdollisia vikojen syitä tai niiden mahdollisuuksia. Usein tästä puhutaan termillä \textit{ vian diagnoosi (eng. fault diagnosis)}. Vian diagnoosia on mahdollista toteuttaa laadullisen simulaation avulla.
+    \end{enumerate}
+    \item Menetelmien tutkiminen (uusi menetelmä ja/tai menetelmien vertailu)
+    \begin{enumerate}
+        \item 4. Tutkimukset joissa käytettiin 2 tai useampaa menetelmää, joista yksi oli laadullinen simulaatio. Tutkimuksissa verrattiin muista menetelmistä saatuja tuloksia laadullisen simulaation saamaan ja pyrittiin varmentamaan joko simulaation tarkkuutta tai tulosten oikeellisuutta.
+        \item 6. Tutkimukset, joissa haluttiin selvittää miten parantaa jotain tiettyä tapaa tai metodia, esimerkiksi tutkimuksessa \textcite{zhang2015automatic} luotiin työkalu HAZOP, jolla voidaan automatisoida kemiallisen tuotannon vaarakohteiden löytämistä. Yksi HAZOP:in käyttämistä menetelmistä on laadullinen simulaatio.
+        \item 7. Tutkimukset kohdistuivat tutkimuksiin, joissa pyritiin luomaan työkaluja tai metodeja juuri laadullisten simulaatioiden luontiin.
+        \item 8. Tutkimukset, joissa käytiin läpi useampaa eri laadullista simulaatioita tai malleja ja näiden toimintaa verrattiin keskenään.
+    \end{enumerate}
 \end{enumerate}
 
+\subsection{Tavoitteet tieteenaloittain}
+
+\subsection{Tavoitteet ja menetelmät}
 
 \begin{table}[]
 \resizebox{\textwidth}{!}{%
@@ -455,13 +519,14 @@ Kategoriat                                                                      
 \printbibliography
 
 \appendix
-
 \section{Aineistossa käytetyt tutkimukset}
 \textbf{TODO: miten saadaan viittaukset pysymään nätisti sivun rajoissa?}
 
 Abdul-Wahab, S A, A Elkamel, M A Al-Weshahi, and A S al Yahmadi. 2007. “Troubleshooting the Brine Heater of the MSF Plant Fuzzy Logic-Based Expert System.” Desalination 217 (1): 100–117. https://doi.org/https://doi.org/10.1016/j.desal.2007.01.014.
 
-Ahmad, Jamil, Jérémie Bourdon, Damien Eveillard, Jonathan Fromentin, Olivier Roux, and Christine Sinoquet. 2009. “Temporal Constraints of a Gene Regulatory Network: 
+Ahmad, Jamil, Jérémie Bourdon, Damien Eveillard, Jonathan Fromentin, Olivier Roux, 
+and Christine Sinoquet. 2009. 
+“Temporal Constraints of a Gene Regulatory Network: 
 Refining a Qualitative Simulation.” Biosystems 98 (3): 149–59.
 https://doi.org/https://doi.org/10.1016/j.biosystems.2009.05.002.
 
@@ -834,7 +899,10 @@ Zheng, Yihua, Chengchun Zhang, Jing Wang, Yan Liu, Chun Shen, and Junfeng Yang. 
 
 Zhong, Chen, S Thomas Ng, and Martin Skitmore. 2021. “An Interdependent Infrastructure Asset Management Framework for High-Density Cities.” Proceedings of the Institution of Civil Engineers - Municipal Engineer 174 (3): 180–90. https://doi.org/https://doi.org/10.1680/jmuen.18.00053.
 
-Zolfagharipoor, Mohammad Amin, and Azadeh Ahmadi. 2016. “A Decision-Making Framework for River Water Quality Management under Uncertainty: Application of Social Choice Rules.” Journal of Environmental Management 183: 152–63. https://doi.org/https://doi.org/10.1016/j.jenvman.2016.07.094.
+Zolfagharipoor, Mohammad Amin, and Azadeh Ahmadi. 2016. 
+“A Decision-Making Framework for River Water Quality Management under Uncertainty:
+Application of Social Choice Rules.” Journal of Environmental Management 183: 152–63.
+https://doi.org/https://doi.org/10.1016/j.jenvman.2016.07.094.
 
 
 \end{document}
