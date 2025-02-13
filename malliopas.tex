@@ -10,7 +10,7 @@
 
 \usepackage{amsmath} % hyödyllinen jos tekstisi sisältää matikkaa,
                      % ei pakollinen
-
+\usepackage{enumitem} % Paremmat listat
 \usepackage{booktabs} % hyvä kauniiden taulukoiden tekemiseen
 \usepackage{textgreek} % tarvitaan kreikkalaisille kirjaimille
 \usepackage{comment} % paketti suurille kommenttilohkoille
@@ -404,18 +404,89 @@ Kategoriat                                                                      
 \end{table}
 
 \section{Tieteenalat} \label{tieteenalat}
-Löydetyt tieteen alat ja artikkelien lukumäärät aloittan on esitetty \textbf{TODO: taulukot vai listat}.
+Löydetyt tieteenalat ja artikkelien lukumäärät on esitetty seuraavissa taulukoissa.
 Tieteenalat on jaettu päätutkimuskysymyksen tuloksien kategorioiden mukaan.
 
-\begin{itemize}
-    \item Social Science, 5 
-    \begin{itemize}
-        \item Behavioral Science and Social Science, 2
-        \item Transportation Engineering and Safety Science
-        \item Behavioral Science and Psychology
-        \item Behavioral Science and Safety Science
-    \end{itemize}
-\end{itemize}
+\begin{table}[]
+    \centering
+    \begin{tabular}{|p{3cm}|p{8cm}|p{1cm}|}
+    \hline
+    \textbf{1. Kategoria}    & \textbf{2. Kategoria} & \textbf{Yht.} \\
+    \hline
+    Social Science  &  
+    \begin{itemize}[nosep]
+        \item Behavioral Science (4) 
+        \begin{itemize}[nosep]
+            \item Social Science (2)
+            \item Psychology 
+            \item Safety Science
+        \end{itemize}
+        \item Transportation Engineering and Safety Science 
+    \end{itemize}  
+    & 5 \\
+    \hline
+    \end{tabular}
+    \caption{Kategorian 1. tieteenalat}
+    \label{table:tieteenalat1}
+\end{table}
+
+\begin{table}[]
+    \centering
+    \begin{tabular}{|p{5cm}|p{8cm}|p{1cm}|}
+    \hline
+        \textbf{1. Kategoria}    & \textbf{2. Kategoria} & \textbf{Yht.} \\
+        \hline
+        Chemical Engineering    & 
+        \begin{itemize}[nosep]
+            \item Chemical Engineering 
+            \begin{itemize}[nosep]
+                \item - (7)
+                \item Process Systems Engineering
+                \item Computer Science 
+                \item Systems Engineering
+                \item Safety Engineering
+            \end{itemize}
+        \end{itemize} & 11 \\
+        \hline
+        Engineering & 
+        \begin{itemize}[nosep]
+            \item Control Engineering (5)
+            \item Electrical Engineering
+            \item Marine Engineering and Robotics
+            \item Mechanical Engineering (3)
+            \item Mechanical Engineering and Computer Science
+            \item Mechatronics
+            \item Process Engineering and Systems Engineering
+            \item Thermal Engineering
+        \end{itemize} & 14 \\
+        \hline
+        Materials Science & 
+        \begin{itemize}[nosep]
+            \item Materials Science
+            \begin{itemize}[nosep]
+                \item Mechanical Engineering
+                \item Structural Engineering
+            \end{itemize}
+        \end{itemize} & 2 \\
+    \hline
+    \end{tabular}
+    \caption{Caption}
+    \label{table:Kategorian 2. tieteenalat}
+\end{table}
+
+\begin{table}[]
+    \centering
+    \begin{tabular}{|p{3cm}|p{8cm}|p{1cm}|}
+    \hline
+        \textbf{1. Kategoria}    & \textbf{2. Kategoria} & \textbf{Yht.} \\
+        \hline
+      placeholder   & placeholder & 0 \\
+    \hline
+    \end{tabular}
+    \caption{Caption}
+    \label{table:Kategorian x tieteenalat}
+\end{table}
+
 
 
 \section{Laadullisten simulaatioiden ohjeet ja työkalut} \label{tyokalut}
@@ -423,7 +494,7 @@ Tieteenalat on jaettu päätutkimuskysymyksen tuloksien kategorioiden mukaan.
 Seuraavissa listoissa on esitetty tutkimuksista tunnistetut työkalut ja ohjeistukset laadullisten simulaatioiden luomiseen. Nämä ovat jaettu kahteen kategoriaan, ohjelmistot ja mallintamisen työkalut. Kategoriaan "ohjelmistot" kuuluvat tietokoneohjelmat ja ohjelmistot joiden avulla voidaan joko luoda tai ajaa laadullisia simulaatioita.
 Kategoriaan "mallintaminen" kuuluvat metodit ja algoritmit joiden avulla voidaan mallintaa laadullisia malleja.
 
-\subsection{Mallintaminen (TODO: jokin tarkempi jäsentely)}
+\subsection{Mallintaminen}
 \begin{itemize}
     \item hazard identification method
     \item HAZOP
