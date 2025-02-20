@@ -449,9 +449,7 @@ Löydetyt kategoriat voidaan jakaa 3 eri osioon.
 Löydetyt tieteenalat ja artikkelien lukumäärät on esitetty seuraavissa taulukoissa.
 Tieteenalat on jaettu päätutkimuskysymyksen tuloksien kategorioiden mukaan.
 
-\begin{table}[h]
-    \centering
-    \begin{tabular}{|p{5cm}|p{8cm}|p{1cm}|}
+\begin{longtable}[h]{|p{5cm}|p{8cm}|p{1cm}|}
     \hline
     \textbf{1. Kategoria}    & \textbf{2. Kategoria} & \textbf{Yht.} \\
     \hline
@@ -469,14 +467,11 @@ Tieteenalat on jaettu päätutkimuskysymyksen tuloksien kategorioiden mukaan.
     \hline
             &   & 5 \\
     \hline
-    \end{tabular}
     \caption{Kategorian 1 tieteenalat}
     \label{table:tieteenalat1}
-\end{table}
+\end{longtable}
 
-\begin{table}[h]
-    \centering
-    \begin{tabular}{|p{5cm}|p{8cm}|p{1cm}|}
+\begin{longtable}[h]{|p{5cm}|p{8cm}|p{1cm}|}
     \hline
         \textbf{1. Kategoria}    & \textbf{2. Kategoria} & \textbf{Yht.} \\
         \hline
@@ -515,14 +510,11 @@ Tieteenalat on jaettu päätutkimuskysymyksen tuloksien kategorioiden mukaan.
     \hline
         &   & \textbf{27} \\
     \hline
-    \end{tabular}
     \caption{Kategorian 2 tieteenalat}
     \label{table:Kategorian 2. tieteenalat}
-\end{table}
+\end{longtable}
 
-\begin{table}[h]
-    \centering
-    \begin{tabular}{|p{5cm}|p{8cm}|p{1cm}|}
+\begin{longtable}[h]{|p{5cm}|p{8cm}|p{1cm}|}
     \hline
     \textbf{1. Kategoria}    & \textbf{2. Kategoria} & \textbf{Yht.} \\
     \hline
@@ -566,16 +558,7 @@ Tieteenalat on jaettu päätutkimuskysymyksen tuloksien kategorioiden mukaan.
             \item Petroleum Engineering
         \end{itemize} & 2 \\
     \hline
-    \end{tabular}
-    \caption{Kategorian 3 tieteenalat, osa 1}
-    \label{table:Kategorian 3.1 tieteenalat}
-\end{table}
-
-\begin{longtable}[]{|p{5cm}|p{8cm}|p{1cm}|}
-    \hline
-        \textbf{1. Kategoria}    & \textbf{2. Kategoria} & \textbf{Yht.} \\
-        \hline
-         Engineering & 
+    Engineering & 
      \begin{itemize}[nosep]
         \item Computational Fluid Dynamics
         \item Mechanical Engineering, Thermal Engineering and Fluid Dynamics
@@ -635,21 +618,20 @@ Tieteenalat on jaettu päätutkimuskysymyksen tuloksien kategorioiden mukaan.
      \hline
        &   & \textbf{55} \\
     \hline
-    %\end{tabular}
-    \caption{table:Kategorian 3 tieteenalat, osa 2}
-    \label{table:Kategorian 3.2 tieteenalat}
+    \caption{table:Kategorian 3 tieteenalat}
+    \label{table:Kategorian 3 tieteenalat}
 \end{longtable}
 
-\begin{table}[]
-    \centering
-    \begin{tabular}{|p{5cm}|p{8cm}|p{1cm}|}
+\begin{longtable}[h]{|p{5cm}|p{8cm}|p{1cm}|}
     \hline
     \textbf{1. Kategoria}    & \textbf{2. Kategoria} & \textbf{Yht.} \\
     \hline
-    Agricultural and Biological Science    & xxx & 2 \\
+    Agricultural and Biological Science & \begin{itemize}
+        \item Systems Biology (2)
+    \end{itemize} & 2 \\
     \hline
     Chemical Engineering & \begin{itemize}
-        \item Systems Biology (2)
+        \item Chemical Engineering (2)
     \end{itemize} & 2 \\
     \hline
     Chemistry & \begin{itemize}
@@ -676,13 +658,16 @@ Tieteenalat on jaettu päätutkimuskysymyksen tuloksien kategorioiden mukaan.
         \item Energy Engineering and Articficial Intelligence
     \end{itemize} & 3 \\
     \hline 
-    Engineering & xxx & 4 \\
-    \hline
-    Environmental Science & \begin{itemize}
+    Engineering & \begin{itemize}
         \item Electromagnetics
         \item Civil Engineering and Urban Planning
         \item Mechatronics
         \item Thermal Engineering and Computational Fluid Dynamics
+    \end{itemize} & 4 \\
+    \hline
+    Environmental Science & \begin{itemize}
+        \item Ecology (2)
+        \item Environmental Engineering
     \end{itemize} & 3 \\
     \hline
     Materials Science & \begin{itemize}
@@ -715,16 +700,13 @@ Tieteenalat on jaettu päätutkimuskysymyksen tuloksien kategorioiden mukaan.
         \item Computational Social and Organizational Science
     \end{itemize} & 2 \\
     \hline
-    \textbf{TODO: Miten saadaan taulukko mahtumaan.}   &   & \textbf{44} \\
+      &   & \textbf{44} \\
     \hline
-    \end{tabular}
     \caption{Kategorian 4 tieteenalat}
     \label{table:Kategorian 4 tieteenalat}
-\end{table}
+\end{longtable}
 
-\begin{table}[]
-    \centering
-    \begin{tabular}{|p{5cm}|p{8cm}|p{1cm}|}
+\begin{longtable}[]{|p{5cm}|p{8cm}|p{1cm}|}
     \hline
     \textbf{1. Kategoria}    & \textbf{2. Kategoria} & \textbf{Yht.} \\
     \hline
@@ -769,120 +751,207 @@ Tieteenalat on jaettu päätutkimuskysymyksen tuloksien kategorioiden mukaan.
     \hline
        &   & \textbf{20} \\
     \hline
-    \end{tabular}
     \caption{Kategorian 5 tieteenalat}
     \label{table:Kategorian 5 tieteenalat}
-\end{table}
+\end{longtable}
 
-\begin{table}[]
-    \centering
-    \begin{tabular}{|p{5cm}|p{8cm}|p{1cm}|}
+\begin{longtable}[]{|p{5cm}|p{8cm}|p{1cm}|}
     \hline
     \textbf{1. Kategoria}    & \textbf{2. Kategoria} & \textbf{Yht.} \\
     \hline
-    Agricultural and Biological Science  & xxx & 9 \\
+    Agricultural and Biological Science  & \begin{itemize}
+        \item Systems Biology (7)
+        \item Systems Biology and Biotechnology 
+        \item Marine Ecology
+    \end{itemize} & 9 \\
     \hline
-    Chemical Engineering & xxx & 4 \\
+    Chemical Engineering & \begin{itemize}
+        \item Chemical Engineering (3)
+        \item Chemical Engineering and Safety Engineering 
+    \end{itemize} & 4 \\
     \hline
-    Computer Science & xxx & 5 \\
+    Computer Science & \begin{itemize}
+        \item Computer Science (3)
+        \begin{itemize}
+            \item Ecology
+            \item Systems Engineering
+            \item Systems Biology
+        \end{itemize}
+        \item Educational Technology and Cognitive Science
+        \item Qualitative Reasoning
+    \end{itemize} & 5 \\
     \hline
-    Earth and Planetary Science & xxx & 2 \\
+    Earth and Planetary Science & \begin{itemize}
+        \item Mining Engineering and Fluid Dynamics
+        \item Petroleum Engineering
+    \end{itemize} & 2 \\
     \hline
-    Engineering & xxx & 9 \\
+    Engineering & \begin{itemize}
+        \item Systems Engineering (2)
+        \item Computer Science and Systems Engineering 
+        \item Control Engineering (2)
+        \item Electronics Engineering
+        \item Chemical Kinetics
+        \item Computational Fluid Dynamics
+        \item Building Science and Physics
+    \end{itemize} & 9 \\
     \hline
-    Environmental Science & xxx & 4 \\
+    Environmental Science & \begin{itemize}
+        \item Environmental Engineering
+        \item Environmental Engineering and Urban Planning
+        \item Environmental Science and Hydrology
+        \item Marine Ecology and Ecosystem Modeling
+    \end{itemize} & 4 \\
     \hline
-    Materials Science & xxx & 2 \\
+    Materials Science & \begin{itemize}
+        \item Materials Science
+        \item Materials Science and Structural Engineering
+    \end{itemize} & 2 \\
     \hline
-    Physics and Astronomy & xxx & 1 \\
+    Physics and Astronomy & \begin{itemize}
+        \item Astrophysics
+    \end{itemize} & 1 \\
     \hline
        &   & \textbf{36} \\
     \hline
-    \end{tabular}
     \caption{Kategorian 6 tieteenalat}
     \label{table:Kategorian 6 tieteenalat}
-\end{table}
+\end{longtable}
 
-\begin{table}[]
-    \centering
-    \begin{tabular}{|p{5cm}|p{8cm}|p{1cm}|}
+\begin{longtable}[h]{|p{5cm}|p{8cm}|p{1cm}|}
     \hline
     \textbf{1. Kategoria}    & \textbf{2. Kategoria} & \textbf{Yht.} \\
     \hline
-    Agricultural and Biological Science  & xxx & 6 \\
+    Agricultural and Biological Science  & \begin{itemize}
+        \item Systems Biology (4)
+        \item Mathematical Biology (2)
+    \end{itemize} & 6 \\
     \hline
-    Chemical Engineering & xxx & 10 \\
+    Chemical Engineering & \begin{itemize}
+        \item Chemical Engineering (9)
+        \begin{itemize}
+            \item - (7)
+            \item Process Systems Engineering
+            \item Safety Engineering
+        \end{itemize}
+        \item Systems Engineering
+    \end{itemize} & 10 \\
     \hline
-    Computer Science & xxx & 5 \\
+    Computer Science & \begin{itemize}
+        \item Computer Science
+        \item Computer Science and Ecology
+        \item Artificial Intelligence and Qualitative Physics
+        \item Educational Technology and Cognitive Science
+        \item Qualitative Reasoning
+    \end{itemize} & 5 \\
     \hline
-    Decision Science & xxx & 1 \\
+    Decision Science & \begin{itemize}
+        \item Safety Management
+    \end{itemize} & 1 \\
     \hline
-    Earth and Planetary Science & xxx & 1 \\
+    Earth and Planetary Science & \begin{itemize}
+        \item Geoscience
+    \end{itemize} & 1 \\
     \hline
-    Engineering & xxx & 10 \\
+    Engineering & \begin{itemize}
+        \item Mechatronics
+        \item Systems Engineering
+        \item Control Engineering (3)
+        \item Chemical Kinetics
+        \item Applied Mathematics and Robotics
+        \item Cognitive Science, Artificial Intelligence and Engineering Psychology
+        \item System Identification
+        \item Electrical Engineering
+    \end{itemize} & 10 \\
     \hline
-    Environmental Science & xxx & 3 \\
+    Environmental Science & \begin{itemize}
+        \item Environmental Science
+        \item Ecology
+        \item Marine Ecology and Ecosystem Modeling
+    \end{itemize} & 3 \\
     \hline
-    Medicine and Dentistry & xxx & 1 \\
+    Medicine and Dentistry & \begin{itemize}
+        \item Biomedical Engineering and Systems Biology
+    \end{itemize} & 1 \\
     \hline
-    Physics and Astronomy & xxx & 1 \\
+    Physics and Astronomy & \begin{itemize}
+        \item Vacuum Science and Technology
+    \end{itemize} & 1 \\
     \hline
        &   & \textbf{38} \\
     \hline
-    \end{tabular}
     \caption{Kategorian 7 tieteenalat}
     \label{table:Kategorian 7 tieteenalat}
-\end{table}
+\end{longtable}
 
-\begin{table}[]
-    \centering
-    \begin{tabular}{|p{5cm}|p{8cm}|p{1cm}|}
+\begin{longtable}[h]{|p{5cm}|p{8cm}|p{1cm}|}
     \hline
     \textbf{1. Kategoria}    & \textbf{2. Kategoria} & \textbf{Yht.} \\
     \hline
-    Chemical Engineering & xxx & 1 \\
+    Chemical Engineering & \begin{itemize}
+        \item Chemical Engineering
+    \end{itemize} & 1 \\
     \hline
-    Computer Science & xxx & 1 \\
+    Computer Science & \begin{itemize}
+        \item Computer Science and Applied Mathematics
+    \end{itemize} & 1 \\
     \hline
-    Decision Science & xxx & 1 \\
+    Decision Science & \begin{itemize}
+        \item Safety Management and Computer Science
+    \end{itemize} & 1 \\
     \hline
-    Engineering & xxx & 1 \\
+    Engineering & \begin{itemize}
+        \item Engineering and Artificial Intelligence
+    \end{itemize} & 1 \\
     \hline
-    Environmental Science & xxx & 1 \\
+    Environmental Science & \begin{itemize}
+        \item Ecology, Economics and Sociology
+    \end{itemize} & 1 \\
     \hline
        &   & \textbf{5} \\
     \hline
-    \end{tabular}
     \caption{Kategorian 8 tieteenalat}
     \label{table:Kategorian 8 tieteenalat}
-\end{table}
+\end{longtable}
 
-\begin{table}[]
-    \centering
-    \begin{tabular}{|p{5cm}|p{8cm}|p{1cm}|}
+\begin{longtable}[h]{|p{5cm}|p{8cm}|p{1cm}|}
     \hline
     \textbf{1. Kategoria}    & \textbf{2. Kategoria} & \textbf{Yht.} \\
     \hline
-    Agricultural and Biological Science  & xxx & 1 \\
+    Agricultural and Biological Science  & \begin{itemize}
+        \item Food Science
+    \end{itemize} & 1 \\
     \hline
     Biochemistry, Genetics and Molecular Biology & xxx & 1 \\
     \hline
-    Engineering & xxx & 1 \\
+    Engineering & \begin{itemize}
+        \item Electrical Engineering
+    \end{itemize} & 1 \\
     \hline
-    Environmental Science & xxx & 3 \\
+    Environmental Science & \begin{itemize}
+        \item Ecology
+        \item Environmental Science, Hydrology and Civil Engineering
+        \item Environmental Science, Biochemistry and Microbiology
+    \end{itemize} & 3 \\
     \hline
-    Materials Science & xxx & 1 \\
+    Materials Science & \begin{itemize}
+        \item Materials Science and Environmental Engineering
+    \end{itemize} & 1 \\
     \hline
-    Mathematics & xxx & 1 \\
+    Mathematics & \begin{itemize}
+        \item Mathematics and Epidemiology
+    \end{itemize} & 1 \\
     \hline
-    Medicine and Dentistry & xxx & 2 \\
+    Medicine and Dentistry & \begin{itemize}
+        \item Biomedical Engineering
+        \item Biomechanics
+    \end{itemize} & 2 \\
     \hline
        &   & \textbf{10} \\
     \hline
-    \end{tabular}
     \caption{Kategorian 9 tieteenalat}
     \label{table:Kategorian 9 tieteenalat}
-\end{table}
+\end{longtable}
 
 \section{Laadullisten simulaatioiden ohjeet ja työkalut} \label{tyokalut}
 \textbf{TODO: Tämä voi tarkentua, jos miettii järjestyksen uusiksi ja pyrkii sitomaan sekä työn tavoitteisiin että tieteenaloihin.}
