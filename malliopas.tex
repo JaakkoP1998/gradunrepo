@@ -922,13 +922,15 @@ Tieteenalat on jaettu päätutkimuskysymyksen tuloksien kategorioiden mukaan.
         \item Food Science
     \end{itemize} & 1 \\
     \hline
-    Biochemistry, Genetics and Molecular Biology & xxx & 1 \\
+    Biochemistry, Genetics and Molecular Biology & \begin{itemize}
+        \item Biomechanics
+    \end{itemize} & 1 \\
     \hline
     Engineering & \begin{itemize}
         \item Electrical Engineering
     \end{itemize} & 1 \\
     \hline
-    Environmental Science & \begin{itemize}
+    Environmental Science & \begin{itemize}[noitemsep, topsep=0pt]
         \item Ecology
         \item Environmental Science, Hydrology and Civil Engineering
         \item Environmental Science, Biochemistry and Microbiology
@@ -959,57 +961,221 @@ Seuraavissa listoissa on esitetty tutkimuksista tunnistetut työkalut ja ohjeist
 Kategoriaan "mallintaminen" kuuluvat metodit ja algoritmit joiden avulla voidaan mallintaa laadullisia malleja.
 
 \subsection{Mallintaminen}
-\begin{itemize}
-    \item hazard identification method
-    \item HAZOP
-    \item fuzzy systems 
-    \item finite element method 
-    \item QSIM 
-    \item fuzzy qualitative simulation algorithm 
-    \item grey qualitative constraint filtering method 
-    \item GA-BP (Genetic Algorithm – Back Propagation Neural Network Algorithm) 
-    \item Morven framework 
-    \item Biomolecular Network Ontology 
-    \item agent-based approach 
-    \item Qualitative Archi Bond Graphs 
-    \item finite element method 
-    \item fuzzy qualitative simulation algorithm 
-    \item signed directed graph 
-    \item extended signed directed graph 
-    \item fault-tree structures 
-    \item qualitative trend analysis algorithm 
-    \item optimum discretization method 
-    \item form particle difference method 
-    \item computational fluid dynamics 
-    \item discrete element method 
-    \item Dynamic trend analysis 
-    \item SQMA (Situation-based Qualitative Modeling and Analysis) 
-    \item qualitative fault isolation (QFI) framework 
-    \item Catastrophe Theory 
-    \item stochastic social choice rules 
-    \item QUAL2Kw 
-    \item multi-objective modified seagull optimization 
-    \item lattice Boltzmann method 
-    \item DEVS formalism 
-    \item Semantic Micro Object Language (SMOL) based modeling 
-    \item frozen phonon approach 
-    \item Nose–Hoover dynamics 
-    \item System Thermal-Hydraulic (STH) analysis 
-    \item fuzzy set theory 
-    \item fuzzy qualitative reasoning 
-    \item agent-based architecture 
-    \item multi-objective particle swarm optimization (MOPSO) algorithm 
-    \item Causal Loop Diagrams 
-    \item slime mould algorithm 
-    \item Euler-Euler approach
-\end{itemize}
+Mallintamisessa käytetyt metodit ja algoritmit on jaettu pääkysymyksen
+kategorioihin tieteenaloittain. Taulukossa ensimmäinen pylväs merkitsee
+päätieteenalaa  ja toinen mallintaminen merkitsee löydetyt ja tunnistetut 
+metodit ja algoritmit. Mallintamiseen on merkitty myös 
+kuinka monta kertaa kyseinen työkalu on esiintynyt eri artikkeleissa.
+\textbf{TODO: Pylväille ehkä paremmat nimitykset.}
 
+\begin{longtable}[h]{|p{5cm}|p{8cm}|}
+    \hline
+    \textbf{Tieteenala}    &    \textbf{Mallintaminen}\\
+    \hline
+    Social Science & \begin{itemize}
+        \item GA-BP (Genetic Algorithm – Back Propagation Neural Network Algorithm)
+        \item QSIM (4)
+        \item catastrophe theory
+        \item fuzzy set theory (2)
+    \end{itemize} \\
+    \hline
+    \caption{Kategorian 1 mallintaminen}
+    \label{table:Kategorian 1 mallintaminen}
+\end{longtable}
+
+\begin{longtable}[h]{|p{5cm}|p{8cm}|}
+    \hline
+    \textbf{Tieteenala}    &    \textbf{Mallintaminen}\\
+    \hline
+    Chemical Engineering & \begin{itemize}
+        \item signed digraph
+        \item Signed Directed Graph (5)
+        \item fuzzy logic (3)
+        \item fuzzy set theory
+        \item HAZOP ?
+        \item process safety analysis ?
+    \end{itemize} \\
+    \hline
+    Engineering & \begin{itemize}
+        \item QSIM (2)
+        \item fuzzy qualitative simulation algorithm (3)
+        \item SQMA (Situation-based Qualitative Modeling and Analysis)
+        \item fault-tree structures ?
+        \item Functional Ontology for Naive Mechanics (FONM) ?
+        \item Signed Directed Graph (2)
+        \item qualitative fault isolation (QFI) framework
+        \item Fuzzy Inductive Reasoning
+    \end{itemize} \\
+    \hline
+    Materials Science & \begin{itemize}
+        \item discrete element method
+    \end{itemize} \\
+    \hline
+    \caption{Kategorian 2 mallintaminen}
+    \label{table:Kategorian 2 mallintaminen}
+\end{longtable}
+
+\begin{longtable}[h]{|p{5cm}|p{8cm}|}
+    \hline
+    \textbf{Tieteenala}    &    \textbf{Mallintaminen}\\
+    \hline
+    Agricultural and Biological Science & xxx \\
+    \hline
+    Chemical Engineering & \begin{itemize}
+        \item Euler-Euler approach
+    \end{itemize} \\
+    \hline
+    Computer Science & xxx \\
+    \hline
+    Energy & xxx \\
+    \hline
+    Engineering & \begin{itemize}
+        \item fuzzy qualitative simulation algorithm
+        \item variational multiscale method
+    \end{itemize} \\
+    \hline
+    Environmental Science & xxx \\
+    \hline
+    Materials Science & \begin{itemize}
+        \item lattice Boltzmann method
+        \item molecular dynamics
+    \end{itemize} \\
+    \hline
+    Medicine and Dentistry & xxx \\
+    \hline
+    \caption{Kategorian 3 mallintaminen}
+    \label{table:Kategorian 3 mallintaminen}
+\end{longtable}
+
+\begin{longtable}[h]{|p{5cm}|p{8cm}|}
+    \hline
+    \textbf{Tieteenala}    &    \textbf{Mallintaminen}\\
+    \hline
+    Agricultural and Biological Science & xxx \\
+    \hline
+    Chemical Engineering & xxx \\
+    \hline
+    Computer Science & xxx \\
+    \hline
+    Economics, Econometrics and Finance & xxx \\
+    \hline
+    Energy & xxx \\
+    \hline
+    Engineering & xxx \\
+    \hline
+    Environmental Science & xxx \\
+    \hline
+    Materials Science & xxx \\
+    \hline
+    Physics and Astronomy & xxx \\
+    \hline
+    Social Science & xxx \\
+    \hline
+    \caption{Kategorian 4 mallintaminen}
+    \label{table:Kategorian 4 mallintaminen}
+\end{longtable}
+
+\begin{longtable}[h]{|p{5cm}|p{8cm}|}
+    \hline
+    \textbf{Tieteenala}    &    \textbf{Mallintaminen}\\
+    \hline
+    Chemical Engineering & xxx \\
+    \hline
+    Computer Science & xxx \\
+    \hline
+    Environmental Science & xxx \\
+    \hline
+    Physics and Astronomy & xxx \\
+    \hline
+    \caption{Kategorian 5 mallintaminen}
+    \label{table:Kategorian 5 mallintaminen}
+\end{longtable}
+
+\begin{longtable}[h]{|p{5cm}|p{8cm}|}
+    \hline
+    \textbf{Tieteenala}    &    \textbf{Mallintaminen}\\
+    \hline
+    Agricultural and Biological Science & xxx \\
+    \hline
+    Chemical Engineering & xxx \\
+    \hline
+    Computer Science & xxx \\
+    \hline
+    Earth and Planetary Science & xxx \\
+    \hline
+    Engineering & xxx \\
+    \hline
+    Environmental Science & xxx \\
+    \hline
+    Materials Science & xxx \\
+    \hline
+    \caption{Kategorian 6 mallintaminen}
+    \label{table:Kategorian 6 mallintaminen}
+\end{longtable}
+
+\begin{longtable}[h]{|p{5cm}|p{8cm}|}
+    \hline
+    \textbf{Tieteenala}    &    \textbf{Mallintaminen}\\
+    \hline
+    Agricultural and Biological Science & xxx \\
+    \hline
+    Chemical Engineering & xxx \\
+    \hline
+    Computer Science & xxx \\
+    \hline
+    Engineering & xxx \\
+    \hline
+    Environmental Science & xxx \\
+    \hline
+    Medicine and Dentistry & xxx \\
+    \hline
+    Physics and Astronomy & xxx \\
+    \hline
+    \caption{Kategorian 7 mallintaminen}
+    \label{table:Kategorian 7 mallintaminen}
+\end{longtable}
+
+\begin{longtable}[h]{|p{5cm}|p{8cm}|}
+    \hline
+    \textbf{Tieteenala}    &    \textbf{Mallintaminen}\\
+    \hline
+    Chemical Engineering & xxx \\
+    \hline
+    Computer Science & xxx \\
+    \hline
+    Decision Science & xxx \\
+    \hline
+    Engineering & xxx \\
+    \hline
+    Environmental Science & xxx \\
+    \hline
+    \caption{Kategorian 8 mallintaminen}
+    \label{table:Kategorian 8 mallintaminen}
+\end{longtable}
+
+\begin{longtable}[h]{|p{5cm}|p{8cm}|}
+    \hline
+    \textbf{Tieteenala}    &    \textbf{Mallintaminen}\\
+    \hline
+    Biochemistry, Genetics and Molecular Biology & xxx \\
+    \hline
+    Engineering & xxx \\
+    \hline
+    Environmental Science & xxx \\
+    \hline
+    Medicine and Dentistry & xxx \\
+    \hline
+    \caption{Kategorian 9 mallintaminen}
+    \label{table:Kategorian 9 mallintaminen}
+\end{longtable}
 
 \subsection{Ohjelmistot}
 Ohjelmistot on luokiteltu toteutettuihin simulaatioiden lähestymistapoihin. Mallintamisessa auttavat ohjelmat on myös merkitty omaksi luokaksi.
 
+Simulaatio-ohjelmat pysytään myös jakamaan toteutetun simulaatiotyypin mukaisesti:
+
 Agent-based simulations:
-\begin{itemize}
+\begin{itemize}[noitemsep, topsep=0pt]
     \item Repast
     \item SWARM
     \item Presage2
