@@ -57,6 +57,7 @@
 \mainmatter
 
 \chapter{Johdanto} \label{johdanto}
+\textbf{TODO: Ehkä joku lähde tänne.}
 Tieteellisillä tutkimuksilla on kaksi yleistä tutkimustyyppiä, empiirinen ja teoreettinen.
 Empiirisessä tutkimuksessa tehdään  ja kerätään havaintoja, sekä analysoidaan 
 ja mitataan tutkimuksen kohteena olevaa tapahtumaa tai järjestelmää. 
@@ -70,10 +71,9 @@ Empiirisesten tutkimusten laadullisissa tutkimuksissa pyritään tutkimaan subje
 numeerisen datan mittaamiseen ja analysointiin sekä muuttujien välisten suhteiden määrittämiseen. 
 Laadullisten tutkimuksien tutkimuskysymyksissä usein kysytään "miksi" ja "miten", 
 kun taas määrällisissä tutkimuksissa enemmän nousevat esiin "milloin" ja "missä".
+Määrällisessä tutkimuksessa tulos pyritään esittämään lukuina ja niiden virherajoina. 
+Jos ei pystytä esittämään lukuja tai niiden virherajoja, niin tulos on laadullinen.
 
-\begin{comment}
-Mietin kappaleen logiikkaa. tavallaan määrällinen tutkimus on suhteellisen selkeä. Laadullinen on sitten vähän sen komplementtia. Lisäksi varsinkaan tässä työssä et tule rajaamana laadullista subjektiivisiin kokemuksiin jne. Olisiko iso kuva se, että määrällisessä tutkimuksessa tulos lopulta pyritään esittämään lukuina ja niiden virherajoina. Jos ei pystytä esittämään lukja tai niiden virherajoja, tulos ei ole määrällinen vaan laadullinen. Onko vaikka havaittu trendi, joka ei ole tilastollisesti merkittävä vielä määrällnen tulos vai vain laadullinen.
-\end{comment}
 Simulointi on yksi tieteen tutkimustapa, jota voidaan käyttää tutkimuksissa.
 Simulointi metodina omaa empiirisen ja teoriittisen tutkimuksien piirteitä.
 Empiirisen tutkimuksen suhteen simuloinnilla voidaan tutkia ja kerätä havaintoja
@@ -86,15 +86,18 @@ Tätä ohjelmaa kutsutaan simulaatioksi.
 On olemassa myös muunlaisia simulointitapoja kuin tietokoneella ajettavat ohjelmat, mutta 
 tässä tutkimuksessä keskitytään tietokoneella ajattaviin simulaatio-ohjelmiin.
 
-\begin{comment}
-    Määrällisetkin simulaatiot perustuvat yleensä numeerisiin menetelmiin, joten tämä virke ei avaa asiaa parhaalla tavalla. Sanallistaisin enemmän funktionaalisten riippuvuuksien kuin parametrien kautta. Saattaa olla, että kahden systeemimuuttujan riippuvuudesta tunnetaan vain laadullisia piirteitä - esimerkiksi kasvava funktio joka on kuitenkin aidosti rajoitettu mutta tarkasta riippuvuudesta ei ole riittävän tarkkoja havaintoja. Pohdin myös seuraavaa virkettä havaintoihin vertaamisesta. Laadullisessa tapauksessa ei voi verrata havaintoihin tarkasti mutta voi olla mahdollista selittää, voiko jokin mekanismi tuottaa kuvitellun/havaitun käyttäytymisen jossakin tapauksessa.. Milloin näin tapahtuisi tarkasti, edellyttäisi sitten tarkempaa määrällistä mallia. 
-\end{comment}
 Simulaatiot perustuvat luotuihin malleihin, 
 jotka pyrkivät kuvaamaan halutun kohteen käyttäytymistä. 
 Mallin luomista kutsutaan mallintamiseksi, joka on erittäin tärkeä prosessi simulointia,
-sillä se määrittää mitä ja miten tutkittavaa järjestelmää simuloidaan. On useita eri tapauksia joissa järjestelmän muuttamiseksi malliksi täytyy toteuttaa niin sanottu laadullinen malli. Laadullinen malli ei käytä tarkkoja parametrejä järjestelmän toimintaa
-esittäessä, vaan usein käyttää numeerisia menetelmiä järjestelmän toiminnan esityksessä.
-Laadulliset mallit ovat hyödyllisiä tapauksissa, joissa halutaan luoda uutta teoriaa ja teorian ennusteita simuloimalla, sitten verrata simulaation tuloksia havaintoihin teorian validoimiseksi. 
+sillä se määrittää mitä ja miten tutkittavaa järjestelmää simuloidaan. 
+On useita eri tapauksia joissa järjestelmän muuttamiseksi malliksi 
+täytyy toteuttaa niin sanottu laadullinen malli. 
+Laadullinen malli pyrkii kuvaamaan järjestelmän muuttujien laadullisia riippuvuksia.
+Esimerkiksi jos tiedetään kahdella muuttujalla olevan riippuvuus, mutta riippuvuuden 
+tarkkoja arvoja ei tiedetä.
+
+Laadulliset mallit ovat hyödyllisiä tapauksissa, joissa halutaan luoda uutta teoriaa ja teorian ennusteita simuloimalla. Vertaamalla laadullisen simulaation tuloksia havaintoihin 
+voidaan mahdollisesti selittää mikä mekanismi tai tapahtuma tuottaa havaitun käyttäytymisen jossakin tapauksessa.
 Laadullisia malleja voidaan myös käyttää tapauksissa, joissa ei ole yhteistä aukotonta teoriaa ja halutaan tarkastella monimutkaisten ilmiöiden yhteisvaikutuksen seuraamuksia simulaatiolla.
 
 Simulaatioilla kyetään keräämään dataa ja havaintoja tutkittavasta aiheesta suhteellisen helposti ja halvalla, mikä tekee siitä oleellisen tutkimusmenetelmän tieteellisiin tutkimuksiin. Yksinkertaisimmillaan simulaatio on ohjelma, jonka avulla voidaan jäljitellä järjestelmän toimintaa. Ohjelmalle syötetään tapahtuman muuttujat ja ohjelma antaa lopputuloksen siitä, mitä simulaation mallin mukaan tulisi tapahtumaan. 
@@ -105,26 +108,26 @@ jonka mahdollisuus taas riippuu laadullisen tutkimuksen tyypistä ja kohteesta.
 Simulaatioiden käyttö laadullisissa tutkimuksissa on kuitenkin laaja alue, 
 esimerkiksi \textcite{eldabi2002quantitative} ehdottivat tutkimuksessaan miten simulaatioilla voidaan välttää laadullisten menetelmien tyypillisiä ongelmia, kuten työlästä datan keruuta. 
 
-% Onko heillä termin 'omistajuus' vai onko vain esimerkki käsitteen aiemmasta käytöstä?
-\textcite{kuipers1986qualitative} esittivät termin \textit{laadullinen simulaatio (eng. qualitative simulation)}, 
-mikä viittaa simulaatioihin, jotka eivät tarvitse tarkkoja numeerisia parametreja toimiakseen, mikä tekee niistä oleellisen laadullisille tutkimuksille. 
+Useat tutkijat viittaavat \textcite{kuipers1986qualitative} tutkimusta ensimmäisenä
+viittauksena termin \textit{laadullinen simulaatio (eng. qualitative simulation)} 
+käytöstä. Laadullinen simulaatio viittaa simulaatioihin, 
+jotka eivät tarvitse tarkkoja numeerisia parametreja toimiakseen, 
+mikä tekee niistä oleellisen laadullisille tutkimuksille. 
 Samoin kuin muunkaltaiset simulaatiot, laadulliset simulaatiot myös perustuvat malleihin.
 Tämän kaltaisia malleja kutsutaan laadullisiksi malleiksi.
-
 \begin{comment}
 Näitä asioita ja piirteitä tulee tipoittain ja teksti alkaa tulla tavallaan toisteiseksi, joten johdannon logiikka kannattaa mietti: mitä, missä järjestyksessä ja mtä jätetään päälukuihin.
-\end{comment}
+
 Laadulliset simulaatiot ovat hyödyllisiä monessa eri tilanteessa. Jos tutkimuskohteen tiedossa on aukkoja tai ei muuten pystytä antamaan tarkkoja parametrejä simulaatiolle, eli ei voida toteuttaa normaalia määrällistä simulaatiota. Näissä tapauksissa laadullisen simulaation toteuttaminen voi olla kuitenkin mahdollista. Usein myös laajoissa kompleksisissa kohteissa on erittäin vaikeaa tehdä normaalia simulaatiota, joten laadullinen simulaatio voi olla järkevämpi vaihtoehto.
-
-Laadullisille simulaatioille on myös toteutettu työkaluja, kuten Garp3-ohjelmisto \parencite{bredeweg2007garp3} ja QSIM-algoritmi \parencite{helgstrand2004qsim} ovat tarkoitettu laadullisten simulaatioiden toteutettamiseen. Lisäksi on myös useita laadullisia tutkimuksia, joissa on käytetty laadullisia simulaatioita. 
-\begin{comment}
-Viekö esimerkki tekstiä aidosti eteenpäin.
-\end{comment}Esimerkiksi \textcite{cao2019depth} tekivät tutkimuksen kaivosmiesten turvallisuuskäyttäytymisestä käyttäen simulaatiota ja tämän perusteella päätellen, miten ongelmatilanteissa tulisi reagoida. 
-
-\begin{comment}
-Tämäkin on sanoitettu menetelmä edellä kuten otsikko. Yleensä tavoitteet ja kysymykset muotoillaan ensin ja sitten valitaan menetelmä, jolla niihin voi vastata.
 \end{comment}
-Tämän tutkimuksen tavoitteena on toteuttaa systemaattinen kirjallisuuskartoitus laadullisten simulaatioiden käytöstä ja kerätyn aineiston perusteella vastata seuraavaan pääkysymykseen:
+
+Laadullisille simulaatioille on myös toteutettu työkaluja, kuten Garp3-ohjelmisto \parencite{bredeweg2007garp3} ja QSIM-algoritmi \parencite{helgstrand2004qsim} ovat tarkoitettu laadullisten simulaatioiden toteutettamiseen. Lisäksi on myös useita laadullisia tutkimuksia, joissa on käytetty laadullisia simulaatioita, joko pää- tai sivumenetelmänä.
+
+Tämän tutkimuksen tavoitteena on selvittää miten laadullisia simulaatioita 
+ollaan käytetty tieteellisissä tutkimuksissa. Tämän tiedon saamiseksi on
+toteutettu systemaattinen kirjallisuuskartoitus 
+laadullisten simulaatioiden käytöstä ja kerätyn aineiston perusteella vastataan 
+seuraavaan pääkysymykseen:
 \begin{itemize}
     \item Millaisia tuloksia laadullisilla simulaatioilla pyritään hakemaan?
 \end{itemize}
