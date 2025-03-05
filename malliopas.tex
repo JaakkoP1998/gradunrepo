@@ -67,11 +67,6 @@ tai \textit{määrällisiä (eng. quantitative)}.
 Vertauksena teoreettisessa tutkimuksessa pyritään hahmottamaan 
 malleja ja rakenteita aiemman tutkimuskirjallisuuden pohjalta. 
 
-\begin{comment}
-    Mitein kappaleen logiikkaa. tavallaan määrällinen tutkimus on suhteellisen selkeä. Laadullinen on sitten vähän sen komplementtia. 
-    Lisäksi varsinakaan tässä työssä et tule rajaamana laadullista subjektiivisiin kokemuksiin jne. 
-\end{comment}
-\textbf{TODO: Määrällistä ja laadullista tutkimuksia pitää varmaan vielä avata enemmän.}
 Tämän tutkimuksen kannalta oleellisin ero määrällisen ja laadullisen tutkimuksen 
 välillä on tutkimuksesta saatu tulos.
 Määrällisessä tutkimuksessa tulos pyritään esittämään lukuina ja niiden virherajoina,
@@ -121,11 +116,6 @@ jotka eivät tarvitse tarkkoja numeerisia parametreja toimiakseen,
 mikä tekee niistä oleellisen laadullisille tutkimuksille. 
 Samoin kuin muunkaltaiset simulaatiot, laadulliset simulaatiot myös perustuvat malleihin.
 Tämän kaltaisia malleja kutsutaan laadullisiksi malleiksi.
-\begin{comment}
-Näitä asioita ja piirteitä tulee tipoittain ja teksti alkaa tulla tavallaan toisteiseksi, joten johdannon logiikka kannattaa mietti: mitä, missä järjestyksessä ja mtä jätetään päälukuihin.
-
-Laadulliset simulaatiot ovat hyödyllisiä monessa eri tilanteessa. Jos tutkimuskohteen tiedossa on aukkoja tai ei muuten pystytä antamaan tarkkoja parametrejä simulaatiolle, eli ei voida toteuttaa normaalia määrällistä simulaatiota. Näissä tapauksissa laadullisen simulaation toteuttaminen voi olla kuitenkin mahdollista. Usein myös laajoissa kompleksisissa kohteissa on erittäin vaikeaa tehdä normaalia simulaatiota, joten laadullinen simulaatio voi olla järkevämpi vaihtoehto.
-\end{comment}
 
 Laadullisille simulaatioille on myös toteutettu työkaluja, kuten Garp3-ohjelmisto \parencite{bredeweg2007garp3} ja QSIM-algoritmi \parencite{helgstrand2004qsim} ovat tarkoitettu laadullisten simulaatioiden toteutettamiseen. Lisäksi on myös useita laadullisia tutkimuksia, joissa on käytetty laadullisia simulaatioita, joko pää- tai sivumenetelmänä.
 
@@ -253,9 +243,9 @@ Laadullinen päättely on käytössä usealla eri tieteenalalla, \textbf{(TODO: 
 \end{itemize}
 Laadullinen simulointi on yksi laadullisen päättelyn menetelmistä \parencite{kuipers1986qualitative}. 
 
-\textbf{TODO: Avaa laadullista simulaatiota käsitteenä enemmän.}
 Laadullinen simulaatio viittaa simulaatioon, jolla voidaan simuloida kohdetta
 vähäisellä tai puuttelisella tiedolla \parencite{kuipers1986qualitative}.
+
 Laadullinen simulointi vaatii yleensä oman mallinnustavan, joka korostaa järjestelmän käyttäytymisen laadullisia näkökohtia tarkkojen numeeristen arvojen sijaan. 
 %
 \parencites%
@@ -280,18 +270,21 @@ Hybridimallit jäävät ilmaan. Minkä hybirideistä on kyse? Ylipäätään ei 
 Simulaatiomallin on mahdollista toteuttaa sekä laadullisia että määrällisiä ominaisuuksia samaan aikaan. Laadullisen simulaation ja määrällisen simulaatioiden yhdistinen voi luoda simulaatioita, jotka osoittavat molempien tapojen vahvuuksia \parencite{semiHybrid1997qualitative}. Yksi mahdollinen tapa puolilaadulliselle simulaatiolle on yksinkertaisimmillaan määrällinen simulaatio, jossa käytetään numeerisia välejä ominaisuuksissa, joista ei ole täydellistä määrällistä tietoa \parencite{semiHybrid1997qualitative}.
 
 \subsection{Yleisiä työkaluja}
-\begin{comment}
-    Tämäkin on hyvin pintapuolinen. Pari esimerkkiä joita ei sidota kovinkaan hyvin simuloinnin tavoitteisiin tai työkaluilta odotettuihin ominaisuuksiin.
-\end{comment}
-\textbf{TODO: Miten QSIM-algoritmia ja muita algoritmeja voidaan käyttää.
-Sama ohjelmistoille.}
 Laadullisten simulaatioiden luonttin löytyy useita eri metodeja ja työkaluja.
-Esimerkiksi Qsim on algoritmi, jolla voidaan luoda laadullisia malleja simulaatioille
+Esimerkiksi \textit{Qsim} on algoritmi, jolla voidaan luoda laadullisia malleja simulaatioille
 \parencite{kuipers1986qualitative}. 
+QSIM:illa mallinnettu laadullinen simulaatio voi mahdollisesti ennustaa 
+järjestelmän mahdollista käyttäytymistä perustuen käytettyihin rajoitusyhtälöihin 
+ja järjestelmän alkutilaan \parencite{kuipers1986qualitative}, mikä mahdollistaa
+monimutkaisempien järjestelmien mallintamisen ja simuloinnin.
+
 Lisäksi on myös \textit{sumeaan teoriaan (eng. fuzzy set theory)} 
 perustuva \textit{sumea laadullinen simulaatioalgoritmi 
 (eng.fuzzy qualitative simulation algorithm)} 
 auttaa myös toteuttamaan laadullisia malleja \parencite{shen1993fuzzy}.
+Sumea teoria perustuu tiedon abstraktointiin, jolla laadullisten simulaatioiden
+konteksitssa pyritään vähentämään fyysisten järjestelmien toimintojen monimutkaisuuksia
+\parencite{shen1993fuzzy}.
 
 Laadullisten simulaatioiden luomiselle löytyy myös siihen tarkoitettuja ohjelmistoja.
 \textcite{bredeweg2007garp3} kehittämä Garp3-ohjelma on laadulliseen 
