@@ -57,7 +57,6 @@
 \mainmatter
 
 \chapter{Johdanto} \label{johdanto}
-\textbf{TODO: Ehkä joku lähde tänne.}
 Tieteellisillä tutkimuksilla on kaksi yleistä tutkimustyyppiä, empiirinen ja teoreettinen.
 Empiirisessä tutkimuksessa tehdään  ja kerätään havaintoja, sekä analysoidaan 
 ja mitataan tutkimuksen kohteena olevaa tapahtumaa tai järjestelmää. 
@@ -232,8 +231,9 @@ Lisäksi simulaatioilla voidaan helposti analysoida miten eri muuttuvat tekijät
 \section{Laadullinen simulaatio} \label{laadullinen simulaatio}
 \textit{Laadullinen päättely (eng. qualitative reasoning)} 
 tieteellisenä käsityksenä viittaa menetelmiin, joilla
-voidaan tehdä ennustuksia ja johtopäätöksiä puutteellisesta tai laadullisesta tiedosta \parencite{QualitativeReasoning1997}. 
-Laadullinen päättely on käytössä usealla eri tieteenalalla, \textbf{(TODO: Viittaus kirjaan, korjaa mallipohjan mukaiseen viittaukseen)} kuten teköälyn \parencite{qualitativeReasoning2014} tai fysiikan aloilla \parencite{QualitativePhysics1988}.
+voidaan tehdä ennustuksia ja johtopäätöksiä fyysisestä järjestelmästä puutteellisen tai laadullisesta tiedon perusteella
+\parencite{QualitativeReasoning1997}. 
+Laadullinen päättely on käytössä usealla eri tieteenalalla, kuten teköälyn \parencite[luku~35]{qualitativeReasoning2014} tai fysiikan aloilla \parencite{QualitativePhysics1988}.
 \textcite{QualitativeReasoning1997} mukaan laadullisen päättelyn hyötyjä ovat:
 \begin{itemize}
     \item Johtopäätöksien tekeminen puuttelisen tai laadullisen tiedon rajoissa.
@@ -241,12 +241,23 @@ Laadullinen päättely on käytössä usealla eri tieteenalalla, \textbf{(TODO: 
     \item Muiden mahdollisten tapahtumien helppo tutkiminen.
     \item Tulosten automaattinen tulkinta. 
 \end{itemize}
+Laadullinen päättely on hyödyllistä esimerkiksi jos 
+määrällisen datan kerääminen on liian kallista tai 
+tutkittavasta kohteesta tarvitaan vain laadullisia ennusteita
+\parencite{QualitativeReasoning1997}.
 Laadullinen simulointi on yksi laadullisen päättelyn menetelmistä \parencite{kuipers1986qualitative}. 
 
+\textbf{TODO: Kuinka tarkka kuvaus on tarpeen laadullisista simulaatioista?}
 Laadullinen simulaatio viittaa simulaatioon, jolla voidaan simuloida kohdetta
-vähäisellä tai puuttelisella tiedolla \parencite{kuipers1986qualitative}.
-
-Laadullinen simulointi vaatii yleensä oman mallinnustavan, joka korostaa järjestelmän käyttäytymisen laadullisia näkökohtia tarkkojen numeeristen arvojen sijaan. 
+laadullisella tai puuttelisella tiedolla \parencite{kuipers1986qualitative}.
+Laadullisella simulaatiolla voidaan tutkia tietyn järjestelmän dynamiikkaa 
+ilman tarkkoja parametriarvoja \parencite{cosme2023history}. 
+Laadullisella simulaatiolla voidaan varmistaa, että järjestelmän
+ominaisuuksien laadullinen kuvaus on toimiva ja hyödyllinen 
+laadullisen päättelyn mielessä \parencite{kuipers1986qualitative}.
+Laadullinen simulointi vaatii yleensä oman mallinnustavan, 
+joka korostaa järjestelmän käyttäytymisen laadullisia näkökohtia 
+tarkkojen numeeristen arvojen sijaan. 
 %
 \parencites%
   {parallelQualitativeSimulation1997}%
@@ -254,20 +265,34 @@ Laadullinen simulointi vaatii yleensä oman mallinnustavan, joka korostaa järje
 \relax.
 %
 
-Laadullisella simulaatiolla voidaan tutkia tietyn järjestelmän dynamiikkaa ilman tarkkoja parametriarvoja \parencite{cosme2023history}. On myös mahdollista toteuttaa simulaatio, joka on ominaisuuksiltaan sekä laadullinen että määrällinen. Näistä simulaatioista käytetään termiä \textit{ puoli-määrällinen simulaatio (eng.semi-quantitative simulation)}\parencite{semiHybrid1997qualitative}.
+Tapauksissa, joissa on vain vajaata määrällistä tietoa saatavilla,
+on mahdollista toteuttaa simulaatio, 
+joka on ominaisuuksiltaan sekä laadullinen että määrällinen 
+\parencite{semiHybrid1997qualitative}. 
+Näistä simulaatioista käytetään termiä hybridimalli, tai
+\textit{ puoli-määrällinen simulaatio 
+(eng.semi-quantitativesimulation)}. 
+Puoli-määrällinen simulaatio yhdistää laadullisen ja määrällisen simulaatiot
+mitätöidäkseen toistensa heikkouksia \parencite{semiHybrid1997qualitative}.
 
 \subsection{Hyödyt}
 \begin{comment}
-    Mietin, onko vähän liian suoraviivaista aloittaa hyödyistä kun määritelmä ja tavoitteet jäävät aika auki. tarvitaanko vahvemmin määrittelevä ja ominaisuuksia kuvaava alaluku. 
+    Mietin, onko vähän liian suoraviivaista aloittaa hyödyistä kun määritelmä ja tavoitteet jäävät aika auki. 
+    
+    Tarvitaanko vahvemmin määrittelevä ja ominaisuuksia kuvaava alaluku. 
     
     Nyt jää käteen vain vähän epämääräinen toteamus soveltuvuudesta tilanteessa jossa riittävän tarkat tiedot puuttuvat.
 \end{comment}
 Laadullisella simuloinnilla on tietysti samat yleiset hyödyt kuin muilla simulaatiolla, mainittuna luvussa \ref{simulaatio}. Laadulliset simulaatiot toimivat hyvin tapauksissa, joissa simuloitavan kohteen tai järjestelmän toiminnasta ei ole täydellistä tietoa tai tarvittava tieto on muuten aukollinen \parencite{kuipers1986qualitative}. 
 
-\begin{comment}
-Hybridimallit jäävät ilmaan. Minkä hybirideistä on kyse? Ylipäätään ei ole mitään kuvaa siitä, miten laadullista simulointia tehdään (millaisia ovat mallit ja niiden rakenteet, miten niillä simuloidaan). Tällöin parametreista ja nopeudesta puhuminen menee lukijalta täysin yli.
-\end{comment}
-Simulaatiomallin on mahdollista toteuttaa sekä laadullisia että määrällisiä ominaisuuksia samaan aikaan. Laadullisen simulaation ja määrällisen simulaatioiden yhdistinen voi luoda simulaatioita, jotka osoittavat molempien tapojen vahvuuksia \parencite{semiHybrid1997qualitative}. Yksi mahdollinen tapa puolilaadulliselle simulaatiolle on yksinkertaisimmillaan määrällinen simulaatio, jossa käytetään numeerisia välejä ominaisuuksissa, joista ei ole täydellistä määrällistä tietoa \parencite{semiHybrid1997qualitative}.
+Simulaatiomallin on mahdollista toteuttaa sekä laadullisia, 
+että määrällisiä ominaisuuksia samaan aikaan. 
+Laadullisen ja määrällisen simulaation yhdistäminen voi luoda simulaatioita, 
+jotka osoittavat molempien tapojen vahvuuksia 
+\parencite{semiHybrid1997qualitative}. 
+Yksi mahdollinen tapa puolilaadulliselle simulaatiolle on yksinkertaisimmillaan
+määrällinen simulaatio, jossa käytetään numeerisia välejä ominaisuuksissa, 
+joista ei ole täydellistä määrällistä tietoa \parencite{semiHybrid1997qualitative}.
 
 \subsection{Yleisiä työkaluja}
 Laadullisten simulaatioiden luonttin löytyy useita eri metodeja ja työkaluja.
@@ -291,18 +316,11 @@ Laadullisten simulaatioiden luomiselle löytyy myös siihen tarkoitettuja ohjelm
 mallintamiseen tarkoitettu työkalu, jolla voidaan mallintaa, simuloida ja
 tarkastella halutun järjestelmän toimintaa.
 
-\subsection{Ongelmat TODO: Sulautetaan aiempiin kappaleisiin mukaan.}
-\textcite{QualSimTheoryApplications2013} mukaan laadullinen simulaatio vähentää
-toistuvuutta, mutta lisää datan kompleksisuutta.
-\textcite{QualSimTheoryApplications2013} mukaan myös parametrien 
-määrän kasvaessa laadullisissa simulaatioissa, 
-simulaationopeus laskee merkittävästi. 
-Näitä ongelmia voidaan mahdollisesti rajata käyttämällä hybridimalleja, mutta 
-tapauksissa joissa täytyy toteuttaa täysin laadullinen simulaatio, 
-niin koneelliset resurssit voivat mahdollisesti olla ongelma. 
-
+\begin{comment}
+\subsection{Ongelmat}
 \textcite{soundQualSimImpossible} mukaan täydellinen laadullinen simulaatio on mahdotonta.
 Tutkimus keskittyy suurimmin osin QSIM-algoritmin kritiikkiin, mutta \textcite{soundQualSimImpossible} esittivät myös yleisempiä ongelmia laadulliseen simulaatioon, kuten tutkijoilta puuttuu usein täydellinen tieto muotoillakseen tarkkoja numeerisia yhtälöitä ja laadullisessa päättelyssä voidaan käyttää heikkoja esityksiä epätäydellisten järjestelmien mallintamiseen.
+\end{comment}
 
 \chapter{Tutkimusasetelma}
 Tässä luvussa käydään läpi valittu tutkimusasetelma ja sen vaiheet. 
@@ -506,15 +524,30 @@ Tutkimuksen etsityt tulokset voivat sopia myös useampaan eri kategoriaan samaan
 \begin{tabular}{|l|l|}
 \hline
 \textbf{Kategoriat} & \textbf{Artikkelien lukumäärä} \\ \hline
-1.Pyritään selvittämään miten toteutunut ongelma/haitta vaikuttaa kohteeseen tai tilanteeseen.                   &         5              \\ \hline
-2.Pyritään selvittämään vian syitä/mahdollisuuksia.                                                              &           27            \\ \hline
-3.Pyritään vähentämään tutkimuskohteen tiedon aukkoja.                                                           &           55            \\ \hline
-4.Simulaatiolla pyritään vertaamaan tuloksia toiseen tutkimukseen tai samassa tutkimuksessa tehtyihin kokeisiin. &           44            \\ \hline
-5.Halutaan selvittää miten olosuhteiden vaihtuminen vaikuttaa simulaation kohteeseen.                            &          20             \\ \hline
-6.Halutaan optimoida jotain metodeja/tapoja liittyen tutkittavaan kohteeseen/työkaluun.                          &          36             \\ \hline
-7.Tutkimuksessa luotiin kokonaan uusi työkalu/metodi laadullisten simulaatioiden luontiin/käyttämiseen.          &           38            \\ \hline
-8.Verrataan erilaisten laadullisten simulaatioiden/algoritmien toimintaa.                                         &           5            \\ \hline
-9. Halutaan ennustaa kohteen käyttäytymistä/toimintaa.                                                           &           10            \\ \hline
+\textbf{Tutkittavan järjestelmän toiminnan selkentäminen} & xx \\ 
+\hline
+3.Pyritään vähentämään tutkimuskohteen tiedon aukkoja.  &  55  \\ 
+\hline
+5.Halutaan selvittää miten olosuhteiden vaihtuminen vaikuttaa simulaation kohteeseen.  &  20  \\ 
+\hline
+9. Halutaan ennustaa kohteen käyttäytymistä/toimintaa. & 10 \\ 
+\hline
+\textbf{Tutkittavan järjestelmän vian tai epätoivotun toiminnan selvittäminen} & 32 \\
+\hline
+1.Pyritään selvittämään miten toteutunut ongelma/haitta vaikuttaa kohteeseen tai tilanteeseen. & 5 \\ 
+\hline
+2.Pyritään selvittämään vian syitä/mahdollisuuksia. & 27 \\ 
+\hline
+\textbf{Menetelmien tutkiminen (uusi menetelmä ja/tai menetelmien vertailu)} & xx \\
+\hline
+4.Simulaatiolla pyritään vertaamaan tuloksia toiseen tutkimukseen tai samassa tutkimuksessa tehtyihin kokeisiin. & 44 \\ 
+\hline
+6.Halutaan optimoida jotain metodeja/tapoja liittyen tutkittavaan kohteeseen/työkaluun. & 36 \\ 
+\hline
+7.Tutkimuksessa luotiin kokonaan uusi työkalu/metodi laadullisten simulaatioiden luontiin/käyttämiseen. & 38 \\ 
+\hline
+8.Verrataan erilaisten laadullisten simulaatioiden/algoritmien toimintaa.           &  5 \\ 
+\hline
 \end{tabular}%
 }
 \label{table: tuloksien kategoriat}
