@@ -248,14 +248,15 @@ tutkittavasta kohteesta tarvitaan vain laadullisia ennusteita
 \parencite{QualitativeReasoning1997}.
 Laadullinen simulointi on yksi laadullisen päättelyn menetelmistä \parencite{kuipers1986qualitative}. 
 
-\textbf{TODO: Kuinka tarkka kuvaus on tarpeen laadullisista simulaatioista?}
+%\textbf{TODO: Kuinka tarkka kuvaus on tarpeen laadullisista simulaatioista?}
 Laadullinen simulaatio viittaa simulaatioon, jolla voidaan simuloida kohdetta
 laadullisella tai puuttelisella tiedolla \parencite{kuipers1986qualitative}.
+Laadullinen simulointi on tapa käsitellä järjestelmän tiedon syöttämistä, 
+mallinnusta, käyttäytymisanalyysiä ja simulointia järjestelmän 
+laadullisen kuvauksen kautta \parencite{QualSimTheoryApplications2013}.
 Laadullisella simulaatiolla voidaan tutkia tietyn järjestelmän dynamiikkaa 
 ilman tarkkoja parametriarvoja \parencite{cosme2023history}. 
-Laadullisella simulaatiolla voidaan varmistaa, että järjestelmän
-ominaisuuksien laadullinen kuvaus on toimiva ja hyödyllinen 
-laadullisen päättelyn mielessä \parencite{kuipers1986qualitative}.
+
 Laadullinen simulointi vaatii yleensä oman mallinnustavan, 
 joka korostaa järjestelmän käyttäytymisen laadullisia näkökohtia 
 tarkkojen numeeristen arvojen sijaan. 
@@ -285,6 +286,9 @@ mitätöidäkseen toistensa heikkouksia \parencite{semiHybrid1997qualitative}.
     Nyt jää käteen vain vähän epämääräinen toteamus soveltuvuudesta tilanteessa jossa riittävän tarkat tiedot puuttuvat.
 \end{comment}
 Laadullisella simuloinnilla on tietysti samat yleiset hyödyt kuin muilla simulaatiolla, mainittuna luvussa \ref{simulaatio}. Laadulliset simulaatiot toimivat hyvin tapauksissa, joissa simuloitavan kohteen tai järjestelmän toiminnasta ei ole täydellistä tietoa tai tarvittava tieto on muuten aukollinen \parencite{kuipers1986qualitative}. 
+Laadullisella simulaatiolla voidaan myös varmistaa, että järjestelmän
+ominaisuuksien laadullinen kuvaus on toimiva ja hyödyllinen 
+laadullisen päättelyn mielessä \parencite{kuipers1986qualitative}.
 
 Simulaatiomallin on mahdollista toteuttaa sekä laadullisia, 
 että määrällisiä ominaisuuksia samaan aikaan. 
@@ -468,7 +472,10 @@ SciSpace -tekoälyohjelmaa
 Ohjelmalta kysyttiin "Chat With PDF"-ominaisuuden 
 kautta tieteen alaa muodossa "What scientific discipline is this study?". 
 Tekoäly osasi antaa vastauksen ja perustella miksi tutkimus 
-luokiteltiin kyseiseen tieteenalaan. \textbf{TODO: Tarkempi tieteenala varmaankin turha, ehkä lisätään ne vain liitteeksi loppuun, niitä kuitenkin käytettiin Science Directin alojen korjauksessa.}
+luokiteltiin kyseiseen tieteenalaan. 
+\begin{comment}
+    TODO: Tarkempi tieteenala varmaankin turha, ehkä lisätään ne vain liitteeksi loppuun, niitä kuitenkin käytettiin Science Directin alojen korjauksessa.
+\end{comment}
 
 Tieteenalojen luokittelussa käytettiin ScienceDirectin luokitusta ylätasolla.
 ScienceDirectin luokitusta ei voinut käyttää sellaisenaan, koska kaikilla artikkeleilla ei ollut luokitusta laisinkaan tai oli useampi luokitus. Tapauksissa, joissa luokitusta ei ollut laisinkaan artikkeli merkittiin osioon,
@@ -498,8 +505,6 @@ Taulukko \ref{table: tuloksien kategoriat} esittää aineiston tutkimuksista
 löydetyt tavoitteet, joita laadullisilla simulaatioilla pyrittiin hakemaan.
 Tutkimuksen etsityt tulokset voivat sopia myös useampaan eri tavoite-kategoriaan
 samaan aikaan. Löydetyt tavoite-kategoriat voidaan jakaa 3 eri osioon. 
-\textbf{TODO: Muistetaan numeroinnin vaihto muissakin osuuksissa.
-vanha -> uusi.numero}
 
 \begin{table}[h]
 \resizebox{\textwidth}{!}{%
@@ -542,12 +547,11 @@ tai tilanteeseen. & 5 \\
 
 \section{Aineiston artikkelien tieteenalat} \label{tieteenalat}
 \begin{comment}
-Olisiko iso vaiva tehdä yksi taulukko jossa olisi toisena dimensiona laadullisen simuloinnin tavoite ja toisena päätieteenala. Saisiko tästä ehkä jopa heat mapin (missä soluissa on isot frekvenssit, missä pienemmät). 
-
 Päätieteenalojen sisälle porautumista voisi miettiä myös sen edellä esitetyn kolmen pääluokan tasolla, mikä voisi keventää taulukoitavaa asiaa.
 \end{comment}
 Löydetyt tieteenalat ja artikkelien lukumäärät on esitetty seuraavissa taulukoissa.
 Tieteenalat on jaettu päätutkimuskysymyksen tuloksien kategorioiden mukaan.
+\textbf{TODO: Muistetaan numeroinnin vaihto muissakin osuuksissa. vanha -> uusi.numero}
 \pagebreak
 
 % Tämä esimerkki toimii
@@ -582,15 +586,20 @@ Tieteenalat on jaettu päätutkimuskysymyksen tuloksien kategorioiden mukaan.
     }
 
   % row labels
-  \foreach \a [count=\i] in {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17} {
-    \node[minimum size=8mm] at (0,-\i) {\a};
+  \foreach \a [count=\i] in {Agricultural,Biochemical,Chem. Engineering,Chemistry,Computer,Decision,Earth\&Planetary,Economical,Energy,Engineering,Environmental,Material,Mathematics,Medicine\&Dentistry,Neuroscience,Physics,Social} {
+    \node[minimum size=8mm] at (-2,-\i) {\a};
   }
 \label{Heatmap tieteenalat}
 \end{tikzpicture}
 
 \section{Löydetyt laadullisten simulaatioiden ohjeet ja työkalut} \label{tyokalut}
-Seuraavissa listoissa on esitetty tutkimuksista tunnistetut työkalut ja ohjeistukset laadullisten simulaatioiden luomiseen. Nämä ovat jaettu kahteen kategoriaan, ohjelmistot ja mallintamisen työkalut. Kategoriaan "ohjelmistot" kuuluvat tietokoneohjelmat ja ohjelmistot joiden avulla voidaan joko luoda tai ajaa laadullisia simulaatioita.
-Kategoriaan "mallintaminen" kuuluvat metodit ja algoritmit joiden avulla voidaan mallintaa laadullisia malleja.
+Seuraavissa listoissa on esitetty tutkimuksista tunnistetut työkalut ja ohjeistukset,
+joita ollaan käytetty laadullisten simulaatioiden luomisessa ja simuloinnissa. 
+Nämä ovat jaettu kahteen kategoriaan, ohjelmistot ja mallintamisen työkalut. 
+Kategoriaan "mallintaminen" kuuluvat metodit ja algoritmit joiden avulla ollaan mallinettu
+laadullisia malleja.
+Kategoriaan "ohjelmistot" kuuluvat tietokoneohjelmat ja ohjelmistot joiden avulla ollaan
+joko luotu tai ajettu laadullisia simulaatioita.
 
 \subsection{Mallintaminen}
 Mallintamisessa käytetyt metodit ja algoritmit on jaettu pääkysymyksen
@@ -599,6 +608,102 @@ päätieteenalaa  ja toinen mallintaminen merkitsee löydetyt ja tunnistetut
 metodit ja algoritmit. Mallintamiseen on merkitty myös 
 kuinka monta kertaa kyseinen työkalu on esiintynyt eri artikkeleissa.
 \textbf{TODO: Parempi esitystapa työkaluille}
+
+\subsection{Tavoitekategoria 1. mallintaminen}
+
+\begin{longtable}[h]{|p{5cm}|p{8cm}|}
+    \hline
+    \textbf{Tieteenala}    &    \textbf{Mallintaminen}\\
+    \hline
+    Agricultural and Biological Science & \begin{itemize}
+        \item discrete element method
+    \end{itemize} \\
+    \hline
+    Chemical Engineering & \begin{itemize}
+        \item Euler-Euler approach
+    \end{itemize} \\
+    \hline
+    Computer Science & \begin{itemize}
+        \item QSIM
+    \end{itemize} \\
+    \hline
+    Energy & \begin{itemize}
+        \item MARS-KS moving reactor model
+    \end{itemize} \\
+    \hline
+    Engineering & \begin{itemize}
+        \item fuzzy qualitative simulation algorithm
+        \item variational multiscale method
+    \end{itemize} \\
+    \hline
+    Environmental Science & \begin{itemize}
+        \item multi-objective modified seagull optimization algorithm
+        \item Jacob-Levins community matrix
+    \end{itemize} \\
+    \hline
+    Materials Science & \begin{itemize}
+        \item lattice Boltzmann method
+        \item molecular dynamics
+    \end{itemize} \\
+    \hline
+    Medicine and Dentistry & \begin{itemize}
+        \item finite element method
+    \end{itemize} \\
+    \hline
+    \caption{Kategorian 1.1. mallintaminen}
+    \label{table:Kategorian 1.1. mallintaminen}
+\end{longtable}
+
+\begin{longtable}[h]{|p{5cm}|p{8cm}|}
+    \hline
+    \textbf{Tieteenala}    &    \textbf{Mallintaminen}\\
+    \hline
+    Chemical Engineering & \begin{itemize}
+        \item signed directed graph
+    \end{itemize} \\
+    \hline
+    Computer Science & \begin{itemize}
+        \item agent-based approach
+    \end{itemize} \\
+    \hline
+    Environmental Science & \begin{itemize}
+        \item QSIM (2)
+        \item signed digraph
+    \end{itemize} \\
+    \hline
+    Physics and Astronomy & \begin{itemize}
+        \item Nose–Hoover dynamics
+    \end{itemize} \\
+    \hline
+    \caption{Kategorian 1.2. mallintaminen}
+    \label{table:Kategorian 1.2. mallintaminen}
+\end{longtable}
+
+\begin{longtable}[h]{|p{5cm}|p{8cm}|}
+    \hline
+    \textbf{Tieteenala}    &    \textbf{Mallintaminen}\\
+    \hline
+    Biochemistry, Genetics and Molecular Biology & \begin{itemize}
+        \item finite element method
+    \end{itemize} \\
+    \hline
+    Engineering & \begin{itemize}
+        \item Modified Nodal Analysis
+    \end{itemize} \\
+    \hline
+    Environmental Science & \begin{itemize}
+        \item slime mould algorithm
+    \end{itemize} \\
+    \hline
+    Medicine and Dentistry & \begin{itemize}
+        \item finite element method
+    \end{itemize} \\
+    \hline
+    \caption{Kategorian 1.3. mallintaminen}
+    \label{table:Kategorian 1.3. mallintaminen}
+\end{longtable}
+
+\subsection{Tavoitekategoria 2. mallintaminen}
 
 \begin{longtable}[h]{|p{5cm}|p{8cm}|}
     \hline
@@ -611,8 +716,8 @@ kuinka monta kertaa kyseinen työkalu on esiintynyt eri artikkeleissa.
         \item fuzzy set theory (2)
     \end{itemize} \\
     \hline
-    \caption{Kategorian 1 mallintaminen}
-    \label{table:Kategorian 1 mallintaminen}
+    \caption{Kategorian 2.1. mallintaminen}
+    \label{table:Kategorian 2.1. mallintaminen}
 \end{longtable}
 
 \begin{longtable}[h]{|p{5cm}|p{8cm}|}
@@ -642,128 +747,144 @@ kuinka monta kertaa kyseinen työkalu on esiintynyt eri artikkeleissa.
         \item discrete element method
     \end{itemize} \\
     \hline
-    \caption{Kategorian 2 mallintaminen}
-    \label{table:Kategorian 2 mallintaminen}
+    \caption{Kategorian 2.2. mallintaminen}
+    \label{table:Kategorian 2.2. mallintaminen}
 \end{longtable}
+
+\subsection{Tavoitekategoria 3. mallintaminen}
 
 \begin{longtable}[h]{|p{5cm}|p{8cm}|}
     \hline
     \textbf{Tieteenala}    &    \textbf{Mallintaminen}\\
     \hline
-    Agricultural and Biological Science & xxx \\
+    Agricultural and Biological Science & \begin{itemize}
+        \item Biomolecular Network Ontology
+    \end{itemize} \\
     \hline
     Chemical Engineering & \begin{itemize}
-        \item Euler-Euler approach
+        \item discrete element method
     \end{itemize} \\
     \hline
-    Computer Science & xxx \\
+    Computer Science & \begin{itemize}
+        \item agent-based approach
+        \item genetic algorithms
+    \end{itemize} \\
     \hline
-    Energy & xxx \\
+    Economics, Econometrics and Finance & \begin{itemize}
+        \item QSIM
+    \end{itemize} \\
+    \hline
+    Energy & \begin{itemize}
+        \item MARS-KS moving reactor model
+    \end{itemize} \\
     \hline
     Engineering & \begin{itemize}
-        \item fuzzy qualitative simulation algorithm
-        \item variational multiscale method
+        \item Causal Loop Diagrams
     \end{itemize} \\
     \hline
-    Environmental Science & xxx \\
+    Environmental Science & \begin{itemize}
+        \item signed digraph
+        \item multi-objective particle swarm optimization algorithm
+    \end{itemize} \\
     \hline
     Materials Science & \begin{itemize}
+        \item finite element method (2)
+        \item form particle difference method
         \item lattice Boltzmann method
-        \item molecular dynamics
+        \item finite-difference time-domain (FDTD) approach
+        \item elastoplastic coupling constitutive framework
     \end{itemize} \\
     \hline
-    Medicine and Dentistry & xxx \\
+    Physics and Astronomy & \begin{itemize}
+        \item finite element method
+    \end{itemize} \\
     \hline
-    \caption{Kategorian 3 mallintaminen}
-    \label{table:Kategorian 3 mallintaminen}
+    Social Science & \begin{itemize}
+        \item multi-agent qualitative simulation approach
+        \item agent-based approach
+    \end{itemize} \\
+    \hline
+    \caption{Kategorian 3.1. mallintaminen}
+    \label{table:Kategorian 3.1. mallintaminen}
 \end{longtable}
 
 \begin{longtable}[h]{|p{5cm}|p{8cm}|}
     \hline
     \textbf{Tieteenala}    &    \textbf{Mallintaminen}\\
     \hline
-    Agricultural and Biological Science & xxx \\
+    Agricultural and Biological Science & \begin{itemize}
+        \item signed digraph
+    \end{itemize} \\
     \hline
-    Chemical Engineering & xxx \\
+    Chemical Engineering & \begin{itemize}
+        \item Cause-Effect matrix
+        \item Signed Directed Graph (2)
+        \item state-based approach
+    \end{itemize} \\
     \hline
-    Computer Science & xxx \\
+    Computer Science & \begin{itemize}
+        \item GDE algorithm
+        \item SQMA (Situation-based Qualitative Modeling and Analysis)
+        \item Rough Set Theory
+    \end{itemize} \\
     \hline
-    Economics, Econometrics and Finance & xxx \\
+    Engineering & \begin{itemize}
+        \item QSIM
+        \item fuzzy qualitative simulation algorithm
+        \item variational multiscale method
+        \item Qualitative Archi Bond Graphs
+        \item Signed Directed Graph
+    \end{itemize} \\
     \hline
-    Energy & xxx \\
+    Environmental Science & \begin{itemize}
+        \item multi-objective particle swarm optimization algorithm
+    \end{itemize} \\
     \hline
-    Engineering & xxx \\
-    \hline
-    Environmental Science & xxx \\
-    \hline
-    Materials Science & xxx \\
-    \hline
-    Physics and Astronomy & xxx \\
-    \hline
-    Social Science & xxx \\
-    \hline
-    \caption{Kategorian 4 mallintaminen}
-    \label{table:Kategorian 4 mallintaminen}
+    \caption{Kategorian 3.2. mallintaminen}
+    \label{table:Kategorian 3.2. mallintaminen}
 \end{longtable}
 
 \begin{longtable}[h]{|p{5cm}|p{8cm}|}
     \hline
     \textbf{Tieteenala}    &    \textbf{Mallintaminen}\\
     \hline
-    Chemical Engineering & xxx \\
+    Agricultural and Biological Science & \begin{itemize}
+        \item QSIM
+        \item Biomolecular Network Ontology
+    \end{itemize} \\
     \hline
-    Computer Science & xxx \\
+    Chemical Engineering & \begin{itemize}
+        \item legacy piping and instrumentation diagrams
+        \item fuzzy set theory
+    \end{itemize} \\
     \hline
-    Environmental Science & xxx \\
+    Computer Science & \begin{itemize}
+        \item GDE algorithm
+        \item exogenization and equilibration techniques ?
+    \end{itemize} \\
     \hline
-    Physics and Astronomy & xxx \\
+    Engineering & \begin{itemize}
+        \item situation-operator modeling (SOM) technique
+        \item QSIM
+        \item qualitative fault isolation (QFI) framework
+        \item Fuzzy Inductive Reasoning
+    \end{itemize} \\
     \hline
-    \caption{Kategorian 5 mallintaminen}
-    \label{table:Kategorian 5 mallintaminen}
-\end{longtable}
-
-\begin{longtable}[h]{|p{5cm}|p{8cm}|}
+    Environmental Science & \begin{itemize}
+        \item stochastic social choice rules
+        \item DEVS formalism
+    \end{itemize} \\
     \hline
-    \textbf{Tieteenala}    &    \textbf{Mallintaminen}\\
+    Medicine and Dentistry & \begin{itemize}
+        \item QSIM
+    \end{itemize} \\
     \hline
-    Agricultural and Biological Science & xxx \\
+    Physics and Astronomy & \begin{itemize}
+        \item Unified Flow Solver?
+    \end{itemize} \\
     \hline
-    Chemical Engineering & xxx \\
-    \hline
-    Computer Science & xxx \\
-    \hline
-    Earth and Planetary Science & xxx \\
-    \hline
-    Engineering & xxx \\
-    \hline
-    Environmental Science & xxx \\
-    \hline
-    Materials Science & xxx \\
-    \hline
-    \caption{Kategorian 6 mallintaminen}
-    \label{table:Kategorian 6 mallintaminen}
-\end{longtable}
-
-\begin{longtable}[h]{|p{5cm}|p{8cm}|}
-    \hline
-    \textbf{Tieteenala}    &    \textbf{Mallintaminen}\\
-    \hline
-    Agricultural and Biological Science & xxx \\
-    \hline
-    Chemical Engineering & xxx \\
-    \hline
-    Computer Science & xxx \\
-    \hline
-    Engineering & xxx \\
-    \hline
-    Environmental Science & xxx \\
-    \hline
-    Medicine and Dentistry & xxx \\
-    \hline
-    Physics and Astronomy & xxx \\
-    \hline
-    \caption{Kategorian 7 mallintaminen}
-    \label{table:Kategorian 7 mallintaminen}
+    \caption{Kategorian 3.3. mallintaminen}
+    \label{table:Kategorian 3.3. mallintaminen}
 \end{longtable}
 
 \begin{longtable}[h]{|p{5cm}|p{8cm}|}
@@ -780,29 +901,15 @@ kuinka monta kertaa kyseinen työkalu on esiintynyt eri artikkeleissa.
     \hline
     Environmental Science & xxx \\
     \hline
-    \caption{Kategorian 8 mallintaminen}
-    \label{table:Kategorian 8 mallintaminen}
+    \caption{Kategorian 3.4. mallintaminen}
+    \label{table:Kategorian 3.4. mallintaminen}
 \end{longtable}
 
-\begin{longtable}[h]{|p{5cm}|p{8cm}|}
-    \hline
-    \textbf{Tieteenala}    &    \textbf{Mallintaminen}\\
-    \hline
-    Biochemistry, Genetics and Molecular Biology & xxx \\
-    \hline
-    Engineering & xxx \\
-    \hline
-    Environmental Science & xxx \\
-    \hline
-    Medicine and Dentistry & xxx \\
-    \hline
-    \caption{Kategorian 9 mallintaminen}
-    \label{table:Kategorian 9 mallintaminen}
-\end{longtable}
 
 \subsection{Ohjelmistot}
 Ohjelmistot on luokiteltu toteutettuihin simulaatioiden lähestymistapoihin. Mallintamisessa auttavat ohjelmat on myös merkitty omaksi luokaksi.
 
+\textbf{TODO: Onko tämä yhtään hyödyllinen?}
 Simulaatio-ohjelmat pysytään myös jakamaan toteutetun simulaatiotyypin mukaisesti:
 
 Agent-based simulations:
@@ -897,7 +1004,24 @@ Mallintamisessa auttavat ohjelmat:
 
 
 \chapter{Tulosten tulkitseminen}
+- Laadullinen simulaatio on kattava aihealue, joilta löytyy tutkimuksia monelta eri alalta.
 
+- Eniten laadullisilla simulaatioilla pyrittiin vähentämään tutkittavan kohteen tietoisuuden
+aukkoja.
+
+- Laadullisille simulaatioille ollaan myös kehittämässä paljon eri työkaluja ja metodeja.
+
+- Eniten laadullisia simulaatioita käytettiin chemical engineering, engineering ja materials sciencen aloilla.
+
+- Kartoituksen tieteenaloihin luottaminen tarvitsee sen, että luotetaan ScienceDirectin 
+ja tekoälyn määritelmiin.
+
+- ScienceDirectin tieteenalojen luokitukset ovat aika laajoja, jotta niihin voitaisiin 
+täydellisesti luottaa. Esim. "Agricultural and Biological" ja "Engineering".
+
+- QSIM on edelleen yleisin käytetty tapa mallintaa ja simuloida laadullisia simulaatioita.
+
+- Muuttaisiko useamman tietokannan käyttäminen näitä tuloksia? Tai aikavälin laajentaminen?
 
 \chapter{Yhteenveto}
 
@@ -906,7 +1030,6 @@ Mallintamisessa auttavat ohjelmat:
 
 \appendix
 \section{Aineistossa käytetyt tutkimukset}
-\textbf{TODO: miten saadaan viittaukset pysymään nätisti sivun rajoissa?}
 
 Abdul-Wahab, S A, A Elkamel, M A Al-Weshahi, and A S al Yahmadi. 2007. “Troubleshooting the Brine Heater of the MSF Plant Fuzzy Logic-Based Expert System.” Desalination 217 (1): 100–117. https://doi.org/https://doi.org/10.1016/j.desal.2007.01.014.
 
