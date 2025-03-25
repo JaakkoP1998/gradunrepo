@@ -41,7 +41,10 @@
   }
 \keywords{Qualitative research, Simulation, Qualitative simulation, Systematic mapping study}
 \tiivistelma{%
-  TODO
+  Määrällinen simulaatio tarvitsee paljon taustatietoa järjestelmän toiminnasta, kun
+  taas laadullinen simulaatio mahdollistaa simuloinnin, vaikka järjestelmän toiminnan 
+  tarkasta tiedossa on puutteita. Tässä tutkimuksessa toteutettiin kirjallisuuskartoitus
+  laadullisten simulaatioiden käytöstä tieteellisenä menetelmänä ja miten laadullisia simulaatioita pyritiin käyttämään kyseisissä tutkimuksissa. 
 }
 \abstract{%
   
@@ -58,9 +61,6 @@
 \mainmatter
 
 \chapter{Johdanto} \label{johdanto}
-\begin{comment}
-    Nämä ovat olleet ne perinteiset luokat. ainakin jotkut puhuvat laskennallisesta tieteestä kolmantena tutkimustyyppinä tai paradigmana. eli käytännössä teoreettisten mallien pohjalta rakennetuista numeerisista kokeista, joka pitkälti vastaa ainakin osaa tuosta määrällisestä simuloinnista
-\end{comment}
 Tieteellisillä tutkimuksilla on kaksi yleistä tutkimustyyppiä, empiirinen ja teoreettinen.
 Empiirisessä tutkimuksessa tehdään  ja kerätään havaintoja, sekä analysoidaan 
 ja mitataan tutkimuksen kohteena olevaa tapahtumaa tai järjestelmää. 
@@ -69,6 +69,8 @@ tyypiltään \textit{laadullisia (eng. qualitative)}
 tai \textit{määrällisiä (eng. quantitative)}. 
 Vertauksena teoreettisessa tutkimuksessa pyritään hahmottamaan 
 malleja ja rakenteita aiemman tutkimuskirjallisuuden pohjalta. 
+On olemass myös kolmas tutkimustyyppi nimeltään laskennallinen tiede, 
+mikä koostuu teoreettisten mallien pohjalta rakennetuista numeerisista kokeista. 
 
 Tämän tutkimuksen kannalta oleellisin ero määrällisen ja laadullisen tutkimuksen 
 välillä on tutkimuksesta saatu tulos.
@@ -84,9 +86,9 @@ Empiirisen tutkimuksen suhteen simuloinnilla voidaan tutkia ja kerätä havainto
 kohteena olevasta järjestelmästä, mutta simulointia ei 
 kuintenkaan voi kutsua aidosti empiiriseksi,
 koska simulointi tarvitsee vahvan teoreettisen pohjan taustalleen.
-\begin{comment}
-Olisiko vielä oleellisempaa, että simulointi ei ole suoraan kytköksissä siihen todellisuuteen, jota esittäviä tuloksia lopulta haetaan. Tämä riippumatta siitä, onko malli tiukan teoreettinen (ab initio) vai fenomenologinen sisältäen yksinkertaistuksia ja sovitteita.
-\end{comment}
+Simulointia voidaan myös pitää laskennallisen tieteen tutkimustyyppinä, 
+koska simulointi yleensä koostuu teoreettisten mallien numeerisista käsittelystä
+\textbf{TODO: sano paremmin}.
 Simulointia varten yleensä luodaan on ohjelma, 
 jolla pyritään jäljittelemään reaalimaailman järjestelmän käyttäytymistä.
 Tätä ohjelmaa kutsutaan simulaatioksi.
@@ -125,18 +127,17 @@ Tämän kaltaisia malleja kutsutaan laadullisiksi malleiksi.
 
 Laadullisille simulaatioille on myös toteutettu työkaluja, kuten Garp3-ohjelmisto \parencite{bredeweg2007garp3} ja QSIM-algoritmi \parencite{helgstrand2004qsim} ovat tarkoitettu laadullisten simulaatioiden toteutettamiseen. Lisäksi on myös useita laadullisia tutkimuksia, joissa on käytetty laadullisia simulaatioita, joko pää- tai sivumenetelmänä.
 
-Tämän tutkimuksen tavoitteena on selvittää miten laadullisia simulaatioita 
+Tämän tutkimuksen tavoitteena on selvittää miksi laadullisia simulaatioita 
 ollaan käytetty tieteellisissä tutkimuksissa. Tämän tiedon saamiseksi on
 toteutettu systemaattinen kirjallisuuskartoitus 
 laadullisten simulaatioiden käytöstä ja kerätyn aineiston perusteella vastataan 
-seuraavaan pääkysymykseen:
+seuraavaan kysymykseen:
 \begin{itemize}
     \item Millaisia tuloksia laadullisilla simulaatioilla pyritään hakemaan?
 \end{itemize}
-\begin{comment}
-Mietin kysyten järjestystä suhteessa toisiinsa. tavallaan nuo apukysymykset eivät kovinkaan selvästi tue itse pääkysymystä. apukysymykset vastaavat tavallaan kysymyksiin kuka (minkä alojen tutkijat), miten (millä työkaluilla) ja pääkysymys on enemmän miksi (tai osin mitä).
-\end{comment}
-Tämän kysymyksen vastaamiseen on myös luotu kaksi apukysymystä:
+
+Tutkimuksessa halutaan myös selvittää missä ja miten laadullisia simulaatioita
+ollaan käytetty. Tätä varten pyritään vastaamaan myös seuraaviin kysymyksiin:
 \begin{itemize}
     \item Minkä alan tutkimuksissa on eniten käytetty laadullisia simulaatioita?
     \item Mitä eri työkaluja löytyy laadullisten simulaatioiden luomiseen?
@@ -146,18 +147,21 @@ Luvussa 2 kerrotaan simulaatioista ja laadullisista simulaatioista yleisesti. Lu
 
 \chapter{Mallintaminen ja simulaatiot}
 \begin{comment}
-Teksti on nyt aika lakonista luettelemista. Tätä kannattaa laventaa enemmän esseen tyyliseksi. Numeroidut osat ovat lukuja ja niiden alalukuja, jotka sitten jakutuvat numeroimattomiksi kappaleiksi. Englannin chapter ei ole kappale vaan kappale on paragraph.
+Numeroidut osat ovat lukuja ja niiden alalukuja, jotka sitten jakutuvat numeroimattomiksi kappaleiksi. Englannin chapter ei ole kappale vaan kappale on paragraph.
 
 Konkreettisena ohjeena, välltäisin 1 virkkeen kaltaista suoraan osoittavaa lausetta. Tyylillisesti voisi aloittaa vaikka tähän tapaan: Sumulaatiot perustuvat aina malleihin. Mallien muodostamista kuttsutaan mallintamiseksi. Alaluvussa 2.1 avataan mallintamisen prosessia ja sen roolia osana simulointiin perustuvaa tutkimusta.....
-
-Ts vähän selitystä ja täytesanoja ja sitä kautta monimuotoisempaa tekstiä.
 \end{comment}
 Tässä luvussa käydään läpi gradulle oleellisten asioiden taustaa. 
-Kappaleessa \ref{mallintaminen} kerrotaan mallintamisesta 
-ja miksi se on oleellista simuloinnin näkökulmasta. 
-Kappale \ref{simulaatio} kertoo lyhyesti simulaation historiasta, kehityksestä ja erityyppisistä simulaatioista. 
-Kappale \ref{laadullinen simulaatio} kertoo mikä on laadullinen simulaatio, mitkä ovat sen käyttötarkoituksia ja mitä hyötyjä ja ongelmia laadullisen
-simulaation käytössä voi olla.
+Simulaatiot perustuvat aina malleihin. Mallien suunnittelemista ja luomista 
+kutsutaan mallintamiseksi. Alalussa \ref{mallintaminen} kerrotaan tarkemmin 
+mallintamisesta ja sen merkityksestä simuloinnin näkökulmasta. 
+Mallintamiseen tutustutta katsestetaan itse simulointia ja simulaatioita.
+Simulaatio on ollut käsitteenä jo pitkän aikaa, joten alaluvussa
+\ref{simulaatio} käydään lyhyesti läpi tutkimukselle relevantti historia, 
+kehitys ja mitä erityyppisiä simulaatioita on olemassa. 
+Alaluvussa \ref{laadullinen simulaatio} tutustutaan tarkemmin 
+mikä on laadullinen simulaatio, mitkä ovat sen käyttötarkoituksia 
+ja mitä hyötyjä laadullisen simulaation käytössä voi olla.
 
 \section{Mallintaminen} \label{mallintaminen}
 \begin{comment}
@@ -262,10 +266,7 @@ Laadullinen päättely on käytössä usealla eri tieteenalalla, kuten teköäly
 \textcite{QualitativeReasoning1997} mukaan laadullisen päättelyn hyötyjä ovat:
 \begin{itemize}
     \item Johtopäätöksien tekeminen puuttelisen tai laadullisen tiedon rajoissa.
-    \begin{comment}
-        Vähän outo lause, mitä tarkoittaa? Kannattaisiko näitä joka tapauksessa avata muutamalla virkkeellä ainakin siltä osin jos eivät ole itsestään selviä. Onko avattu lähteessä? ->
-    \end{comment}
-    \item Epätarkkojen yksityiskohtien, mutta todennäköisyydeltään todellisten ennusteiden tekemisessä.
+    \item Epätarkkojen yksityiskohtien, mutta todennäköisyydeltään todellisten ennusteiden tekemisessä.  \textbf{Vähän outo lause, mitä tarkoittaa? Kannattaisiko näitä joka tapauksessa avata muutamalla virkkeellä ainakin siltä osin jos eivät ole itsestään selviä. Onko avattu lähteessä?}
     \item Muiden mahdollisten tapahtumien helppo tutkiminen.
     \item Tulosten automaattinen tulkinta. 
 \end{itemize}
@@ -352,12 +353,6 @@ Laadullisten simulaatioiden luomiselle löytyy myös siihen tarkoitettuja ohjelm
 mallintamiseen tarkoitettu työkalu, jolla voidaan mallintaa, simuloida ja
 tarkastella halutun järjestelmän toimintaa.
 
-\begin{comment}
-\subsection{Ongelmat}
-\textcite{soundQualSimImpossible} mukaan täydellinen laadullinen simulaatio on mahdotonta.
-Tutkimus keskittyy suurimmin osin QSIM-algoritmin kritiikkiin, mutta \textcite{soundQualSimImpossible} esittivät myös yleisempiä ongelmia laadulliseen simulaatioon, kuten tutkijoilta puuttuu usein täydellinen tieto muotoillakseen tarkkoja numeerisia yhtälöitä ja laadullisessa päättelyssä voidaan käyttää heikkoja esityksiä epätäydellisten järjestelmien mallintamiseen.
-\end{comment}
-
 \chapter{Tutkimusasetelma}
 \begin{comment}
 Kuten edellisessä luvussa, vähän narratiivisempi tyyli.
@@ -380,9 +375,6 @@ aiheesta ei ole löytynyt aikaisempaa yleiskatsausta. Aiheeseesta on tehty tutki
 Gradun tavoitteena on saada kyseinen yleiskatsaus laadullisista simulaatioista systemaattisen kirjallisuuskartoitusta käyttäen, jotta saataisiin haluttu yleiskäsitys millä aloilla laadulliset simulaatioit ovat levinneet eniten, miten paljon laadullisten simulaatioiden luontiin ja mallintamiseen löytyy työkaluja ja ohjeita sekä minkäkaltaisia tuloksia laadullisilla simulaatioilla etsitään.
 
 \section{Tutkimusmenetelmä} \label{tutkimusmenetelmä}
-\begin{comment}
-Kyse on Kitchenhamin et al raportista, joka on julkaistu Keelen yliopistossa. Kannattaa silmäillä häneltä uudempiakin artikkeleita ihan vain ajantasaisuuden mielikuvan luomiseksi.
-\end{comment}
 Tutkielman tarkoituksena oli saada yleiskuva laadullisten simulaatioiden käytöstä
 tieteellisenä menetelmänä.
 \textcite{keele2007guidelines} mukaan  systemaattisella kirjallisuuskartoituksella saadaan laaja yleiskatsaus tutkimuskohteesta,
@@ -1066,6 +1058,8 @@ Mallintamisessa auttavat ohjelmat:
 
 
 \chapter{Tulosten tulkitseminen}
+
+\section{Laadullinen simulaation tavoitteet}
 - Laadullinen simulaatio on kattava aihealue, joilta löytyy tutkimuksia monelta eri alalta.
 
 - Eniten laadullisilla simulaatioilla pyrittiin vähentämään tutkittavan kohteen tietoisuuden
@@ -1074,6 +1068,7 @@ aukkoja.
 - Laadullisien simulaatioiden luomiselle ollaan myös parhaillaan kehittämässä paljon eri 
 työkaluja ja metodeja.
 
+\section{Laadullisen simulaation tieteenalat}
 - Eniten laadullisia simulaatioita käytettiin chemical engineering, engineering ja materials sciencen aloilla.
 
 - Kemiantekniikassa (chemical engineering) ja tekniikassa (engineering) yleisesti 
@@ -1091,6 +1086,14 @@ Päätösteoria (Decision Science) osittain on myös osa sosiaalisia tieteitä.
 Yksi syy tälle voi olla että muilla aloilla ei olla kiinnostuneita haittojen vaikutuksista,
 vaan ainoastaan niiden esiintymismahdollisuuksista.
 
+\section{Laadullisen simulaation työkalut}
+
+- QSIM on edelleen yleisin käytetty tapa mallintaa ja simuloida laadullisia simulaatioita.
+
+- Ohjelmistoissa yleisiä ovat Matlab, Garp3, COMSOL ja OpenFOAM. Näistä Matlab esiintyi 
+useimmiten eri tieteenaloilla ja tuloskategorioissa.
+
+\section{Tutkimuksen huomiot ja jatkotutkimus ehdotukset}
 - Kartoituksen tieteenaloihin luottaminen tarvitsee sen, että luotetaan ScienceDirectin 
 ja tekoälyn määritelmiin. Näistä voidaan luoda alustavia päätelmiä, mutta tarkempia
 toteamuksia varten pitäisi laajentaa ja tarkentaa hakua.
@@ -1099,11 +1102,6 @@ toteamuksia varten pitäisi laajentaa ja tarkentaa hakua.
 täydellisesti luottaa. Esim. "Agricultural and Biological" ja "Engineering".
 
 - Myös se, että tutkimus voi olla useaa tieteenalaa samaan aikaan täytyy ottaa huomioon.
-
-- QSIM on edelleen yleisin käytetty tapa mallintaa ja simuloida laadullisia simulaatioita.
-
-- Ohjelmistoissa yleisiä ovat Matlab, Garp3, COMSOL ja OpenFOAM. Näistä Matlab esiintyi 
-useimmiten eri tieteenaloilla ja tuloskategorioissa.
 
 - Muuttaisiko useamman hakutietokannan käyttäminen näitä tuloksia? Tai aikavälin laajentaminen?
 
