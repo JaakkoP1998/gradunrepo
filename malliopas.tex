@@ -87,8 +87,7 @@ kohteena olevasta järjestelmästä, mutta simulointia ei
 kuintenkaan voi kutsua aidosti empiiriseksi,
 koska simulointi tarvitsee vahvan teoreettisen pohjan taustalleen.
 Simulointia voidaan myös pitää laskennallisen tieteen tutkimustyyppinä, 
-koska simulointi yleensä koostuu teoreettisten mallien numeerisista käsittelystä
-\textbf{TODO: sano paremmin}.
+koska simulointi vahvasti pohjautuu teoreettisten mallien numeerisista käsittelystä.
 Simulointia varten yleensä luodaan on ohjelma, 
 jolla pyritään jäljittelemään reaalimaailman järjestelmän käyttäytymistä.
 Tätä ohjelmaa kutsutaan simulaatioksi.
@@ -155,7 +154,7 @@ Tässä luvussa käydään läpi gradulle oleellisten asioiden taustaa.
 Simulaatiot perustuvat aina malleihin. Mallien suunnittelemista ja luomista 
 kutsutaan mallintamiseksi. Alalussa \ref{mallintaminen} kerrotaan tarkemmin 
 mallintamisesta ja sen merkityksestä simuloinnin näkökulmasta. 
-Mallintamiseen tutustutta katsestetaan itse simulointia ja simulaatioita.
+Tämän jälkeen katsestetaan itse simulointia ja simulaatioita.
 Simulaatio on ollut käsitteenä jo pitkän aikaa, joten alaluvussa
 \ref{simulaatio} käydään lyhyesti läpi tutkimukselle relevantti historia, 
 kehitys ja mitä erityyppisiä simulaatioita on olemassa. 
@@ -164,15 +163,15 @@ mikä on laadullinen simulaatio, mitkä ovat sen käyttötarkoituksia
 ja mitä hyötyjä laadullisen simulaation käytössä voi olla.
 
 \section{Mallintaminen} \label{mallintaminen}
-\begin{comment}
-Tämä alaluku on aika tiivistä. Sinänsä toki ok, mutta esim jo input-output ajattelu edellyttää, että on ensiksi tunnistettu paremmin järjestelmän/systeemin käsite, oliona, joka on tarkasteltavissa erillisenä muusta ympäristöstä ja jonka sidokset ympäristöön voidaan jakaa input ja output termeihin (eli input, kun ympäristö vaikuttaa systeemiin ja output, kun systeemi vaikuttaa (tai siitä näkyy) ympäristöön. Tämän päälle tulee sitten sen systeemin malli, jossa yleensä on mallin sisäisiä suureita, joita voi mahdollisesti vaihdella (sekä laadullisesti että määrällisesti).
-\end{comment}
 Mallintaminen on prosessi, jolla pyritään tuottamaan malli, joka jäljittelee 
 ja edustaa kiinostuksena olevan järjestelmän toimintaa \parencite{maria1997introduction}. 
+Mallintamisen kontekstissa järjestelmä viittaa reaalimaailman osioon, 
+joka on tarkasteltavissa erillisenä muusta ympäristöstä.
 Mallin tarkoitus on auttaa ennustamaan järjestelmän toimintaa ja muutoksia.
 Esimerkkinä malli voi toimia \textit{input-output} ajattelun kautta, 
 eli mallille annetaan \textit{syötearvoja (eng. input)} ja malli antaa näiden perusteella
 \textit{tulosarvoja (eng. output)} mitä mallin mukaan tulee tapahtumaan.
+
 \textcite{maria1997introduction} mukaan parhaimmat mallit pitävät 
 sisällään kiinnostuksena olevan järjestelmän 
 ominaisuuksista ja toiminnallisuuksista vain tarpeelliset, 
@@ -211,7 +210,9 @@ joka on saanut alkunsa 1950-luvussa.
 %
 
 \begin{comment}
-Kyllähän aikariippuvillakin malleilla on syöte ja tulos. Niillä on vain monimutkaisempi sisäinen tila, joka muistaa nykyhetkeä aiempien syötteiden vaikutusta. Perinteinen Monte-Carlo (funktion/todennäköisyysjakauman integrointina) menee tuohon staatiseen syöte-tulos kategoriaan. Toisaalta MCMC on luonteeltaanhistoriaa mukanaan kantava prosessi vaikka silläkin lopulta tähdätään  staattiseen (stokastiseen) tulokseen.
+Kyllähän aikariippuvillakin malleilla on syöte ja tulos. 
+Niillä on vain monimutkaisempi sisäinen tila, joka muistaa nykyhetkeä aiempien syötteiden vaikutusta. 
+Perinteinen Monte-Carlo (funktion/todennäköisyysjakauman integrointina) menee tuohon staatiseen syöte-tulos kategoriaan. Toisaalta MCMC on luonteeltaanhistoriaa mukanaan kantava prosessi vaikka silläkin lopulta tähdätään  staattiseen (stokastiseen) tulokseen.
 \end{comment}
 Simulaatiotyypit voidaan jakaa syöte-tulos-malleihin 
 ja aikariippuvaisiin malleihin. Esimerkki syöte-tulos simulaatiosta on
@@ -533,13 +534,21 @@ Kappale \ref{tyokalut} käy läpi artikkeleista löydetyt
 ja tunnistetut algoritmit, ohjemistot ja ohjelmistokehykset. 
 
 \section{Laadullisen simuloinnin tavoitteet} \label{simulaatiotulokset}
-\begin{comment}
-Jos tämä oli alussa kuvattu pääkysymykseksi, käsittely jää aika ohueksi.
-\end{comment}
-Taulukko \ref{table: tuloksien kategoriat} esittää aineiston tutkimuksista 
+Tässä alaluvussa on tarkoitus esittää aineiston tutkimuksista 
 löydetyt tavoitteet, joita laadullisilla simulaatioilla pyrittiin hakemaan.
+Menetelmä, miten laadullisten simulaatioiden tavoitteita haettiin 
+ja tunnistettiin aineiston artikkeleista on kuvattu tarkemmin 
+aiemmassa alaluvussa \ref{tiedon keruu}.
 Tutkimuksen etsityt tulokset voivat sopia myös useampaan eri tavoite-kategoriaan
-samaan aikaan. Löydetyt tavoite-kategoriat voidaan jakaa 3 eri osioon. 
+samaan aikaan. Löydetyistä tavoite-kategorioista esiintyi samankaltaisuuksia, 
+minkä perusteella ne voidaan jakaa kolmeen osioon:
+\begin{enumerate}
+    \item Tutkittavan järjestelmän toiminnan selkentäminen
+    \item Tutkittavan järjestelmän vian tai epätoivotun toiminnan selvittäminen
+    \item Menetelmien tutkiminen (uusi menetelmä ja/tai menetelmien vertailu)
+\end{enumerate}
+
+Tarkemmat lopulliset tavoitekategoriat on esitelty taulukossa \ref{table: tuloksien kategoriat}
 
 \begin{table}[h]
 \resizebox{\textwidth}{!}{%
@@ -586,33 +595,29 @@ Päätieteenalojen sisälle porautumista voisi miettiä myös sen edellä esitet
 \end{comment}
 Löydetyt tieteenalat ja artikkelien lukumäärät on esitetty seuraavissa taulukoissa.
 Tieteenalat on jaettu päätutkimuskysymyksen tuloksien kategorioiden mukaan.
-\textbf{TODO: Muistetaan numeroinnin vaihto muissakin osuuksissa. vanha -> uusi.numero}
-\pagebreak
+Koska joissain tieteenaloissa oli vain muutama artikkeli, 
+harvempia tieteenaloja yhdistettiin sopivuuden mukaan laajempiin aloihin.
+\textbf{TODO: Kirjoita nätimmin.}
+Chemistry, chemical engineering yhdistettiin kemian tieteisiiin.
+Biochemical, medicine, neuroscience yhdistettiin laajempaan Lifescience osioon.
+Earth \& Planetary, Environmental yhdistettiin samaan, 
+koska Earth \& Planetary on osana ympäristöntieteitä.
+Mathematics, Computer science yhdistettiin, koska matematiikan tutkimukset olivat myös osittain tietotekniikkaa.
+Decision, economics, social yhdistettiin laajempaan alaan.
 
-\begin{comment}
-Tieteenalat nousivat kai tekoälyn ehdottamina. Koska osalle aloista kertyy vain muutama osuma, voisi olla perusteltua ryhmitellä niitä vähän isommiksi kokonaisuuksiksi, jolloin kuvio ehkä selkenisi. Ainakin 'life science' (biochemical, medicine, neuroscience) voisi olla mielekäs. Decision, economics, social mahdollisesti toinen. samalla tulisi tutkijan omaakin ajattelua mukaan eikä vaan suoraan aineistosta tai algoritmeistä seuraavan datan raportointia. sama jaottelu sitenehkä vähentäisi taulukoiden määrää myöhemminkin.
-\end{comment}
-
-% Tämä esimerkki toimii
+%\textbf{TODO: Muistetaan numeroinnin vaihto muissakin osuuksissa. vanha -> uusi.numero}
 \begin{tikzpicture}[scale=0.8]
     \foreach \y [count=\n] in {
         {9,1,1,0,0,2,9,6,0},
-        {1,0,1,0,0,0,0,0,0},
-        {4,2,0,0,11,2,4,10,1},
-        {4,0,0,0,0,3,0,0,0},
-        {1,1,0,0,0,3,5,5,1},
-        {0,0,0,0,0,0,0,1,1},
-        {2,1,0,0,0,2,2,1,0},
-        {0,1,0,0,0,2,0,0,0},
+        {8,2,0,0,11,5,4,10,1},
+        {2,1,1,0,0,3,5,5,1},
         {1,9,0,0,0,3,0,0,0},
         {5,1,1,0,14,4,9,10,1},
-        {8,0,3,0,0,3,4,3,1},
+        {10,1,3,0,0,5,6,4,1},
+        {4,0,3,0,0,1,0,1,0},
         {15,3,1,0,2,15,2,0,0},
-        {1,0,1,0,0,0,0,0,0},
-        {2,0,2,0,0,0,0,1,0},
-        {1,0,0,0,0,1,0,0,0},
         {1,1,0,0,0,2,1,1,0},
-        {0,0,0,5,0,2,0,0,0},
+        {0,1,0,5,0,4,0,1,1},
     } {
       % column labels
       \foreach \n [count=\i] in {1.1,1.2,1.3,2.1,2.2,3.1,3.2,3.3,3.4} {
@@ -625,10 +630,10 @@ Tieteenalat nousivat kai tekoälyn ehdottamina. Koska osalle aloista kertyy vain
     }
 
   % row labels
-  \foreach \a [count=\i] in {Agricultural,Biochemical,Chem. Engineering,Chemistry,Computer,Decision,Earth\&Planetary,Economical,Energy,Engineering,Environmental,Material,Mathematics,Medicine\&Dentistry,Neuroscience,Physics,Social} {
+  \foreach \a [count=\i] in {Agricultural,Chemical Sciences,Computer Sciences,Energy,Engineering,Environmental,Lifescience,Materials Science,Physics,Social and Psychology} {
     \node[minimum size=8mm] at (-2,-\i) {\a};
   }
-\label{Heatmap tieteenalat}
+\label{Heatmap tieteenalat v.2}
 \end{tikzpicture}
 
 \section{Löydetyt laadullisten simulaatioiden ohjeet ja työkalut} \label{tyokalut}
@@ -1069,7 +1074,7 @@ aukkoja.
 työkaluja ja metodeja.
 
 \section{Laadullisen simulaation tieteenalat}
-- Eniten laadullisia simulaatioita käytettiin chemical engineering, engineering ja materials sciencen aloilla.
+- Eniten laadullisia simulaatioita käytettiin chemical engineering, engineering, environmental ja materials sciencen aloilla.
 
 - Kemiantekniikassa (chemical engineering) ja tekniikassa (engineering) yleisesti 
 pyrittiin usein selvittämään tuotantoprosessissa  mahdollisia ilmestyviä vikoja tai riskejä 
@@ -1078,6 +1083,9 @@ ja näiden selvittämistä varten luotiin eri työkaluja sekä menetelmiä.
 - Materiaalien tutkimustieteessä (Materials science) pyrittiin selvästi 
 tutkimaan materiaaleihin  liittyvistä tietojen ja datan aukkoisuutta, ja näitä tuloksia usein 
 vertailtiin reaalimaailman testeihin.
+
+- Fysiikassa oli erittäin vähän tutkimuksia, vaikka laadullinen simulointi on koettu hyödylliseksi fysiikan alalla \textbf{TODO: muista lähde}. Osittain tälle syynä voi olla
+että puhutaan usein laadullisesta fysiikasta (Qualitative Physics), jolloinka tutkimuksia voi helposti jäädä aineiston ulkopuolelle (hakusana: qualitative simulation).
 
 - Sosiaalisesta tieteistä (Social Science) löytyi suurimmalta osalta tutkimuksia, 
 jotka pyrkivät selvittämään miten mahdollinen haitallinen käyttäytyminen voi vaikuttaa
@@ -1104,6 +1112,8 @@ täydellisesti luottaa. Esim. "Agricultural and Biological" ja "Engineering".
 - Myös se, että tutkimus voi olla useaa tieteenalaa samaan aikaan täytyy ottaa huomioon.
 
 - Muuttaisiko useamman hakutietokannan käyttäminen näitä tuloksia? Tai aikavälin laajentaminen?
+
+- Tietokannan hakuun olisi voinut lisätä hakusanoiksi "Qualitative Reasoning" ja "Qualitative Physics" AND-ehdolla. Näiden termien suureen esiintymismäärään törmättiin vasta aineiston analyysin vaiheessa ja olisi vaatinut lisäaikaa gradun kirjoittamiselle.
 
 - Mahdollisia jatkotutkimuskohteita: Kirjallisuuskartoituksen parantaminen 
 (laajempi haku, tarkemmat tieteenalat), 
