@@ -17,6 +17,7 @@
 \usepackage{float} % Pitäisi auttaa taulukoiden asettelussa
 \usepackage{longtable} % Isommille taulukoille
 \usepackage{tikz} % Heatmapin tekemiselle
+\usepackage{makecell}
 
 % HUOM! Tämän tulee olla viimeinen \usepackage koko dokumentissa!
 \usepackage[bookmarksopen,bookmarksnumbered,linktocpage]{hyperref}
@@ -25,6 +26,10 @@
 
 % Tämä auttaa taulukoiden listojen tekemisessä
 \newcommand{\tabitem}{~~\llap{\textbullet}~~}
+\renewcommand\theadalign{bc}
+\renewcommand\theadfont{\bfseries}
+\renewcommand\theadgape{\Gape[4pt]}
+\renewcommand\cellgape{\Gape[4pt]}
 % Estää tekstin pommpimisen marginaalien yli, mutta voi aiheuttaa muita ongelmia.
 \sloppy
 
@@ -190,7 +195,8 @@ aikaisempiin askeleihin perustuen, sekä validoitaan. Lopuksi mallin toiminta ja
 
 \section{Simulaatio} \label{simulaatio}
 \begin{comment}
-Käytännössä tämä alaluku on vahvasti sidoksissa edelliseen. Mikä on sitten oikea jako näiden välillä eri aihepiirien osalta, onkin vaikeampi kysymys. Missä määrin simulaatioiden tyypit ovat suoraan sidoksissa mallien tyyppeihin, missä määrin samalla mallirakenteella voi toteuttaa erityyppisiä simulointeja.
+Käytännössä tämä alaluku on vahvasti sidoksissa edelliseen. Mikä on sitten oikea jako näiden välillä eri aihepiirien osalta, onkin vaikeampi kysymys. 
+Missä määrin simulaatioiden tyypit ovat suoraan sidoksissa mallien tyyppeihin, missä määrin samalla mallirakenteella voi toteuttaa erityyppisiä simulointeja.
 \end{comment}
 Simulaatio viittaa reaalimaailman prosessin tai 
 järjestelmän jäljittelyyn \parencite{banks1999introduction}. 
@@ -203,15 +209,10 @@ joka on saanut alkunsa 1950-luvussa.
     {HistoryOfSimulation}%
     {historyOfSimulation1996}
 \relax
-%
 
-\begin{comment}
-Kyllähän aikariippuvillakin malleilla on syöte ja tulos. 
-Niillä on vain monimutkaisempi sisäinen tila, joka muistaa nykyhetkeä aiempien syötteiden vaikutusta. 
-Perinteinen Monte-Carlo (funktion/todennäköisyysjakauman integrointina) menee tuohon staatiseen syöte-tulos kategoriaan. Toisaalta MCMC on luonteeltaanhistoriaa mukanaan kantava prosessi vaikka silläkin lopulta tähdätään  staattiseen (stokastiseen) tulokseen.
-\end{comment}
-Simulaatiotyypit voidaan jakaa syöte-tulos-malleihin 
-ja aikariippuvaisiin malleihin. Esimerkki syöte-tulos simulaatiosta on
+Simulaatiotyypit voidaan jakaa aikariippuvaisiin ja ei-aikariipuvaisiin malleihin.
+Yksinkertainen esimerkki ei-aikariippuvaisesta simulaatiosta on esimerkiksi staattinen 
+syöte-tulos
 \textit{Monte Carlo simulaatio}, joka on yksi varhaisimmista simulaatiomenetelmistä
 \parencites%
     {historyOfSimulation1996}%
@@ -262,8 +263,9 @@ voidaan tehdä ennustuksia ja johtopäätöksiä fyysisestä järjestelmästä p
 Laadullinen päättely on käytössä usealla eri tieteenalalla, kuten teköälyn \parencite[luku~35]{qualitativeReasoning2014} tai fysiikan aloilla \parencite{QualitativePhysics1988}.
 \textcite{QualitativeReasoning1997} mukaan laadullisen päättelyn hyötyjä ovat:
 \begin{itemize}
-    \item Johtopäätöksien tekeminen puuttelisen tai laadullisen tiedon rajoissa.
-    \item Epätarkkojen yksityiskohtien, mutta todennäköisyydeltään todellisten ennusteiden tekemisessä.  \textbf{Vähän outo lause, mitä tarkoittaa? Kannattaisiko näitä joka tapauksessa avata muutamalla virkkeellä ainakin siltä osin jos eivät ole itsestään selviä. Onko avattu lähteessä?}
+    \item Puuttelisen tai laadullisen tiedon käsittely.
+    \item Tarkkojen ennusteiden ja johtopäätösten tekeminen, 
+    vaikka täydellistä numeerista tietoa ei ole saatavilla.
     \item Muiden mahdollisten tapahtumien helppo tutkiminen.
     \item Tulosten automaattinen tulkinta. 
 \end{itemize}
@@ -301,10 +303,8 @@ Näistä simulaatioista käytetään termiä hybridimalli, tai
 Puoli-määrällinen simulaatio yhdistää laadullisen ja määrällisen simulaatiot
 kompensoidakseen näiden heikkouksia \parencite{semiHybrid1997qualitative}.
 
-\subsection{Hyödyt}
+\subsection{Laadullisen simulaation hyödyt}
 \begin{comment}
-Hyödyt on aika yleinen otsikkoja toisaalta sisällöt ovat myös aika ylimalkaisia. Pystyykö tätä avaamaan paremmin. 
-
 Jo määrällisessäkin simuloinnissa on usein tarve mm herkkyysanalyysille, jolla arvioidaan eri parametreissa olevien epävarmuuksien vaikutusta tulosmuuttujiin (ja joskus tämä on määrällisen simuloinnin tavoitekin). 
 Vastaavasti tästä voi johtaa laadullisen tulosen sille, onko jonkin parametrin tai ilmiön tarkempi kuvaus tarpeen vai voiko rauhassa yksinkertaistaa.
 \end{comment}
@@ -312,6 +312,15 @@ Laadullisella simuloinnilla on tietysti samat yleiset hyödyt kuin muilla simula
 Laadullisella simulaatiolla voidaan myös varmistaa, että järjestelmän
 ominaisuuksien laadullinen kuvaus on toimiva ja hyödyllinen 
 laadullisen päättelyn mielessä \parencite{kuipers1986qualitative}.
+
+Laadullinen simulaatio on käytössä eri tieteenaloilla.
+Esimerkiksi tekniikan aloilla laadullisella simulaatiolla voidaan toteuttaa
+\textit{vian diagnoosia (eng. Fault Diagnosis)} \parencite{QualitativeReasoning1997},
+jossa pyritään selvittämään järjestelmässä esiintyviä vikojen syitä ja mahdollisuuksia, 
+ennen kuin vika pääsee tapahtumaan.
+Ympäristötieteessä laadullisella simulaatiolla voidaan analysoida ja ennustaa
+ympäristön muutoksen vaikutuksia kasvien lajeihin ja elinympäristöön \parencite{qualiAnalysisEnviron2010}.
+Lääketieteessä taas laadullisella simulaatio voi auttaa tutkimaan potilaan kuntoa analysoimalla laadullisia potilastietoja ja luomalla mahdollisia diagnooseja \parencite{QualitativeReasoning1997}. \textbf{TODO: tarkista lähde.}
 
 Simulaatiomallin on mahdollista toteuttaa sekä laadullisia, 
 että määrällisiä ominaisuuksia samaan aikaan. 
@@ -629,7 +638,7 @@ nimityksellä "Social and Psychology".
     }
 
   % row labels
-  \foreach \a [count=\i] in {Agricultural,Chemical Sciences,Computer Sciences,Energy,Engineering,Environmental,Lifescience,Materials Science,Physics,Social and Psychology} {
+  \foreach \a [count=\i] in {Agricultural,Chemical Sciences,Computer Sciences,Energy,Engineering,Environmental,Lifescience,Materials Science,Physics and Astronomy,Social and Psychology} {
     \node[minimum size=8mm] at (-2,-\i) {\a};
   }
 \label{Heatmap tieteenalat v.2}
@@ -645,14 +654,10 @@ Kategoriaan "ohjelmistot" kuuluvat tietokoneohjelmat ja ohjelmistot joiden avull
 joko luotu tai ajettu laadullisia simulaatioita.
 
 \subsection{Mallintaminen}
-Mallintamisessa käytetyt metodit ja algoritmit on jaettu pääkysymyksen
-kategorioihin tieteenaloittain. Taulukossa ensimmäinen pylväs merkitsee
+Mallintamisessa käytetyt metodit ja algoritmit on jaettu kolmeen tavoitekategoriaan tieteenaloittain. Taulukossa ensimmäinen pylväs merkitsee
 päätieteenalaa  ja toinen mallintaminen merkitsee löydetyt ja tunnistetut 
 metodit ja algoritmit. Mallintamiseen on merkitty myös 
 kuinka monta kertaa kyseinen työkalu on esiintynyt eri artikkeleissa.
-\textbf{TODO: Parempi esitystapa työkaluille}
-
-\subsection{Tavoitekategoria 1. mallintaminen}
 
 \begin{longtable}[h]{|p{5cm}|p{8cm}|}
     \hline
@@ -664,10 +669,12 @@ kuinka monta kertaa kyseinen työkalu on esiintynyt eri artikkeleissa.
     \hline
     Chemical Engineering & \begin{itemize}
         \item Euler-Euler approach
+        \item signed directed graph
     \end{itemize} \\
     \hline
     Computer Science & \begin{itemize}
         \item QSIM
+        \item agent-based approach
     \end{itemize} \\
     \hline
     Energy & \begin{itemize}
@@ -677,11 +684,15 @@ kuinka monta kertaa kyseinen työkalu on esiintynyt eri artikkeleissa.
     Engineering & \begin{itemize}
         \item fuzzy qualitative simulation algorithm
         \item variational multiscale method
+        \item Modified Nodal Analysis
     \end{itemize} \\
     \hline
     Environmental Science & \begin{itemize}
         \item multi-objective modified seagull optimization algorithm
         \item Jacob-Levins community matrix
+        \item slime mould algorithm
+        \item QSIM (2)
+        \item signed digraph
     \end{itemize} \\
     \hline
     Materials Science & \begin{itemize}
@@ -693,74 +704,16 @@ kuinka monta kertaa kyseinen työkalu on esiintynyt eri artikkeleissa.
         \item finite element method
     \end{itemize} \\
     \hline
-    \caption{Kategorian 1.1. mallintaminen}
-    \label{table:Kategorian 1.1. mallintaminen}
-\end{longtable}
-
-\begin{longtable}[h]{|p{5cm}|p{8cm}|}
-    \hline
-    \textbf{Tieteenala}    &    \textbf{Mallintaminen}\\
-    \hline
-    Chemical Engineering & \begin{itemize}
-        \item signed directed graph
-    \end{itemize} \\
-    \hline
-    Computer Science & \begin{itemize}
-        \item agent-based approach
-    \end{itemize} \\
-    \hline
-    Environmental Science & \begin{itemize}
-        \item QSIM (2)
-        \item signed digraph
+    Lifescience & \begin{itemize}
+        \item finite element method (2)
     \end{itemize} \\
     \hline
     Physics and Astronomy & \begin{itemize}
         \item Nose–Hoover dynamics
     \end{itemize} \\
     \hline
-    \caption{Kategorian 1.2. mallintaminen}
-    \label{table:Kategorian 1.2. mallintaminen}
-\end{longtable}
-
-\begin{longtable}[h]{|p{5cm}|p{8cm}|}
-    \hline
-    \textbf{Tieteenala}    &    \textbf{Mallintaminen}\\
-    \hline
-    Biochemistry, Genetics and Molecular Biology & \begin{itemize}
-        \item finite element method
-    \end{itemize} \\
-    \hline
-    Engineering & \begin{itemize}
-        \item Modified Nodal Analysis
-    \end{itemize} \\
-    \hline
-    Environmental Science & \begin{itemize}
-        \item slime mould algorithm
-    \end{itemize} \\
-    \hline
-    Medicine and Dentistry & \begin{itemize}
-        \item finite element method
-    \end{itemize} \\
-    \hline
-    \caption{Kategorian 1.3. mallintaminen}
-    \label{table:Kategorian 1.3. mallintaminen}
-\end{longtable}
-
-\subsection{Tavoitekategoria 2. mallintaminen}
-
-\begin{longtable}[h]{|p{5cm}|p{8cm}|}
-    \hline
-    \textbf{Tieteenala}    &    \textbf{Mallintaminen}\\
-    \hline
-    Social Science & \begin{itemize}
-        \item GA-BP (Genetic Algorithm – Back Propagation Neural Network Algorithm)
-        \item QSIM (4)
-        \item catastrophe theory
-        \item fuzzy set theory (2)
-    \end{itemize} \\
-    \hline
-    \caption{Kategorian 2.1. mallintaminen}
-    \label{table:Kategorian 2.1. mallintaminen}
+    \caption{Mallintamisen työkalut, tavoitekategoria 1.}
+    \label{table:tavoitekategoria 1.}
 \end{longtable}
 
 \begin{longtable}[h]{|p{5cm}|p{8cm}|}
@@ -790,27 +743,54 @@ kuinka monta kertaa kyseinen työkalu on esiintynyt eri artikkeleissa.
         \item discrete element method
     \end{itemize} \\
     \hline
-    \caption{Kategorian 2.2. mallintaminen}
-    \label{table:Kategorian 2.2. mallintaminen}
+    Social Science & \begin{itemize}
+        \item GA-BP (Genetic Algorithm – Back Propagation Neural Network Algorithm)
+        \item QSIM (4)
+        \item catastrophe theory
+        \item fuzzy set theory (2)
+    \end{itemize} \\   
+    \hline
+    \caption{Mallintamisen työkalut, tavoitekategoria 2.}
+    \label{table:tavoitekategoria 2.}
 \end{longtable}
-
-\subsection{Tavoitekategoria 3. mallintaminen}
 
 \begin{longtable}[h]{|p{5cm}|p{8cm}|}
     \hline
     \textbf{Tieteenala}    &    \textbf{Mallintaminen}\\
     \hline
     Agricultural and Biological Science & \begin{itemize}
-        \item Biomolecular Network Ontology
+        \item Biomolecular Network Ontology (2)
+        \item signed digraph
+        \item QSIM
     \end{itemize} \\
     \hline
     Chemical Engineering & \begin{itemize}
         \item discrete element method
+        \item Cause-Effect matrix
+        \item Signed Directed Graph (2)
+        \item state-based approach
+        \item legacy piping and instrumentation diagrams ?
+        \item fuzzy set theory
+        \item Extended SDG (Signed Directed Graph)
+        \item signed digraph
+        \item QSIM
+        \item fault trees
     \end{itemize} \\
     \hline
     Computer Science & \begin{itemize}
         \item agent-based approach
         \item genetic algorithms
+        \item GDE algorithm
+        \item SQMA (Situation-based Qualitative Modeling and Analysis)
+        \item Rough Set Theory
+        \item GDE algorithm
+        \item exogenization and equilibration techniques ?
+        \item Signed Directed Graph
+    \end{itemize} \\
+    \hline
+    Decision Science & \begin{itemize}
+        \item GA-BP (Genetic Algorithm – Back Propagation Neural Network Algorithm)
+        \item QSIM
     \end{itemize} \\
     \hline
     Economics, Econometrics and Finance & \begin{itemize}
@@ -823,11 +803,23 @@ kuinka monta kertaa kyseinen työkalu on esiintynyt eri artikkeleissa.
     \hline
     Engineering & \begin{itemize}
         \item Causal Loop Diagrams
+        \item QSIM (3)
+        \item fuzzy qualitative simulation algorithm
+        \item variational multiscale method
+        \item Qualitative Archi Bond Graphs
+        \item Signed Directed Graph
+        \item situation-operator modeling (SOM) technique
+        \item qualitative fault isolation (QFI) framework
+        \item Fuzzy Inductive Reasoning
+        \item Dynamic trend analysis
     \end{itemize} \\
     \hline
     Environmental Science & \begin{itemize}
         \item signed digraph
-        \item multi-objective particle swarm optimization algorithm
+        \item multi-objective particle swarm optimization algorithm (2)
+        \item stochastic social choice rules
+        \item DEVS formalism ?
+        \item Jacob-Levins community matrix
     \end{itemize} \\
     \hline
     Materials Science & \begin{itemize}
@@ -838,8 +830,13 @@ kuinka monta kertaa kyseinen työkalu on esiintynyt eri artikkeleissa.
         \item elastoplastic coupling constitutive framework
     \end{itemize} \\
     \hline
+    Medicine and Dentistry & \begin{itemize}
+        \item QSIM
+    \end{itemize} \\
+    \hline
     Physics and Astronomy & \begin{itemize}
         \item finite element method
+        \item Unified Flow Solver?
     \end{itemize} \\
     \hline
     Social Science & \begin{itemize}
@@ -847,120 +844,8 @@ kuinka monta kertaa kyseinen työkalu on esiintynyt eri artikkeleissa.
         \item agent-based approach
     \end{itemize} \\
     \hline
-    \caption{Kategorian 3.1. mallintaminen}
-    \label{table:Kategorian 3.1. mallintaminen}
-\end{longtable}
-
-\begin{longtable}[h]{|p{5cm}|p{8cm}|}
-    \hline
-    \textbf{Tieteenala}    &    \textbf{Mallintaminen}\\
-    \hline
-    Agricultural and Biological Science & \begin{itemize}
-        \item signed digraph
-    \end{itemize} \\
-    \hline
-    Chemical Engineering & \begin{itemize}
-        \item Cause-Effect matrix
-        \item Signed Directed Graph (2)
-        \item state-based approach
-    \end{itemize} \\
-    \hline
-    Computer Science & \begin{itemize}
-        \item GDE algorithm
-        \item SQMA (Situation-based Qualitative Modeling and Analysis)
-        \item Rough Set Theory
-    \end{itemize} \\
-    \hline
-    Engineering & \begin{itemize}
-        \item QSIM
-        \item fuzzy qualitative simulation algorithm
-        \item variational multiscale method
-        \item Qualitative Archi Bond Graphs
-        \item Signed Directed Graph
-    \end{itemize} \\
-    \hline
-    Environmental Science & \begin{itemize}
-        \item multi-objective particle swarm optimization algorithm
-    \end{itemize} \\
-    \hline
-    \caption{Kategorian 3.2. mallintaminen}
-    \label{table:Kategorian 3.2. mallintaminen}
-\end{longtable}
-
-\begin{longtable}[h]{|p{5cm}|p{8cm}|}
-    \hline
-    \textbf{Tieteenala}    &    \textbf{Mallintaminen}\\
-    \hline
-    Agricultural and Biological Science & \begin{itemize}
-        \item QSIM
-        \item Biomolecular Network Ontology
-    \end{itemize} \\
-    \hline
-    Chemical Engineering & \begin{itemize}
-        \item legacy piping and instrumentation diagrams
-        \item fuzzy set theory
-    \end{itemize} \\
-    \hline
-    Computer Science & \begin{itemize}
-        \item GDE algorithm
-        \item exogenization and equilibration techniques ?
-    \end{itemize} \\
-    \hline
-    Engineering & \begin{itemize}
-        \item situation-operator modeling (SOM) technique
-        \item QSIM
-        \item qualitative fault isolation (QFI) framework
-        \item Fuzzy Inductive Reasoning
-    \end{itemize} \\
-    \hline
-    Environmental Science & \begin{itemize}
-        \item stochastic social choice rules
-        \item DEVS formalism
-    \end{itemize} \\
-    \hline
-    Medicine and Dentistry & \begin{itemize}
-        \item QSIM
-    \end{itemize} \\
-    \hline
-    Physics and Astronomy & \begin{itemize}
-        \item Unified Flow Solver?
-    \end{itemize} \\
-    \hline
-    \caption{Kategorian 3.3. mallintaminen}
-    \label{table:Kategorian 3.3. mallintaminen}
-\end{longtable}
-
-\begin{longtable}[h]{|p{5cm}|p{8cm}|}
-    \hline
-    \textbf{Tieteenala}    &    \textbf{Mallintaminen}\\
-    \hline
-    Chemical Engineering & \begin{itemize}
-        \item Extended SDG (Signed Directed Graph)
-        \item signed digraph
-        \item QSIM
-        \item fault trees
-    \end{itemize} \\
-    \hline
-    Computer Science & \begin{itemize}
-        \item Signed Directed Graph
-    \end{itemize} \\
-    \hline
-    Decision Science & \begin{itemize}
-        \item GA-BP (Genetic Algorithm – Back Propagation Neural Network Algorithm)
-        \item QSIM
-    \end{itemize} \\
-    \hline
-    Engineering & \begin{itemize}
-        \item QSIM
-        \item Dynamic trend analysis
-    \end{itemize} \\
-    \hline
-    Environmental Science & \begin{itemize}
-        \item Jacob-Levins community matrix
-    \end{itemize} \\
-    \hline
-    \caption{Kategorian 3.4. mallintaminen}
-    \label{table:Kategorian 3.4. mallintaminen}
+    \caption{Mallintamisen työkalut, tavoitekategoria 3.}
+    \label{table:tavoitekategoria 3.}
 \end{longtable}
 
 
