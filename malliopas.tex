@@ -161,7 +161,9 @@ kehitys ja mitä erityyppisiä simulaatioita on olemassa.
 Laadullinen simulaatio on itsessään liian laaja alue käydä samassa alaluvussa, joten
 luvussa \ref{laadullinen simulaatio} tutustutaan tarkemmin 
 mikä on laadullinen simulaatio, mitkä ovat sen käyttötarkoituksia 
-ja mitä hyötyjä laadullisen simulaation käytössä voi olla.
+ja mitä hyötyjä laadullisen simulaation käytössä voi olla. 
+Lisäksi laadullisten simulaatioiden luomiseen tarkoitetuista työkaluista annetaan 
+muutama esimerkki, miten niitä pystyttäisiin tekemään.
 
 \section{Mallintaminen} \label{mallintaminen}
 Mallintaminen on prosessi, jolla pyritään tuottamaan malli, joka jäljittelee 
@@ -339,6 +341,7 @@ joista ei ole täydellistä määrällistä tietoa \parencite{semiHybrid1997qual
 \subsection{Yleisiä työkaluja}
 \begin{comment}
 Käytännössä kai loppupelissä tietokone ajaa konkreettista määrällisät mallia konkreettisilla parametreilla. Mitä työkaluja tämän tason päällä on, jotta käyttäjälle syntyy näkymä laadullisemmasta lähestymistavasta. 
+
 Esim jos syöte on intervalleja tarkkojen arvojen sijaan, ohjelmisto haarukoi lopputuloksen ääriarvot kaikilla parametrikombinaatioilla tai antaa erilaisen tavan kuvata riippuvuuksia (smeat kuvaukset).
 \end{comment}
 Laadullisten simulaatioiden luonttin löytyy useita eri metodeja ja työkaluja.
@@ -362,32 +365,41 @@ Sumea teoria perustuu tiedon abstraktointiin,
 jolla laadullisten simulaatioiden kontekstissa pyritään vähentämään 
 fyysisten järjestelmien toimintojen monimutkaisuuksia
 \parencite{shen1993fuzzy}. 
+\textcite{shen1993fuzzy} määrittelemän sumean simulaatioalgoritmin 
+prosessi alkaa järjestelmän muuttujien, 
+mallin rakenteen ja järjestelmän alkutilan määrittelyllä. 
+Algoritmi luo mahdollisia käyttäytymismalleja suodattamalla siirtymiä laadullisesta tilasta
+toiseen.
 
 Laadullisten simulaatioiden luomiselle löytyy myös siihen tarkoitettuja ohjelmistoja.
-\textcite{bredeweg2007garp3} kehittämä Garp3-ohjelma on laadulliseen 
+Yksi esimerkki tästä on \textcite{bredeweg2007garp3} kehittämä Garp3-ohjelma on laadulliseen 
 mallintamiseen tarkoitettu työkalu, jolla voidaan mallintaa, simuloida ja
-tarkastella halutun järjestelmän toimintaa.
+tarkastella halutun järjestelmän toimintaa. 
+\textcite{bredeweg2007garp3} mukaan Garp3 ohjelmalla mallinnus alkaa
+määrittelemällä mallin osuuksia: 
+järjestelmän objektit, niiden suhteet ja määrät sekä järjestelmän ulkoiset vaikuttaja-agentit.
+Malliin määritellään myös sen mahdolliset tilat ja tapahtumat, mitä systeemissä voi tapahtua.
+Tapahtumat määritellään mallin frakmenteina, 
+jotka havainnollistavat riippuvuuksia  eri suhteiden välillä ja osoittavat, 
+kuinka muutokset yhdessä tilassa voivat johtaa muutoksiin toisessa.
+Eli sen sijaan, että käytettäisiin numeerista tietoa, mallissa toimitaan
+järjestelmän vaikuttajien suhteiden kautta, mikä on osa laadullista päättelyä.
 
 \chapter{Tutkimusasetelma}
-\begin{comment}
-Numeroidut osat ovat lukuja ja niiden alalukuja, jotka sitten jakutuvat numeroimattomiksi kappaleiksi. Englannin chapter ei ole kappale vaan kappale on paragraph.
-
-Konkreettisena ohjeena, välltäisin 1 virkkeen kaltaista suoraan osoittavaa lausetta. Tyylillisesti voisi aloittaa vaikka tähän tapaan: Simulaatiot perustuvat aina malleihin. Mallien muodostamista kuttsutaan mallintamiseksi. Alaluvussa 2.1 avataan mallintamisen prosessia ja sen roolia osana simulointiin perustuvaa tutkimusta.....
-\end{comment}
-Tutkimuksen tavoite käytiin läpi lyhyesti johdannossa.
-Tarkempia motivaatioita ja tavoitteita avataan alaluvussa
-\ref{tavoite}.
+Tutkimuksen tavoite ja motivaatio käytiin läpi lyhyesti johdannossa, mutta 
+tätä on hyvä avata enemmän, ennen kun käydään läpi tutkimuksen menetelmää ja 
+sen askeleita. Tavoitetta ja motivaatiota avataan enemmän alaluvussa \ref{tavoite}.
 Millä menetelmällä tutkimuksen tavoitetta pyritään saavuttamaan on kerrottu alaluvussa 
 \ref{tutkimusmenetelmä}. 
 Miten valittua menetelmää seurattiin käydään alaluvuissa 
 \ref{hakukoneiden valinta}, \ref{valintakriteerit} ja \ref{valintaprosessi}.
-Menetelmän viimeinen vaihe on aineston analysointi, joka kuvataan luvussa
+Menetelmän viimeinen vaihe on aineston analysointi, jota kuvataan luvussa
 \ref{tiedon keruu}.
 
  \section{Tutkimuksen tavoite} \label{tavoite}
 Vaikka laadullinen mallinnus ja simulointi on laaja alue, 
 josta löytyy tutkimuksia useammalta eri tieteenalalta, 
-aiheesta ei ole löytynyt aikaisempaa yleiskatsausta. Aiheeseesta on tehty tutkimuksia esimerkiksi eri laadullisten simulaatioiden tarkkuudesta \parencite{FisherManagmentTechniques2024} ja eri laadullisten simulaatioiden menetelmien toimivuudesta \parencite{qualitativeSimTechniquesAssesment1992}, mutta tämän tutkielman kirjoitus ajankohdalla ei löytynyt laajempaa yleiskatsausta mitä tulee laadullisten simulaatioiden levinneisyyteen, työkaluihin ja käyttötarkoituksiin.  
+aiheesta ei ole löytynyt aikaisempaa yleiskatsausta. Aiheeseesta on tehty tutkimuksia esimerkiksi eri laadullisten simulaatioiden tarkkuudesta \parencite{FisherManagmentTechniques2024} ja eri laadullisten simulaatioiden menetelmien toimivuudesta \parencite{qualitativeSimTechniquesAssesment1992}, mutta tämän tutkielman kirjoitus ajankohdalla ei löytynyt laajempaa yleiskatsausta mitä tulee laadullisten simulaatioiden levinneisyyteen eri tieteenaloissa, työkaluihin ja käyttötarkoituksiin.  
 
 Gradun tavoitteena on saada kyseinen yleiskatsaus laadullisista simulaatioista systemaattisen kirjallisuuskartoitusta käyttäen, jotta saataisiin haluttu yleiskäsitys millä aloilla laadulliset simulaatioit ovat levinneet eniten, miten paljon laadullisten simulaatioiden luontiin ja mallintamiseen löytyy työkaluja ja ohjeita sekä minkäkaltaisia tuloksia laadullisilla simulaatioilla etsitään.
 
@@ -541,8 +553,13 @@ Kriteerit etsityille työkaluille olivat:
 \end{enumerate}
 
 \chapter{Kirjallisuuskartoituksen tulokset}
+\begin{comment}
+Numeroidut osat ovat lukuja ja niiden alalukuja, jotka sitten jakutuvat numeroimattomiksi kappaleiksi. Englannin chapter ei ole kappale vaan kappale on paragraph.
+
+Konkreettisena ohjeena, välltäisin 1 virkkeen kaltaista suoraan osoittavaa lausetta. Tyylillisesti voisi aloittaa vaikka tähän tapaan: Simulaatiot perustuvat aina malleihin. Mallien muodostamista kuttsutaan mallintamiseksi. Alaluvussa 2.1 avataan mallintamisen prosessia ja sen roolia osana simulointiin perustuvaa tutkimusta.....
+\end{comment}
 Tässä luvussa esitellään kerätyn aineiston perusteella koostetut tulokset.
-Kappale \ref{simulaatiotulokset} kuvailee 
+Alaluvussa \ref{simulaatiotulokset} kuvaillaan,
 mitä tutkimusartikkelit ovat tavoitelleet laadullisella simuloinnilla.
 Kappaleessa \ref{tieteenalat} esitellään tutkimusartikkeleiden 
 päätieteenalat ja niiden lukumäärät. 
@@ -559,6 +576,7 @@ Löydetyistä kategorioista käytetään nimitystä \textbf{tavoitekategoria}.
 Tutkimuksen etsityt tulokset voivat sopia myös useampaan eri tavoitekategoriaan
 samaan aikaan. Löydetyistä tavoite-kategorioista esiintyi samankaltaisuuksia, 
 minkä perusteella ne voidaan jakaa kolmeen osioon:
+\textbf{TODO: Tavoitekategorioiden poikkileikaukset.}
 \begin{enumerate}
     \item Tutkittavan järjestelmän toiminnan selkentäminen
     \item Tutkittavan järjestelmän vian tai epätoivotun toiminnan selvittäminen
