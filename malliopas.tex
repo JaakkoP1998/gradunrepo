@@ -156,7 +156,7 @@ kutsutaan mallintamiseksi. Alalussa \ref{mallintaminen} kerrotaan tarkemmin
 mallintamisesta ja sen merkityksestä simuloinnin näkökulmasta. 
 Tämän jälkeen katsestetaan itse simulointia ja simulaatioita.
 Simulaatio on ollut käsitteenä jo pitkän aikaa, joten alaluvussa
-\ref{simulaatio} käydään lyhyesti läpi tutkimukselle relevantti historia, 
+\ref{simulaatio} käydään lyhyesti läpi tutkimukselle oleellinen simulaation historia, 
 kehitys ja mitä erityyppisiä simulaatioita on olemassa. 
 Laadullinen simulaatio on itsessään liian laaja alue käydä samassa alaluvussa, joten
 luvussa \ref{laadullinen simulaatio} tutustutaan tarkemmin 
@@ -308,7 +308,12 @@ kompensoidakseen näiden heikkouksia \parencite{semiHybrid1997qualitative}.
 Jo määrällisessäkin simuloinnissa on usein tarve mm herkkyysanalyysille, jolla arvioidaan eri parametreissa olevien epävarmuuksien vaikutusta tulosmuuttujiin (ja joskus tämä on määrällisen simuloinnin tavoitekin). 
 Vastaavasti tästä voi johtaa laadullisen tulosen sille, onko jonkin parametrin tai ilmiön tarkempi kuvaus tarpeen vai voiko rauhassa yksinkertaistaa.
 \end{comment}
-Laadullisella simuloinnilla on tietysti samat yleiset hyödyt kuin muilla simulaatiolla, mainittuna luvussa \ref{simulaatio}. Laadulliset simulaatiot toimivat hyvin tapauksissa, joissa simuloitavan kohteen tai järjestelmän toiminnasta ei ole täydellistä tietoa tai tarvittava tieto on muuten aukollinen \parencite{kuipers1986qualitative}. 
+Laadullisella simuloinnilla on tietysti samat yleiset hyödyt 
+kuin muilla simulaatiolla, mainittuna luvussa \ref{simulaatio}. 
+Laadulliset simulaatiot toimivat hyvin tapauksissa, 
+joissa simuloitavan kohteen tai järjestelmän toiminnasta 
+ei ole täydellistä tietoa tai tarvittava tieto on 
+muuten aukollinen \parencite{kuipers1986qualitative}. 
 Laadullisella simulaatiolla voidaan myös varmistaa, että järjestelmän
 ominaisuuksien laadullinen kuvaus on toimiva ja hyödyllinen 
 laadullisen päättelyn mielessä \parencite{kuipers1986qualitative}.
@@ -333,9 +338,8 @@ joista ei ole täydellistä määrällistä tietoa \parencite{semiHybrid1997qual
 
 \subsection{Yleisiä työkaluja}
 \begin{comment}
-Työkalujen nimet eivät juuri kerro niitä tuntemattomille. Pystytkö kuvaamaan enemmän strategieoita ja lähestymistapoja ymmärrettävällä tavalla. 
-
-Käytännössä kai loppupelissä tietokone ajaa konkreettista määrällisät mallia konkreettisilla parametreilla. Mitä työkaluja tämän tason päällä on, jotta käyttäjälle syntyy näkymä laadullisemmastalähestymistavasta 8esim jos syöte on intervalleja tarkkojen arvojen sijaan, ohjelmisto haarukoi lopputuloksen ääriarvot kaikilla parametrikombinaatioilla tai antaa erilaisen tavan kuvata riippuvuuksia (smeat kuvaukset).
+Käytännössä kai loppupelissä tietokone ajaa konkreettista määrällisät mallia konkreettisilla parametreilla. Mitä työkaluja tämän tason päällä on, jotta käyttäjälle syntyy näkymä laadullisemmasta lähestymistavasta. 
+Esim jos syöte on intervalleja tarkkojen arvojen sijaan, ohjelmisto haarukoi lopputuloksen ääriarvot kaikilla parametrikombinaatioilla tai antaa erilaisen tavan kuvata riippuvuuksia (smeat kuvaukset).
 \end{comment}
 Laadullisten simulaatioiden luonttin löytyy useita eri metodeja ja työkaluja.
 Esimerkiksi \textit{Qsim} on algoritmi, jolla voidaan luoda laadullisia malleja simulaatioille
@@ -344,14 +348,20 @@ QSIM:illa mallinnettu laadullinen simulaatio voi mahdollisesti ennustaa
 järjestelmän mahdollista käyttäytymistä perustuen käytettyihin rajoitusyhtälöihin 
 ja järjestelmän alkutilaan \parencite{kuipers1986qualitative}, mikä mahdollistaa
 monimutkaisempien järjestelmien mallintamisen ja simuloinnin.
+Yksinkertaisesti sanottua QSIM-algoritmilla pyritään kuvaamaan mihin tiloihin
+järjestelmä voi mennä tai joutua annetusta aloitustilasta 
+perustuen järjestelmän toimintaa laadullisesti kuvaavista 
+\textit{ tavallisista differentiaaliyhtälöistä 
+(eng. ordinary differential equations)}.
 
 Lisäksi on myös \textit{sumeaan teoriaan (eng. fuzzy set theory)} 
 perustuva \textit{sumea laadullinen simulaatioalgoritmi 
 (eng.fuzzy qualitative simulation algorithm)} 
 auttaa myös toteuttamaan laadullisia malleja \parencite{shen1993fuzzy}.
-Sumea teoria perustuu tiedon abstraktointiin, jolla laadullisten simulaatioiden
-konteksitssa pyritään vähentämään fyysisten järjestelmien toimintojen monimutkaisuuksia
-\parencite{shen1993fuzzy}.
+Sumea teoria perustuu tiedon abstraktointiin, 
+jolla laadullisten simulaatioiden kontekstissa pyritään vähentämään 
+fyysisten järjestelmien toimintojen monimutkaisuuksia
+\parencite{shen1993fuzzy}. 
 
 Laadullisten simulaatioiden luomiselle löytyy myös siihen tarkoitettuja ohjelmistoja.
 \textcite{bredeweg2007garp3} kehittämä Garp3-ohjelma on laadulliseen 
@@ -564,36 +574,36 @@ Tarkemmat lopulliset tavoitekategoriat on esitelty taulukossa \ref{table: tuloks
 \textbf{Kategoriat} & \textbf{Artikkelien lukumäärä} \\ \hline
 \textbf{1. Tutkittavan järjestelmän toiminnan selkentäminen} & \textbf{85} \\ 
 \hline
-3. -> 1.1 Pyritään vähentämään tutkimuskohteen tiedon aukkoja.  &  55  \\ 
+1.1 Pyritään vähentämään tutkimuskohteen tiedon aukkoja.  &  55  \\ 
 \hline
-5. -> 1.2 Halutaan selvittää miten olosuhteiden vaihtuminen vaikuttaa simulaation kohteeseen.  &  20  \\ 
+1.2 Halutaan selvittää miten olosuhteiden vaihtuminen vaikuttaa simulaation kohteeseen.  &  20  \\ 
 \hline
-9. -> 1.3 Halutaan ennustaa kohteen käyttäytymistä/toimintaa. & 10 \\ 
+1.3 Halutaan ennustaa kohteen käyttäytymistä/toimintaa. & 10 \\ 
 \hline
 \textbf{2. Tutkittavan järjestelmän vian tai epätoivotun toiminnan selvittäminen} & 
 \textbf{32} \\
 \hline
-1. -> 2.1 Pyritään selvittämään miten toteutunut ongelma/haitta vaikuttaa kohteeseen 
+2.1 Pyritään selvittämään miten toteutunut ongelma/haitta vaikuttaa kohteeseen 
 tai tilanteeseen. & 5 \\ 
 \hline
-2. -> 2.2 Pyritään selvittämään vian syitä/mahdollisuuksia. & 27 \\ 
+2.2 Pyritään selvittämään vian syitä/mahdollisuuksia. & 27 \\ 
 \hline
 \textbf{3. Menetelmien tutkiminen (uusi menetelmä ja/tai menetelmien vertailu)} & 
 \textbf{123}\\
 \hline
-4. -> 3.1 Simulaatiolla pyritään vertaamaan tuloksia toiseen tutkimukseen tai samassa tutkimuksessa tehtyihin kokeisiin. & 44 \\ 
+3.1 Simulaatiolla pyritään vertaamaan tuloksia toiseen tutkimukseen tai samassa tutkimuksessa tehtyihin kokeisiin. & 44 \\ 
 \hline
-6. -> 3.2 Halutaan optimoida jotain metodeja/tapoja liittyen tutkittavaan kohteeseen/työkaluun. & 36 \\ 
+3.2 Halutaan optimoida jotain metodeja/tapoja liittyen tutkittavaan kohteeseen/työkaluun. & 36 \\ 
 \hline
-7. -> 3.3 Tutkimuksessa luotiin kokonaan uusi työkalu/metodi laadullisten simulaatioiden luontiin/käyttämiseen. & 38 \\ 
+3.3 Tutkimuksessa luotiin kokonaan uusi työkalu/metodi laadullisten simulaatioiden luontiin/käyttämiseen. & 38 \\ 
 \hline
-8. -> 3.4 Verrataan erilaisten laadullisten simulaatioiden/algoritmien toimintaa. 
+3.4 Verrataan erilaisten laadullisten simulaatioiden/algoritmien toimintaa. 
 &  5 \\ 
 \hline
 \end{tabular}%
 }
 \label{table: tuloksien kategoriat}
-\caption{Tuloksien kategoriat.}
+\caption{Tutkimuksista tunnistetut tavoitekategoriat}
 \end{table}
 
 \section{Aineiston artikkelien tieteenalat} \label{tieteenalat}
@@ -602,6 +612,7 @@ Löydetyt tieteenalat ja artikkelien lukumäärät on esitetty taulukossa
 Tieteenalat on jaettu päätutkimuskysymyksen tavoitekategorioiden mukaan.
 Koska joissain tieteenaloissa oli vain muutama artikkeli, 
 tieteenaloja yhdistettiin sopivuuden mukaan laajempiin osuuksiin.
+Yhdistämättä tieteenaloja tunnistettiin yhteensä seitsemäntoista.
 Tieteenalat "Chemistry" ja "chemical engineering" yhdistettiin 
 kemian tieteisiin nimellä "Chemical Sciences".
 "Biochemistry, Genetics and Molecular Biology", "Medicine and Dentistry" ja "Neuroscience"
@@ -609,7 +620,8 @@ yhdistettiin laajempaan elämäntieteiden alaan "Lifescience" nimityksellä.
 "Earth and Planetary Science" ja "Environmental Science" yhdistettiin samaan, 
 koska "Earth and Planetary Science" on osana ympäristöntieteitä.
 "Mathematics" ja "Computer Science" yhdistettiin, 
-koska matematiikan tutkimukset olivat myös suurimmaksi osaksi tietotekniikan alaa.
+koska matematiikan tutkimukset koskivat myös tietotekniikan alaa tekoälyn 
+antamien tarkempien tieteenalojen mukaan.
 "Decision Science", "Economics" ja "Social Science" yhdistettiin laajempaan alaan,
 nimityksellä "Social and Psychology".
 
@@ -638,25 +650,28 @@ nimityksellä "Social and Psychology".
     }
 
   % row labels
-  \foreach \a [count=\i] in {Agricultural,Chemical Sciences,Computer Sciences,Energy,Engineering,Environmental,Lifescience,Materials Science,Physics and Astronomy,Social and Psychology} {
-    \node[minimum size=8mm] at (-2,-\i) {\a};
+  \foreach \a [count=\i] in {Agricultural and Biological,Chemical Sciences,Computer Sciences,Energy,Engineering,Environmental Science,Lifescience,Materials Science,Physics and Astronomy,Social and Psychology} {
+    \node[minimum size=8mm] at (-3,-\i) {\a};
   }
 \label{Heatmap tieteenalat v.2}
 \end{tikzpicture}
 
 \section{Löydetyt laadullisten simulaatioiden ohjeet ja työkalut} \label{tyokalut}
-Seuraavissa listoissa on esitetty tutkimuksista tunnistetut työkalut ja ohjeistukset,
-joita ollaan käytetty laadullisten simulaatioiden luomisessa ja simuloinnissa. 
-Nämä ovat jaettu kahteen kategoriaan, ohjelmistot ja mallintamisen työkalut. 
-Kategoriaan "mallintaminen" kuuluvat metodit ja algoritmit joiden avulla ollaan mallinettu
-laadullisia malleja.
-Kategoriaan "ohjelmistot" kuuluvat tietokoneohjelmat ja ohjelmistot joiden avulla ollaan
-joko luotu tai ajettu laadullisia simulaatioita.
+Seuraavissa listoissa on esitetty tutkimuksista tunnistetut mallintamisen työkalut 
+ja algoritmit sekä tietokoneohjelmat,
+joita käytettiin laadullisten simulaatioiden luomisessa ja ajamisessa. 
+Nämä ovat jaettu kahteen kategoriaan, mallintamisen työkalut 
+ja tietokoneohjelmistot. 
+Kategoriaan "mallintaminen" kuuluvat metodit ja algoritmit 
+joiden avulla ollaan mallinnettu tai suunniteltu laadullisia malleja.
+Kategoriaan "ohjelmistot" kuuluvat tietokoneohjelmat ja ohjelmistot 
+joiden avulla ollaan joko luotu tai ajettu laadullisia simulaatioita.
 
 \subsection{Mallintaminen}
-Mallintamisessa käytetyt metodit ja algoritmit on jaettu kolmeen tavoitekategoriaan tieteenaloittain. Taulukossa ensimmäinen pylväs merkitsee
-päätieteenalaa  ja toinen mallintaminen merkitsee löydetyt ja tunnistetut 
-metodit ja algoritmit. Mallintamiseen on merkitty myös 
+Mallintamisessa käytetyt metodit ja algoritmit on jaettu kolmeen
+tavoitekategoriaan tieteenaloittain. Taulukossa ensimmäinen pylväs merkitsee
+tieteenalaa  ja toinen mallintaminen merkitsee löydetyt ja tunnistetut 
+mallintamisen metodit ja algoritmit. Työkaluihin on suluissa merkitty 
 kuinka monta kertaa kyseinen työkalu on esiintynyt eri artikkeleissa.
 
 \begin{longtable}[h]{|p{5cm}|p{8cm}|}
@@ -673,8 +688,8 @@ kuinka monta kertaa kyseinen työkalu on esiintynyt eri artikkeleissa.
     \end{itemize} \\
     \hline
     Computer Science & \begin{itemize}
-        \item QSIM
         \item agent-based approach
+        \item QSIM
     \end{itemize} \\
     \hline
     Energy & \begin{itemize}
@@ -683,16 +698,16 @@ kuinka monta kertaa kyseinen työkalu on esiintynyt eri artikkeleissa.
     \hline
     Engineering & \begin{itemize}
         \item fuzzy qualitative simulation algorithm
-        \item variational multiscale method
         \item Modified Nodal Analysis
+        \item variational multiscale method
     \end{itemize} \\
     \hline
     Environmental Science & \begin{itemize}
-        \item multi-objective modified seagull optimization algorithm
         \item Jacob-Levins community matrix
-        \item slime mould algorithm
+        \item multi-objective modified seagull optimization algorithm
         \item QSIM (2)
         \item signed digraph
+        \item slime mould algorithm
     \end{itemize} \\
     \hline
     Materials Science & \begin{itemize}
@@ -712,27 +727,29 @@ kuinka monta kertaa kyseinen työkalu on esiintynyt eri artikkeleissa.
     \label{table:mallintaminen 1.}
 \end{longtable}
 
+\pagebreak
+
 \begin{longtable}[h]{|p{5cm}|p{8cm}|}
     \hline
     \textbf{Tieteenala}    &    \textbf{Mallintaminen}\\
     \hline
     Chemical Science & \begin{itemize}
-        \item signed digraph
-        \item Signed Directed Graph (5)
+        \item fault-tree structures
         \item fuzzy logic (3)
         \item fuzzy set theory
-        \item fault-tree structures
+        \item signed digraph
+        \item Signed Directed Graph (5)
     \end{itemize} \\
     \hline
     Engineering & \begin{itemize}
-        \item QSIM (2)
-        \item fuzzy qualitative simulation algorithm (3)
-        \item SQMA (Situation-based Qualitative Modeling and Analysis)
         \item fault-tree structures
-        \item Functional Ontology for Naive Mechanics (FONM)
-        \item Signed Directed Graph (2)
+        \item fuzzy inductive reasoning
+        \item fuzzy qualitative simulation algorithm (3)
+        \item FONM - Functional Ontology for Naive Mechanics 
         \item qualitative fault isolation (QFI) framework
-        \item Fuzzy Inductive Reasoning
+        \item QSIM (2)
+        \item Signed Directed Graph (2)
+        \item SQMA (Situation-based Qualitative Modeling and Analysis)
     \end{itemize} \\
     \hline
     Materials Science & \begin{itemize}
@@ -740,10 +757,10 @@ kuinka monta kertaa kyseinen työkalu on esiintynyt eri artikkeleissa.
     \end{itemize} \\
     \hline
     Social and Psychological Sciences & \begin{itemize}
-        \item GA-BP (Genetic Algorithm – Back Propagation Neural Network Algorithm)
-        \item QSIM (4)
         \item catastrophe theory
         \item fuzzy set theory (2)
+        \item GA-BP (Genetic Algorithm – Back Propagation Neural Network Algorithm)
+        \item QSIM (4)
     \end{itemize} \\   
     \hline
     \caption{Mallintamisen työkalut, tavoitekategoria 2.}
@@ -756,32 +773,31 @@ kuinka monta kertaa kyseinen työkalu on esiintynyt eri artikkeleissa.
     \hline
     Agricultural and Biological Science & \begin{itemize}
         \item Biomolecular Network Ontology (2)
-        \item signed digraph
         \item QSIM
+        \item signed digraph
     \end{itemize} \\
     \hline
     Chemical Science & \begin{itemize}
-        \item discrete element method
         \item Cause-Effect matrix
-        \item Signed Directed Graph (2)
-        \item state-based approach
-        \item legacy piping and instrumentation diagrams ?
-        \item fuzzy set theory
-        \item Extended SDG (Signed Directed Graph)
-        \item signed digraph
-        \item QSIM
+        \item discrete element method
+        \item Extended Signed Directed Graph
         \item fault trees
+        \item fuzzy set theory
+        \item piping and instrumentation diagrams
+        \item QSIM
+        \item signed digraph
+        \item Signed Directed Graph (2)       
+        \item state-based approach
     \end{itemize} \\
     \hline
     Computer Science & \begin{itemize}
         \item agent-based approach
+        \item exogenization and equilibration techniques
         \item genetic algorithms
-        \item GDE algorithm
-        \item SQMA (Situation-based Qualitative Modeling and Analysis)
+        \item GDE algorithm (2)
         \item Rough Set Theory
-        \item GDE algorithm
-        \item exogenization and equilibration techniques ?
         \item Signed Directed Graph
+        \item SQMA - Situation-based Qualitative Modeling and Analysis
     \end{itemize} \\
     \hline
     Energy & \begin{itemize}
@@ -790,31 +806,31 @@ kuinka monta kertaa kyseinen työkalu on esiintynyt eri artikkeleissa.
     \hline
     Engineering & \begin{itemize}
         \item Causal Loop Diagrams
-        \item QSIM (3)
+        \item Dynamic trend analysis
+        \item Fuzzy Inductive Reasoning
         \item fuzzy qualitative simulation algorithm
-        \item variational multiscale method
+        \item QSIM (3)
         \item Qualitative Archi Bond Graphs
+        \item qualitative fault isolation (QFI) framework
         \item Signed Directed Graph
         \item situation-operator modeling (SOM) technique
-        \item qualitative fault isolation (QFI) framework
-        \item Fuzzy Inductive Reasoning
-        \item Dynamic trend analysis
+        \item variational multiscale method
     \end{itemize} \\
     \hline
     Environmental Science & \begin{itemize}
-        \item signed digraph
-        \item multi-objective particle swarm optimization algorithm (2)
-        \item stochastic social choice rules
-        \item DEVS formalism ?
+        \item DEVS formalism
         \item Jacob-Levins community matrix
+        \item multi-objective particle swarm optimization algorithm (2)
+        \item signed digraph
+        \item stochastic social choice rules
     \end{itemize} \\
     \hline
     Materials Science & \begin{itemize}
+        \item elastoplastic coupling constitutive framework
+        \item finite-difference time-domain (FDTD) approach
         \item finite element method (2)
         \item form particle difference method
         \item lattice Boltzmann method
-        \item finite-difference time-domain (FDTD) approach
-        \item elastoplastic coupling constitutive framework
     \end{itemize} \\
     \hline
     Lifescience & \begin{itemize}
@@ -823,14 +839,13 @@ kuinka monta kertaa kyseinen työkalu on esiintynyt eri artikkeleissa.
     \hline
     Physics and Astronomy & \begin{itemize}
         \item finite element method
-        \item Unified Flow Solver?
     \end{itemize} \\
     \hline
         Social and Psychological Sciences & \begin{itemize}
-        \item GA-BP (Genetic Algorithm – Back Propagation Neural Network Algorithm)
-        \item QSIM (2)
-        \item multi-agent qualitative simulation approach
         \item agent-based approach
+        \item GA-BP (Genetic Algorithm – Back Propagation Neural Network Algorithm)
+        \item multi-agent qualitative simulation approach
+        \item QSIM (2)
     \end{itemize} \\
     \hline
     \caption{Mallintamisen työkalut, tavoitekategoria 3.}
@@ -839,76 +854,73 @@ kuinka monta kertaa kyseinen työkalu on esiintynyt eri artikkeleissa.
 
 
 \subsection{Ohjelmistot}
-Ohjelmistot on luokiteltu toteutettuihin simulaatioiden lähestymistapoihin. Mallintamisessa auttavat ohjelmat on myös merkitty omaksi luokaksi.
+Samoin kuin mallintamisen työkalut, simulaatioissa käytetyt
+tietokoneohjelmat on jaettu luvussa \ref{simulaatiotulokset} 
+mainittujen tavoitekategorioiden mukaan. Jos ohjelma on esiintynyt useammassa eri 
+artikkelissa, sen lukumäärä on esitetty sulkujen sisällä.
 
 \begin{longtable}[h]{|p{5cm}|p{8cm}|}
     \hline
     \textbf{Tieteenala}    &    \textbf{Ohjelma}\\
     \hline
     Agricultural and Biological Science & \begin{itemize}
-        \item GNA (4)
         \item CompuCell3D
-        \item OVITO
-        \item QTIP (Qualitative Temporal Inference Program)
+        \item GNA (4)
         \item Idrisi GIS software
+        \item OVITO
+        \item QTIP - Qualitative Temporal Inference Program
     \end{itemize} \\
     \hline
     Chemical Science & \begin{itemize}
         \item Chemkin-Pro software
-        \item ThermRot software
         \item COMSOL software (2)
-        \item OpenFOAM (2)
-        \item HyperChem 8.0
         \item GROMACS 4.5 software
+        \item HyperChem 8.0 software
+        \item OpenFOAM (2)
+        \item ThermRot software
     \end{itemize} \\
     \hline
     Computer Science & \begin{itemize}
         \item Matlab (2)
     \end{itemize} \\
     \hline
-    Energy & \begin{itemize}
-        \item MARS-KS moving reactor model
-    \end{itemize} \\
-    \hline
     Engineering & \begin{itemize}
-        \item COMSOL
-        \item Matlab
+        \item COMSOL software 
         \item FLUENT
+        \item Matlab
     \end{itemize} \\
     \hline
     Environmental Science & \begin{itemize}
         \item EPANET software
-        \item Matlab (4)
-        \item GMS-7 software
-        \item Garp3 (3)
         \item GARP (3)
+        \item Garp3 (3)
+        \item GMS-7 software
+        \item Matlab (4)
         \item MODFLOW software
-        \item ReaDDy (2) ?
+        \item ReaDDy 2 software
     \end{itemize} \\
     \hline
     Materials Science & \begin{itemize}
-        \item COMSOL
-        \item Matlab
+        \item COMSOL software 
+        \item DEAL.II
+        \item Flow3d
         \item FLUENT (2)
         \item LAMMPS
         \item Materials Studio
-        \item DEAL.II ?
-        \item Pace3D ?
-        \item Flow3d
+        \item Matlab
+        \item Pace3D 
     \end{itemize} \\
     \hline
     Lifescience & \begin{itemize}
-        \item Matlab (3)
         \item ANSYS software
-    \end{itemize} \\
-    \hline
-    Physics and Astronomy & \begin{itemize}
-        \item Nose–Hoover dynamics
+        \item Matlab (3)
     \end{itemize} \\
     \hline
     \caption{Ohjelmat ja ohjelmistot, tavoitekategoria 1.}
     \label{table:ohjelmistot 1.}
 \end{longtable}
+
+\pagebreak
 
 \begin{longtable}[h]{|p{5cm}|p{8cm}|}
     \hline
@@ -936,77 +948,71 @@ Ohjelmistot on luokiteltu toteutettuihin simulaatioiden lähestymistapoihin. Mal
     \textbf{Tieteenala}    &    \textbf{Ohjelma}\\
     \hline
     Agricultural and Biological Science & \begin{itemize}
-        \item Matlab (4)
+        \item GRENS - Gene REgulatory Network Simulator
+        \item GINsim - Gene Interaction Network simulation
         \item GNA (3)
+        \item Matlab (4)
         \item TAM-B
-        \item GINsim
-        \item GRENS (Gene REgulatory Network Simulator)
     \end{itemize} \\
     \hline
     Chemical Science & \begin{itemize}
-        \item OpenFOAM
         \item Chemkin-Pro software
+        \item OpenFOAM
+        \item TAM-C
         \item ThermRot software
         \item WINEPR-Simfonia
-        \item TAM-C
     \end{itemize} \\
     \hline
     Computer Science & \begin{itemize}
-        \item ns-2 simulator
-        \item GNA
         \item GARP (2)
-        \item LASS (2)
         \item Garp3 
+        \item GNA
+        \item LASS (2)
+        \item ns-2 simulator
         \item Simulink
     \end{itemize} \\
     \hline
     Energy & \begin{itemize}
+        \item Matlab
         \item TCAD
         \item Visual-FIR
-        \item Matlab
     \end{itemize} \\
     \hline
     Engineering & \begin{itemize}
         \item MAGMAS3D
-        \item V-REP
         \item SABER software (3)
-        \item TAM-C (2)
         \item SQSIM software
+        \item TAM-C (2)
+        \item V-REP
         \item Visual-FIR
     \end{itemize} \\
     \hline
     Environmental Science & \begin{itemize}
-        \item Matlab (3)
-        \item Garp3
-        \item GMS-7 software
         \item EcoMata (2)
         \item FLUENT
+        \item Garp3
+        \item GMS-7 software
+        \item Matlab (3)
     \end{itemize} \\
     \hline
     Materials Science & \begin{itemize}
         \item COMSOL software
-        \item SCAPS 1D ?
-        \item TCAD ?
-        \item Materials Studio
-        \item DEAL.II ?
-        \item Poynting
+        \item DEAL.II 
         \item Maplesoft
-        \item 3D TCAD
+        \item Materials Studio
+        \item Poynting
+        \item SCAPS 1D
+        \item TCAD (2)
     \end{itemize} \\
     \hline
     Lifescience & \begin{itemize}
         \item Matlab
     \end{itemize} \\
     \hline
-    Physics and Astronomy & \begin{itemize}
-        \item finite element method
-        \item Unified Flow Solver?
-    \end{itemize} \\
-    \hline
-        Social and Psychological Sciences & \begin{itemize}
+    Social and Psychological Sciences & \begin{itemize}
+        \item Presage2
         \item Repast software
         \item SWARM software
-        \item Presage2
     \end{itemize} \\
     \hline
     \caption{Ohjelmat ja ohjelmistot, tavoitekategoria 3.}
@@ -1015,84 +1021,165 @@ Ohjelmistot on luokiteltu toteutettuihin simulaatioiden lähestymistapoihin. Mal
 
 \chapter{Tulosten tulkitseminen}
 
-\section{Laadullinen simulaation tavoitteet}
-- Laadullinen simulaatio on kattava aihealue, joilta löytyy tutkimuksia monelta eri alalta.
+\section{Laadullisen simulaation tavoitteet}
+Laadullinen simulaatio on kattava aihealue, joilta löytyy tutkimuksia monelta eri alalta. Tässä tutkimuksessa aineiston artikkeleista tunnistettiin 17 
+eri ScienceDirectin määrittelemää tieteenalaa, 
+jotka tiivistettiin kymmeneksi alaksi taulukkoon 
+\ref{Heatmap tieteenalat v.2}.
+Käytetystä aineistosta löydettiin yhdeksän eri tavoitetta, mitä laadullisella simulaatiolla pyrittiin saavuttamaan tutkimuksessa.
 
-- Käytetystä aineistosta löydettiin yhdeksän eri tavoitetta, mitä laadullisella simulaatiolla
-pyrittiin saavuttamaan tutkimuksessa.
+Taulukosta \ref{table: tuloksien kategoriat}, voidaan havaita, 
+että eniten yksittäisistä tavoitekategoiroista 
+laadullisilla simulaatioilla pyrittiin vähentämään tutkittavan 
+kohteen tietoisuuden aukkoja (kategoria 1.1.). 
+Tämä vastaa hyvin laadullisen simulaation määritelmää
+työkaluna, jolla voidaan simuloida järjestelmiä ilman täydellistä tietoa.
+Olosuhteiden muutoksien vaikusta ja järjestelmän käyttäytymisen ennustusta
+pyrittiin myös tutkimaan laadullisella simulaatioilla jonkin verran.
 
-- Eniten laadullisilla simulaatioilla pyrittiin vähentämään tutkittavan kohteen tietoisuuden
-aukkoja.
+Kaikista eniten tutkimuksissa on tutkittu menetelmiä (tavoitekategoria 3.).
+Tästä voidaan päätellä,  että laadullisien simulaatioiden käyttämistä 
+tutkitaan usein, oli kyse sitten vanhojen työkalujen parantamisesta tai 
+uusien luomisesta. 
+On myös mahdollista, että laadulisten simulaatioiden käytölle ollaan 
+parhaillaan kehittämässä eri työkaluja ja metodeja, jos sen yleisyys jatkaa 
+kasvamista.
 
-- Laadullisien simulaatioiden luomiselle ollaan myös kehitetty ja parhaillaan 
-kehittämässä paljon eri työkaluja ja metodeja.
+Kohdejärjestelmien vikojen tai epätoivottujen toiminnan selvittämistä 
+oltiin tutkittu tavoitekategorioista vähiten (tavoitekategoria 2.).
+Toteutuneen vian vaikutuksia tutkittiin aika vähän 
+verrattuna muihin kategorioihin. 
+Mahdollinen teoria tälle on, että muissa tutkimuksissa, 
+jotka liittyivät vikoihin tutkittavissa kohteissa, 
+oltiin kiinnostuneempia vian ennaltaehkäisemisestä.
 
-- Vertailuja eri työkalujen tehokkuuksien välillä oli aika vähän tehty. Yksi teoria tälle voi 
-olla että laadullisen simulaation tutkimuskohteet ovat liian niukkoja, jotta työkaluja joita
-voitaisiin vertailla löytyisi.
-
-- Myös toteutuneen vian vaikutuksia tutkittiin aika vähän. Teoria tälle on, että muissa tutkimuksissa, jotka liittyivät vikoihin, oltiin kiinnostuneempia vian ennaltaehkäisemisestä.
+Vertailuja eri työkalujen tehokkuuksien välillä oltiin aika vähän tehty. 
+Yksi teoria tälle voi  olla että laadullisen simulaation tutkimuskohteet 
+voivat olla liian niukkoja, jotta työkaluja voitaisiin vertailla hyödyllisesti.
+On myös mahdollista, että eri laadullisten simulaatioiden työkalujen vertailuja 
+löytyy enemmän eri tutkimustietokannista.
 
 \section{Laadullisen simulaation tieteenalat}
-- Eniten laadullisia simulaatioita käytettiin chemical engineering, engineering, environmental ja materials sciencen aloilla.
+Eniten laadullisia simulaatioita käytettiin kemian tieteen (chemical science),
+tekniikan (engineering), ympäristön (environmental) ja materiaalien tieteen  (materials science) tieteenaloilla. 
+Vähiten laadullisia simulaatioita käytettiin elämäntieteiden (lifescience),
+fysiikan ja astronomian  (Physics and Astronomy) sekä 
+sosiaalisten ja psykologisten (Social and Psychology) tieteiden aloilla.
 
-- Kemiantieteissä ja tekniikassa (engineering) yleisesti 
-pyrittiin usein selvittämään tuotantoprosessissa  mahdollisia ilmestyviä vikoja tai riskejä 
-ja näiden selvittämistä varten luotiin eri työkaluja sekä menetelmiä.
+Maatalouden ja biologisten (agricultural and biological) tieteiden aloilla
+tutkittiin kohdejärjestelmien koskevien tietojen aukkoja ja myös pyrittiin
+parantamaan eri laadullisten simulaatioiden työkalujen käyttöä tieteenalan
+sisällä.
 
-- Materiaalien tutkimustieteessä (Materials science) pyrittiin selvästi 
-tutkimaan materiaaleihin  liittyvistä tietojen ja datan aukkoisuutta, ja näitä tuloksia usein 
-vertailtiin reaalimaailman testeihin.
+Kemiantieteissä ja tekniikassa yleisesti 
+pyrittiin usein selvittämään kohdejärjestelmässä mahdollisia 
+ilmestyviä vikoja tai riskejä.
+Näillä aloilla pyrittiin myös usein parantamaan ja 
+kehittämään työkaluja laadullisten simulaatioiden käyttöön ja toteuttamiseen.
+Tutkimuksissa pyrittiin myös parantamaan tietoisuutta liittyen tutkimuskohteisiin.
 
-- Fysiikassa oli erittäin vähän tutkimuksia, vaikka laadullinen simulointi on koettu hyödylliseksi fysiikan alalla \textbf{TODO: muista lähde}. Osittain tälle syynä voi olla
-että puhutaan usein laadullisesta fysiikasta (Qualitative Physics), jolloinka tutkimuksia voi helposti jäädä aineiston ulkopuolelle, ,un haussa käytetty termi oli "qualitative simulation".
+Materiaalien tutkimustieteessä pyrittiin selvästi 
+tutkimaan materiaaleihin  liittyvistä tietojen ja datan aukkoisuutta, 
+ja tutkimuksen laadullisten simulaatioiden tuloksia usein vertailtiin reaalimaailman testeihin ja havaintoihin.
 
-- Sosiaalisesta tieteistä (Social Science) löytyi suurimmalta osalta tutkimuksia, 
-jotka pyrkivät selvittämään miten mahdollinen haitallinen käyttäytyminen voi vaikuttaa
-tilanteeseen. Tämä Voi mahdollisesti johtua Science Directin määritelmistä, esimerkiksi
-Päätösteoria (Decision Science) osittain on myös osa sosiaalisia tieteitä. 
-Yksi syy tavoitekategorian 2.1. vähäiselle esiintymiselle voi olla, 
+Ympäristötieteissä pyrittiin eniten vähentämään tutkimuskohteiden tietojen aukkoisuuksia, mutta tutkimuksia oli tasaisesti myös jakaantunut tavoitekategorioille 3.1, 3.2 ja 3.4, mikä viittaa siihen, että
+metodeja laadullisten simulaatioiden käyttämiseen ja toteutukseen on myös
+tutkittu paljon.
+
+Fysiikassa oli erittäin vähän tutkimuksia, vaikka laadullinen simulointi on koettu hyödylliseksi fysiikan alalla \textbf{TODO: muista lähde}. 
+Osittain tälle syynä voi olla
+että puhutaan usein laadullisesta fysiikasta (Qualitative Physics), jolloinka tutkimuksia voi helposti jäädä aineiston ulkopuolelle, 
+kun haussa käytetty termi oli "qualitative simulation".
+
+Sosiaalisesta tieteistä (Social Science) löytyi suurimmalta osalta tutkimuksia, 
+jotka pyrkivät selvittämään miten mahdollinen haitallinen käyttäytyminen voi vaikuttaa tilanteeseen. Tämä Voi mahdollisesti johtua Science Directin määritelmistä, esimerkiksi
+Päätösteoria (Decision Science) on osittain myös osa sosiaalisia tieteitä. 
+Yksi syy tavoitekategorian 2.1. taulukossa \ref{Heatmap tieteenalat v.2}
+vähäiselle esiintymiselle voi olla, 
 että muilla aloilla ei olla kiinnostuneita haittojen vaikutuksista,
-vaan ainoastaan niiden esiintymismahdollisuuksista.
+vaan ainoastaan niiden esiintymismahdollisuuksista, 
+jos verrataan tavoitekategoriaan 2.2.
 
 \section{Laadullisen simulaation työkalut}
+Löydetyistä mallintamisen työkaluista taulukoista \ref{table:mallintaminen 1.},
+\ref{table:mallintaminen 2.} ja \ref{table:mallintaminen 3.} voidaan päätellä, 
+että QSIM on yleisin käytetty tapa mallintaa laadullisia simulaatioita.
+On selkeää, että QSIM on erittäin tunnettu algoritmi ja yksi ensimmäisistä
+laadullisille simuloinninlle tarkoitetuista algoritmeista
+\parencite{kuipers1986qualitative}.
+Mallintamisessa on myös käytetty useita eri abstraktointiin perustuvia sumeita tapoja ja metodeja \textbf{TODO: laajenna tätä hiukan.}. 
 
-- QSIM on edelleen yleisin käytetty tapa mallintaa ja simuloida laadullisia simulaatioita.
+"Signed Directed graphs" ja "signed digraphs" esiintyivät myös usein, 
+varsinkin kemian ja tekniikan tieteenaloilla. Lyhyella katsauksella
+metodeissa on kyse \textbf{TODO: Selvitä}...
 
-- Mallintamisessa on myös käytetty useita eri abstraktointiin perustuvia sumeita tapoja.
+Mallintamisesta löytyy useita eri yksittäisiä metodeja ja algoritmeja. 
+Mallintamisessa täytyy tietää tutkittava kohdejärjestelmä hyvin tarkasti, 
+jotta toimivaa mallia pystyttäisiin luomaan. Tästä johtuen havainnot 
+mallintamisen metodeista ja algoritmeista ei ole niin tärkeä, sillä
+mallintamiseen ei ole yleistä, kaikkeen toimivaa tapaa.
 
-- Ohjelmistoissa yleisiä ovat Matlab, GNA, Garp3, COMSOL ja OpenFOAM. Näistä Matlab esiintyi 
-useimmiten eri tieteenaloilla ja tavoitekategorioissa.
+Taulukoista \ref{table:ohjelmistot 1.}, \ref{table:mallintaminen 2.} ja 
+\ref{table:ohjelmistot 3.} löytyvät aineiston tutkimuksista löydetyt 
+laadullisiin simulaatioihin liittyvät ohjelmistot ja ohjelmat.
+Ohjelmistoissa yleisiä ovat Matlab, GNA, Garp3, COMSOL ja OpenFOAM. 
+Näistä Matlab esiintyi useimmiten eri tieteenaloilla ja tavoitekategorioissa.
 
-- Matlab on erittäin yleinen ohjelma laadullisille simulaatioille, joka esiintyy eri 
+Matlab on erittäin yleinen ohjelma laadullisille simulaatioille, joka esiintyy eri 
 tieteenaloissa ja tavoitteissa. Matlab on ohjelmoinnin ja numeerinen laskennan alusta
 \footnote{\url{https://se.mathworks.com/products/matlab.html}},
-joka on kyvyiltään erittäin monipuolinen, mikä näkyy sen levinneisyydessä myös mitä tulee
-laadullisille simulaatioille.
+joka on kyvyiltään erittäin monipuolinen, mikä näkyy sen levinneisyydessä. 
+Tämä on paikkansa pitävä myös mitä tulee laadullisten simulaatioiden käytölle.
 
-- GNA (Genetic Networ Analyzer) on tietokonetyökalu geeniverkkojen mallintamiseen 
+GNA (Genetic Networ Analyzer) on tietokonetyökalu geeniverkkojen mallintamiseen 
 ja simulointiin 
 \footnote{\url{https://team.inria.fr/microcosme/genetic-network-analyzer-gna/}}. 
 Geeniverkkoja on vaikea simuloida määrällisesti (\textbf{TODO: Lähde}), miksikä
-GNA on laadullisen mallintamisen ja simulaation työkalu.
+GNA on laadullisen mallintamisen ja simulaation työkalu. GNA-ohjelmaa 
+usein käytettiin maatalouden ja biologisten tieteiden tutkimuksissa.
+Muita geeniverkkoihin liittyviä ohjelmistoja on esimerkiksi GINsim ja GRENS,
+jotka esiintyvät taulukossa \ref{table:ohjelmistot 3.}.
 
-\section{Tutkimuksen huomiot ja jatkotutkimus ehdotukset}
-- Kartoituksen tieteenaloihin luottaminen tarvitsee sen, että luotetaan ScienceDirectin 
-ja tekoälyn määritelmiin. Näistä voidaan luoda alustavia päätelmiä, mutta tarkempia
-toteamuksia varten pitäisi laajentaa ja tarkentaa hakua.
+Garp3 
+\footnote{\url{https://ivi.fnwi.uva.nl/tcs/QRgroup/QRM/help/faq/index.html\#Software}} on ohjelmisto laadullisten mallien tarkastelemiseen, kehittämiseen ja 
+ajamiseen. Garp3 on uudempi versio työkaluissa mainitusta GARP-ohjelmasta.
+Garp3 sisältää sisällään myös VisiGarp ja Homer -ohjelmat, jotka myös näkyvät 
+ohjelmistojen taulukoissa. Garp3 ja aikaisempi versio GARP olivat eniten käytössä
+ympäristötieteen aloilla.
 
-- ScienceDirectin tieteenalojen luokitukset ovat aika laajoja, jotta niihin voitaisiin 
-täydellisesti luottaa. Esim. "Agricultural and Biological" ja "Engineering".
+Ohjelmistoissa esiintyy enemmän yhtäläisyyksia eri työkalujen käytössa verrattuna
+mallintamisen työkaluihin. Tämä voi johtua siitä, että simulaatio-ohjelman
+valitseminen on vähemmän kriittistä kuin mallin luominen. 
+Kun on malli saatu luotua, simulaation ajamiselle löytyy yleiskäyttöisiä 
+työkaluja, kuten Matlab.
 
-- Myös se, että tutkimus voi olla useaa tieteenalaa samaan aikaan täytyy ottaa huomioon.
+\section{Tutkimuksen huomiot ja jatkotutkimusehdotukset}
+Kartoituksen tieteenaloihin luottaminen tarvitsee sen, 
+että luotetaan ScienceDirectin  ja tekoälyn määritelmiin. 
+Näistä voidaan kuitenkin luoda alustavia päätelmiä, mutta tarkempia
+toteamuksia varten pitäisi laajentaa aineiston hakua useammalle eri tietokannalle ja hakukoneelle. Myös haun tarkentaminen voi parantaa tuloksia, sillä tälle 
+aineistolle piti tehdä paljon karsimista, 
+vaikka käytettiin vain yhtä tutkimustietokantaa.
 
-- Muuttaisiko useamman hakutietokannan käyttäminen näitä tuloksia? Tai aikavälin laajentaminen?
+ScienceDirectin tieteenalojen luokitukset ovat aika laajoja, jotta niihin voitaisiin täydellisesti luottaa. Esim. "Agricultural and Biological" ja "Engineering". Myös se, että tutkimus voi olla useaa tieteenalaa samaan aikaan täytyy ottaa huomioon mahdollisessa jatkotutkimuksessa. 
+Tässä tutkimuksessa pyrittiin rajoittamaan tieteenaloja yksi per artikkeli.
 
-- Tietokannan hakuun olisi voinut lisätä hakusanoiksi "Qualitative Reasoning" ja "Qualitative Physics" AND-ehdolla. Näiden termien suureen esiintymismäärään törmättiin vasta aineiston analyysin vaiheessa ja olisi vaatinut lisäaikaa gradun kirjoittamiselle.
+Mahdollisia kyseenalaistavia kysymyksiä tulosten tarkkuudesta ovat seuraavat:
+\begin{itemize}
+    \item Muuttaako useamman hakukoneen tai tutkimustietokannan käyttäminen näitä tuloksia? 
+    \item Voiko aikavälin rajaaminen haussa väärentää tuloksia?
+\end{itemize}
 
-- Mahdollisia jatkotutkimuskohteita: Kirjallisuuskartoituksen parantaminen 
-(laajempi haku, tarkemmat tieteenalat), 
-tarkemmat kirjallisuuskatsaukset syvemmälle eri tieteenaloihin ja työkaluihin.
+Tietokannan hakuun olisi voinut lisätä hakusanoiksi 
+"Qualitative Reasoning" ja "Qualitative Physics" OR-ehdolla. 
+Näiden termien suureen esiintymismäärään törmättiin vasta aineiston 
+analyysin vaiheessa ja olisi vaatinut lisäaikaa gradun kirjoittamiselle.
+
+Mahdollisia jatkotutkimuskohteita ovat: 
+\begin{itemize}
+    \item Kirjallisuuskartoituksen parantaminen  (laajempi haku, tarkemmat tieteenalat)
+    \item Mahdollisemmat syvällisemmät kirjallisuuskatsaukset eri tieteenaloihin ja työkaluihin.
+\end{itemize}
 
 \chapter{Yhteenveto}
 
