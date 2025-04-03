@@ -46,13 +46,38 @@
   }
 \keywords{Qualitative research, Simulation, Qualitative simulation, Systematic mapping study}
 \tiivistelma{%
-  Määrällinen simulaatio tarvitsee paljon taustatietoa järjestelmän toiminnasta, kun
+  Määrällinen simulaatio tarvitsee paljon numeerista taustatietoa järjestelmän toiminnasta, kun
   taas laadullinen simulaatio mahdollistaa simuloinnin, vaikka järjestelmän toiminnan 
   tarkasta tiedossa on puutteita. Tässä tutkimuksessa toteutettiin kirjallisuuskartoitus
-  laadullisten simulaatioiden käytöstä tieteellisenä menetelmänä ja miten laadullisia simulaatioita pyritiin käyttämään kyseisissä tutkimuksissa. 
+  laadullisten simulaatioiden käytöstä tieteellisenä menetelmänä 
+  ja miten laadullisia simulaatioita pyritiin käyttämään 
+  kyseisissä tutkimuksissa. Kirjallisuuskartoituksen tuloksena saatiin 
+  pinnallinen kuvaus laadullisten simulaatioiden käytöstä eri tieteenaloilla.
+  Kartoituksessa tunnistettiin yhteensa 17 eri tieteenalaa ja 
+  9 eri tavoitetta, joita simulaatioilla pyrittiin saavuttamaan. 
+  Lisäksi löydettiin lukuisia eri työkaluja
+  laadullisten simulaatioiden luomiseen. Suurimpina havaintona todettiin, että laadullisilla
+  simulaatioilla pyritään usein vähentämään kohdejärjestelmän tietoisuuden aukkoja ja 
+  eniten simulaatioita ollaan käytetty kemian tieteiden, tekniikan ja materiaalien tieteiden 
+  aloilla. Yleisimpiä työkaluja simulaatioiden toteutukseen 
+  ovat QSIM algoritmi ja Matlab-sovellus. 
 }
 \abstract{%
-  
+Quantitative simulation needs a lot of numerical information about the system's operations,
+while qualitative simulation allows simulation even if there is a lack of precise information about the system's operation. 
+This study conducted a systematic literature mapping study 
+on the use of qualitative simulations as
+a scientific method and how qualitative simulations were used in scientific studies. 
+The systematic literature mapping study resulted in a superficial description of the use of
+qualitative simulations in different scientific disciplines. 
+The literature mapping study identified a total of 17 different scientific disciplines and 
+9 different objectives that simulations were designed to achieve. Also in addition a wide range of tools for creating qualitative simulations was found. 
+The main findings were that qualitative simulations often aim to reduce gaps 
+in the knowledge of the target system
+and that simulations have been most widely used in 
+the chemical sciences, engineering and materials sciences. 
+The most common tools used to implement simulations are the QSIM
+algorithm and the Matlab application.
 }
 
 \author{Jaakko Palm}
@@ -196,10 +221,6 @@ jonka perusteella toteutetaan datan keruu. Malli muotoillaan ja kehitetään,
 aikaisempiin askeleihin perustuen, sekä validoitaan. Lopuksi mallin toiminta ja logiikka dokumentoidaan myöhempää käyttöä varten.
 
 \section{Simulaatio} \label{simulaatio}
-\begin{comment}
-Käytännössä tämä alaluku on vahvasti sidoksissa edelliseen. Mikä on sitten oikea jako näiden välillä eri aihepiirien osalta, onkin vaikeampi kysymys. 
-Missä määrin simulaatioiden tyypit ovat suoraan sidoksissa mallien tyyppeihin, missä määrin samalla mallirakenteella voi toteuttaa erityyppisiä simulointeja.
-\end{comment}
 Simulaatio viittaa reaalimaailman prosessin tai 
 järjestelmän jäljittelyyn \parencite{banks1999introduction}. 
 Käsitteenä simulaatio on ollut jo useampaa sataa vuotta 
@@ -248,6 +269,8 @@ järjestelmän osioiden jatkuva-aikaista muuttumista käyttäen sopivia
 yhtälöitä \parencite{historyOfSimulation1996}. 
 Jatkuva-aikaisissa simulaatioissa järjestemän muuttujat muuttuvat 
 jatkuvasti simulaatiomallin differentiaaliyhtälöiden mukaan.
+Simulaatiolle toimivin tyyppi katsotaan mallin mukaan. Jos mallissa aikaa seurataan 
+tapahtumien kautta, diskreetin tapahtuman simulaatio on toteutukseltaan oleellisempi.
 
 \cite{banks1999introduction} mukaan simulaatiolla on useampi eri hyöty, 
 mitä tulee sen käytössä tutkimusten työkaluna. 
@@ -306,10 +329,6 @@ Puoli-määrällinen simulaatio yhdistää laadullisen ja määrällisen simulaa
 kompensoidakseen näiden heikkouksia \parencite{semiHybrid1997qualitative}.
 
 \subsection{Laadullisen simulaation hyödyt}
-\begin{comment}
-Jo määrällisessäkin simuloinnissa on usein tarve mm herkkyysanalyysille, jolla arvioidaan eri parametreissa olevien epävarmuuksien vaikutusta tulosmuuttujiin (ja joskus tämä on määrällisen simuloinnin tavoitekin). 
-Vastaavasti tästä voi johtaa laadullisen tulosen sille, onko jonkin parametrin tai ilmiön tarkempi kuvaus tarpeen vai voiko rauhassa yksinkertaistaa.
-\end{comment}
 Laadullisella simuloinnilla on tietysti samat yleiset hyödyt 
 kuin muilla simulaatiolla, mainittuna luvussa \ref{simulaatio}. 
 Laadulliset simulaatiot toimivat hyvin tapauksissa, 
@@ -327,7 +346,8 @@ jossa pyritään selvittämään järjestelmässä esiintyviä vikojen syitä ja
 ennen kuin vika pääsee tapahtumaan.
 Ympäristötieteessä laadullisella simulaatiolla voidaan analysoida ja ennustaa
 ympäristön muutoksen vaikutuksia kasvien lajeihin ja elinympäristöön \parencite{qualiAnalysisEnviron2010}.
-Lääketieteessä taas laadullisella simulaatio voi auttaa tutkimaan potilaan kuntoa analysoimalla laadullisia potilastietoja ja luomalla mahdollisia diagnooseja \parencite{QualitativeReasoning1997}. \textbf{TODO: tarkista lähde.}
+Kemian alalla taas laadullisilla simulaatioilla voidaan simuloida kemikaalisia 
+reaktioita ja selittää niiden prosesseja \parencite{chemistryQualitativeSim2002}.
 
 Simulaatiomallin on mahdollista toteuttaa sekä laadullisia, 
 että määrällisiä ominaisuuksia samaan aikaan. 
@@ -553,18 +573,15 @@ Kriteerit etsityille työkaluille olivat:
 \end{enumerate}
 
 \chapter{Kirjallisuuskartoituksen tulokset}
-\begin{comment}
-Numeroidut osat ovat lukuja ja niiden alalukuja, jotka sitten jakutuvat numeroimattomiksi kappaleiksi. Englannin chapter ei ole kappale vaan kappale on paragraph.
-
-Konkreettisena ohjeena, välltäisin 1 virkkeen kaltaista suoraan osoittavaa lausetta. Tyylillisesti voisi aloittaa vaikka tähän tapaan: Simulaatiot perustuvat aina malleihin. Mallien muodostamista kuttsutaan mallintamiseksi. Alaluvussa 2.1 avataan mallintamisen prosessia ja sen roolia osana simulointiin perustuvaa tutkimusta.....
-\end{comment}
 Tässä luvussa esitellään kerätyn aineiston perusteella koostetut tulokset.
+Kerätyt tiedot on koostettu taulukoihin ja niistä huomattavat havainnot löytyvät
+seuraavasta luvusta \ref{tulkitseminen ja pohdinta}.
 Alaluvussa \ref{simulaatiotulokset} kuvaillaan,
 mitä tutkimusartikkelit ovat tavoitelleet laadullisella simuloinnilla.
-Kappaleessa \ref{tieteenalat} esitellään tutkimusartikkeleiden 
-päätieteenalat ja niiden lukumäärät. 
-Kappale \ref{tyokalut} käy läpi artikkeleista löydetyt 
-ja tunnistetut algoritmit, ohjemistot ja ohjelmistokehykset. 
+Aineistosta kerättiin myös tutkimuksien tieteenalat, jotka näkyvät alaluvussa
+\ref{tieteenalat}.
+Alaluku \ref{tyokalut} käy läpi artikkeleista löydetyt 
+ja tunnistetut laadullisiin simulaatioihin liittyvät algoritmit ja ohjemistot. 
 
 \section{Laadullisen simuloinnin tavoitteet} \label{simulaatiotulokset}
 Tässä alaluvussa on tarkoitus esittää aineiston tutkimuksista 
@@ -576,7 +593,7 @@ Löydetyistä kategorioista käytetään nimitystä \textbf{tavoitekategoria}.
 Tutkimuksen etsityt tulokset voivat sopia myös useampaan eri tavoitekategoriaan
 samaan aikaan. Löydetyistä tavoite-kategorioista esiintyi samankaltaisuuksia, 
 minkä perusteella ne voidaan jakaa kolmeen osioon:
-\textbf{TODO: Tavoitekategorioiden poikkileikaukset.}
+
 \begin{enumerate}
     \item Tutkittavan järjestelmän toiminnan selkentäminen
     \item Tutkittavan järjestelmän vian tai epätoivotun toiminnan selvittäminen
@@ -630,20 +647,20 @@ Löydetyt tieteenalat ja artikkelien lukumäärät on esitetty taulukossa
 Tieteenalat on jaettu päätutkimuskysymyksen tavoitekategorioiden mukaan.
 Koska joissain tieteenaloissa oli vain muutama artikkeli, 
 tieteenaloja yhdistettiin sopivuuden mukaan laajempiin osuuksiin.
-Yhdistämättä tieteenaloja tunnistettiin yhteensä seitsemäntoista.
+Yhdistämättä tieteenaloja tunnistettiin yhteensä 17.
 Tieteenalat "Chemistry" ja "chemical engineering" yhdistettiin 
-kemian tieteisiin nimellä "Chemical Sciences".
+samaksi kemian tieteisiin nimellä "Chemical Sciences".
 "Biochemistry, Genetics and Molecular Biology", "Medicine and Dentistry" ja "Neuroscience"
 yhdistettiin laajempaan elämäntieteiden alaan "Lifescience" nimityksellä.
 "Earth and Planetary Science" ja "Environmental Science" yhdistettiin samaan, 
 koska "Earth and Planetary Science" on osana ympäristöntieteitä.
 "Mathematics" ja "Computer Science" yhdistettiin, 
 koska matematiikan tutkimukset koskivat myös tietotekniikan alaa tekoälyn 
-antamien tarkempien tieteenalojen mukaan.
+antamien tarkempien tieteenalojen mukaan 
+(menetelmä on tarkemmin kuvattu luvussa \ref{tiedon keruu}).
 "Decision Science", "Economics" ja "Social Science" yhdistettiin laajempaan alaan,
 nimityksellä "Social and Psychology".
 
-%\textbf{TODO: Muistetaan numeroinnin vaihto muissakin osuuksissa. vanha -> uusi.numero}
 \begin{tikzpicture}[scale=0.8]
     \foreach \y [count=\n] in {
         {9,1,1,0,0,2,9,6,0},
@@ -1037,7 +1054,7 @@ artikkelissa, sen lukumäärä on esitetty sulkujen sisällä.
     \label{table:ohjelmistot 3.}
 \end{longtable}
 
-\chapter{Tulosten tulkitseminen}
+\chapter{Tulosten tulkitseminen ja pohdinta} \label{tulkitseminen ja pohdinta}
 
 \section{Laadullisen simulaation tavoitteet}
 Laadullinen simulaatio on kattava aihealue, joilta löytyy tutkimuksia monelta eri alalta. Tässä tutkimuksessa aineiston artikkeleista tunnistettiin 17 
@@ -1104,10 +1121,9 @@ Ympäristötieteissä pyrittiin eniten vähentämään tutkimuskohteiden tietoje
 metodeja laadullisten simulaatioiden käyttämiseen ja toteutukseen on myös
 tutkittu paljon.
 
-Fysiikassa oli erittäin vähän tutkimuksia, vaikka laadullinen simulointi on koettu hyödylliseksi fysiikan alalla \textbf{TODO: muista lähde}. 
-Osittain tälle syynä voi olla
-että puhutaan usein laadullisesta fysiikasta (Qualitative Physics), jolloinka tutkimuksia voi helposti jäädä aineiston ulkopuolelle, 
-kun haussa käytetty termi oli "qualitative simulation".
+Fysiikan ja astronomian aloilla oli erittäin vähän tutkimuksia.
+Yksi mahdollinen teoria tälle voi olla,
+että usein laadullisesta fysiikasta käytetään termiä "Qualitative Physics", jolloinka tutkimuksia voi helposti jäädä aineiston ulkopuolelle.
 
 Sosiaalisesta tieteistä (Social Science) löytyi suurimmalta osalta tutkimuksia, 
 jotka pyrkivät selvittämään miten mahdollinen haitallinen käyttäytyminen voi vaikuttaa tilanteeseen. Tämä Voi mahdollisesti johtua Science Directin määritelmistä, esimerkiksi
@@ -1125,11 +1141,14 @@ että QSIM on yleisin käytetty tapa mallintaa laadullisia simulaatioita.
 On selkeää, että QSIM on erittäin tunnettu algoritmi ja yksi ensimmäisistä
 laadullisille simuloinninlle tarkoitetuista algoritmeista
 \parencite{kuipers1986qualitative}.
-Mallintamisessa on myös käytetty useita eri abstraktointiin perustuvia sumeita tapoja ja metodeja \textbf{TODO: laajenna tätä hiukan.}. 
+Mallintamisessa on myös käytetty useita eri abstraktointiin perustuvia sumeita tapoja ja metodeja, kuten alaluvussa \ref{tyokalut} mainittua sumeaa laadullisen simulaation algoritmia.
 
 "Signed Directed graphs" ja "signed digraphs" esiintyivät myös usein, 
 varsinkin kemian ja tekniikan tieteenaloilla. Lyhyella katsauksella
-metodeissa on kyse \textbf{TODO: Selvitä}...
+metodit ovat käytössä laadullisen simuloinnin, vaara- ja käytettävyysanalysoinnissa 
+ja vianselvityksessä \parencite{SDGapplication2004}.
+Molemmissa menetelmissä pyritään toteuttamaan syy-seuraus kaavakkeita perustuen
+järjestelmän laadullisesti määriteltyyn käyttäytymiseen.
 
 Mallintamisesta löytyy useita eri yksittäisiä metodeja ja algoritmeja. 
 Mallintamisessa täytyy tietää tutkittava kohdejärjestelmä hyvin tarkasti, 
@@ -1152,8 +1171,9 @@ Tämä on paikkansa pitävä myös mitä tulee laadullisten simulaatioiden käyt
 GNA (Genetic Networ Analyzer) on tietokonetyökalu geeniverkkojen mallintamiseen 
 ja simulointiin 
 \footnote{\url{https://team.inria.fr/microcosme/genetic-network-analyzer-gna/}}. 
-Geeniverkkoja on vaikea simuloida määrällisesti (\textbf{TODO: Lähde}), miksikä
-GNA on laadullisen mallintamisen ja simulaation työkalu. GNA-ohjelmaa 
+Geeniverkkoihin liitty suuri määrä matematiista dataa, mikä tekee niistä vaikeita 
+simuloida määrällisesti \parencite{gnaGeneticNetworkAnalyzer2003}, miksikä
+GNA on suunniteltu laadulliseen mallintamiseen ja simulointiin. GNA-ohjelmaa 
 usein käytettiin maatalouden ja biologisten tieteiden tutkimuksissa.
 Muita geeniverkkoihin liittyviä ohjelmistoja on esimerkiksi GINsim ja GRENS,
 jotka esiintyvät taulukossa \ref{table:ohjelmistot 3.}.
@@ -1200,7 +1220,55 @@ Mahdollisia jatkotutkimuskohteita ovat:
 \end{itemize}
 
 \chapter{Yhteenveto}
+Tutkmuksessa halutiin saada toteamus miten laadullisia simulaatioita käytetään
+ja toteutetaan tieteellisenä menetelmänä. Kysymykset joihin pyrittiin vastata 
+olivat mitä tavoitteita laadullisilla simulaatiolla haluttiin saavuttaa, 
+millä aloilla simulaatioit olivat eniten käytössä ja 
+millä työkaluilla simulaatioita toteutettiin. Vastaavaa tutkimusta ei ollut 
+löytynyt kirjoitusvaiheessa.
 
+Tutkimuksen menetelmäksi valittiin systemaattinen kirjallisuuskartoitus, koska
+menetelmä on sopiva kun halutaan saada pinnallinen katsaus laajaan aihealueeseen.
+laadullisten simulaatioiden käytöstä tieteellisenä tutkimusmenetelmänä.
+Koska laadulliset simulaatioit olivat aiheena odotettua suurempi, 
+kartoituksessa aineiston keruu jouduttiin rajoittamaan ScienceDirectin 
+tutkimustietokantaan. Aineistoa haettiin hakutermillä "Qualitative simulation"
+vuosilta 2000-2024. Sopivia artikkeleita valittiin lopuksi yhteensä 184 kappaletta.
+
+Systemaattisen kirjallisuuskartoituksen tuloksena saatiin pinnallinen katsaus miten 
+laadulliset simulaatioit ovat käytössä eri tieteenaloilla. 
+Laadullisia simulaatioita oltiin eniten käytetty kemian tieteiden, 
+tekniikan ja ympäristötieteiden aloilla. Tutkimuksia löytyi kiitettävästi myös
+maatalouden ja biologian, sekä energian ja tietotekniikan aloilla. 
+Vähiten tutkimuksia löytyi sosiaalisten ja psykologisteb tieteiden aloista, sekä 
+fysikaan ja astronomian aloilta.
+
+Eniten laadullisilla simulaatioilla pyrittiin
+selvittämään enemmän kohdejärjestelmän toiminnasta, eli korjaamaan tietoisuuden aukkoja
+tutkittavasta kohteesta. Viimeisenä 20 vuotena on myös tehty paljon tutkimuksia liittyen 
+laadullisten simulaatioiden toteuttamiseen eri aloilla. 
+Esimerkiksi uusia työkaluja ollaan kehitetty ja vanhoja paranneltu.
+Osittain laadullisilla simulaatioilla on myös pyritty ennustamaan mahdollisia vian 
+ilmentymiä, varsinkin kemian tieteiden ja tekniikan aloilla.
+
+Laadullisille simulaatioille löydettiin myös useita eri metodeja ja algoritmeja 
+mitä tulee mallintamiseen. Mallintamisen työkalujen valinta on erittäin tärkeää,
+jos sopivia työkaluja edes on olemassa. Tästä huolimatta mallintamisen työkaluista
+nousivat esille QSIM-algoritmi ja Signed Directed Graph sekä Signed Digraph -kaaviot, 
+jotka esiintyivät useammin verrattuna muihin työkaluihin.
+Simulaatio-ohjelman valitseminen on selvästi vähemmän kriittistä, sillä ohjelmien taulukoissa
+oli selkeästi vähemmän yksittäisiä ohjelmia. 
+Yleisin simulaatio-ohjelma on Matlab, mikä johtuu sen monikäyttöisyydestä 
+matemaattisena työkaluna.
+
+Toteutettu kirjallisuuskartoitus ei ole kuitenkaan huomioitta. Kartoitus jouduttiin resurssien
+puitteissa rajaamaan vain yhteen tutkimustietokantaan, ScienceDirectiin, 
+mikä pitää ottaa huomioon tulosten tulkitsemisessa. Mahdollisia jatkotutkimus ehdotuksia
+tutkimukselle on kirjallisuuskartoituksen parantaminen ottamalla mukaan useampaa eri 
+hakukonetta ja tietokantaa. 
+Lisäksi jos halutaan syvällisempää tietoa laadullisten simulaatioiden käytöstä, 
+voidaan mahdollisesti toteuttaa tarkempia kirjallisuuskatsauksia esimerkiksi yhteen 
+tieteenalaan kerrallaan.
 
 \printbibliography
 
