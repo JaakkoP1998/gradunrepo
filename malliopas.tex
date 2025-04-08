@@ -52,7 +52,7 @@ joka mahdollistaa simuloinnin vaikka järjestelmän toiminnan tarkasta tiedossa 
 Tässä tutkimuksessa toteutettiin kirjallisuuskartoitus
 laadullisten simulaatioiden käytöstä tieteellisenä menetelmänä 
 ja miten laadullisia simulaatioita pyritiin käyttämään 
-kyseisissä tutkimuksissa. Kirjallisuuskartoituksen tuloksena saatiin 
+kyseisissä tutkimuksissa. Kirjallisuuskartoituksen tuloksena tuotettiin 
 laaja kuvaus laadullisten simulaatioiden käytöstä eri tieteenaloilla.
 Kartoituksessa tunnistettiin yhteensa 17 eri tieteenalaa ja 
 9 eri tavoitetta, joita simulaatioilla pyrittiin saavuttamaan. 
@@ -61,7 +61,7 @@ laadullisten simulaatioiden luomiseen. Keskeisimpinä havaintona todettiin, ett�
 simulaatioilla pyritään usein vähentämään kohdejärjestelmän tietoisuuden aukkoja ja 
 eniten simulaatioita ollaan käytetty kemian tieteiden, tekniikan ja materiaalien tieteiden 
 aloilla. Yleisimpiä työkaluja simulaatioiden toteutuksessa
-ovat QSIM algoritmi ja Matlab-sovellus. 
+on käytetty QSIM algoritmia ja Matlab-sovellusta. 
 }
 \abstract{%
 TODO: Päivitä käännös.
@@ -252,16 +252,12 @@ syöte-tulos
 Monte Carlo sai nimensä vuonna 1947 \parencite{historyOfMonte}
 ja se perustuu tilastotieteeseen ja todennäköisyyden laskemiseen
 \parencite{historyOfSimulation1996}.
+Monte Carlo simulaatiossa lasketaan useita riippumattomia syöte-tulospareja,
+joissa syöte noudattaa annettua tlastollista jakaumaa 
+ja tulosten jakaumasta lasketaan haluttuja tunnuslukuja lopputulokseksi.
 \begin{comment}
-Tämä on vähän tautologinen eikä avaa asiaa lukijalle. kaikkein yksinkertaisin Monte Carlo on sitä, että lasketaan riippumattomia syöte-tulospareja, joissa syöte noudattaa annettua tlastollista jakaumaa ja tulosten jakaumasta lasketaan haluttuja tunnuslukuja lopputulokseksi. Monimutkaisempia MC algoritmeja tarvitaan tilanteissa, joissa riippumattomien näytteiden generointi syötejakaumasta on vaikeaa ja syötearvoja poimitaan tavalla, joka tekee niistä tilastollisesti keskenäsiriippuvia. Tällöin luonnollisesti tulosten analysoinnissa on huomioitava tämä riippuvuus. 
+Monimutkaisempia MC algoritmeja tarvitaan tilanteissa, joissa riippumattomien näytteiden generointi syötejakaumasta on vaikeaa ja syötearvoja poimitaan tavalla, joka tekee niistä tilastollisesti keskenäsiriippuvia. Tällöin luonnollisesti tulosten analysoinnissa on huomioitava tämä riippuvuus. 
 \end{comment}
-Monte Carlo simulaatiossa lasketaan useita laskelmia käyttäen sopivaa 
-Monte Carlo algoritmia.
-Simulaatiossa tehdään useampi laskelma, 
-joista jokainen on arvaus mahdollisesta tuloksesta ja yhdessä katsottaessa
-antavat mahdollisuuden tuloksen todennäköisyydestä. 
-Eli simulaatiolle annetaan syöte, minkä perusteella simulaatio antaa
-ajon jälkeen lopputuloksen.
 
 Aikaa käsitteleviä simulaatiomenetelmiä ovat 
 \textit{diskreetin tapahtuman simulaatiot (eng. discrete event simulations)}
@@ -368,9 +364,9 @@ Yksi mahdollinen tapa puolilaadulliselle simulaatiolle on yksinkertaisimmillaan
 määrällinen simulaatio, jossa käytetään numeerisia välejä ominaisuuksissa, 
 joista ei ole täydellistä määrällistä tietoa \parencite{semiHybrid1997qualitative}.
 
-\subsection{Yleisiä työkaluja}
+\subsection{Yleisiä menetelmiä}
 \begin{comment}
-Kun koetin perehtyä noihin työkaluihin, jäin miettimään, miten oikea termi tuo yleinen työkalu on, koska näissä mainituissa kyse oli enemmän yksittäisten tutkimusryhmien jakamista työkaluista. Yleisi käaupallisia tuotteita nämä eivät ole. Mutta ohjemistoja kannattaa avata enemmän myöhemmin.
+Kun koetin perehtyä noihin työkaluihin, jäin miettimään, miten oikea termi tuo yleinen työkalu on, koska näissä mainituissa kyse oli enemmän yksittäisten tutkimusryhmien jakamista työkaluista. Mutta ohjemistoja kannattaa avata enemmän myöhemmin.
 \end{comment}
 Laadullisten simulaatioiden luonttin löytyy useita eri metodeja ja työkaluja.
 Esimerkiksi \textit{Qsim} on algoritmi, jolla voidaan luoda laadullisia malleja simulaatioille
@@ -439,17 +435,10 @@ Tutkimuksen tavoitteena on tuottaa yleiskatsaus laadullisten simulaatioiden käy
 systemaattisen kirjallisuuskartoitusta käyttäen, jotta saataisiin haluttu yleiskäsitys millä aloilla laadulliset simulaatioit ovat levinneet eniten, miten paljon laadullisten simulaatioiden luontiin ja mallintamiseen löytyy työkaluja ja ohjeita sekä minkäkaltaisia tuloksia laadullisilla simulaatioilla etsitään.
 
 \section{Tutkimusmenetelmä} \label{tutkimusmenetelmä}
-\begin{comment}
-    muotoile niin, että tutkimuksen tavoite on tuottaa jotain (eikä saada!)
-
-    Tämä oli se Kitchenham (Keelen yliopistosta). 
-    Muuten näytät sanoittavan kaikkea saamisen kautta.
-
-    Kitchenham raporttiin viittaus menee pieleen viittauksissa.
-\end{comment}
-Tutkielman tarkoituksena oli saada yleiskuva laadullisten simulaatioiden käytöstä
+Tutkielman tarkoituksena oli tuottaa yleiskuva laadullisten simulaatioiden käytöstä
 tieteellisenä menetelmänä.
-\textcite{keele2007guidelines} mukaan  systemaattisella kirjallisuuskartoituksella saadaan laaja yleiskatsaus tutkimuskohteesta,
+\textcite{keele2007guidelines} mukaan systemaattisella kirjallisuuskartoituksella 
+tuotetaan laaja yleiskatsaus tutkimuskohteesta,
 mikä tekee siitä oleellisen menetelmän tutkimukselle. 
 Systemaattinen kirjallisuuskartoitus antaa halutun yleiskuvan laadullisista simulaatioista ja menetelmä sopii hyvin vastaamaan luvussa \ref{johdanto} esitettyihin tutkimuskysymyksiin.
 
@@ -487,23 +476,43 @@ Google Scholarin hauissa taas saatujen artikkelien määrä oli liian suuri,
 mitä hankaloitsi Scholarin vajaat hakujen rajausvaihtoehdot. 
 Testatut hakukoneet ja niiden tuloset on esillä taulukossa \ref{table: hakutulokset}.
 
-Tutkimukset aineistoon kerättiin ScienceDirect-tutkimustietokannasta \footnote{\url{https://www.sciencedirect.com/}}. Hakuterminä käytettiin "qualitative simulation" ja haun rajaamisessa artikkelit rajattiin englannin kielisiin tutkimusartikkeleihin vuosina 2000-2024. 
-
-\begin{comment}
-Tästä taisin jo kommentoida aiemmin. Olisi hyvä avata vähän noita SD lukuja kahdesta eri aikaikkunasta. Niistä ja termin historiasta voi päätellä, että ennen 2000 on ollut aktiivisempaa kuin 2000-24, jos sama määrä viitteitä on tullut ennen 2000 vaikka käsiten on vuodelta 86 (vai mikä se nyt olikaan). Sinänsä on toki perusteltua tarkastella tuoreempaa tilannetta.
-\end{comment}
+Tutkimukset aineistoon kerättiin ScienceDirect-tutkimustietokannasta \footnote{\url{https://www.sciencedirect.com/}}. 
+Hakuterminä käytettiin "qualitative simulation" 
+ja haun rajaamisessa artikkelit 
+rajattiin englannin kielisiin tutkimusartikkeleihin vuosina 2000-2024. 
+Vertauksen vuoksi tehtiin haut myös 
+aikaisemmille aikakausille Google Scholarin ja ScienceDirectin hauissa,
+jotta saataisiin käsitys aiheen kasvusta.
 
 \begin{table}[h]
 \centering
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{|l|l|l|}
 \hline
-\textbf{Hakukohde} & \textbf{Hakukriteerit} & \textbf{Hakutulokset} \\ \hline
-Google Scholar & hakustermi:"qualitative simulation", kieli: englanti    & 11300                 \\ \hline
-JYKDOK  &  hakutermi: "qualitative simulation"     & 13                    \\ \hline
-IEEE Xplore  &  hakutermi: "qualitative simulation"       & 153                   \\ \hline
-ScienceDirect, haku 1  &  hakutermi: "qualitative simulation", kieli: englanti     & 1300                   \\ \hline
-ScienceDirect, haku 2  &  hakutermi: "qualitative simulation", kieli: englanti, aikakausi: 2000-2024     & 677                   \\ \hline
+\textbf{Hakukohde} & \textbf{hakutermi: "qualitative simulation", muut hakukriteerit} & \textbf{Hakutulokset} \\ \hline
+Google Scholar, haku 1 &  
+kieli: englanti    & 11300       
+\\ \hline
+Google Scholar, haku 2 &  
+kieli: englanti, aikakausi: 2000-2024    & 7090       
+\\ \hline
+Google Scholar, haku 3 &  
+kieli: englanti, aikakausi: 1985-1999    & 3830       
+\\ \hline
+JYKDOK  &  -     & 13                    
+\\ \hline
+IEEE Xplore  &  -       & 153                   
+\\ \hline
+ScienceDirect, haku 1  &  
+julkaisun tyyppi: research articles, kieli: englanti    & 1300
+\\ \hline
+ScienceDirect, haku 2  &  julkaisun tyyppi: research articles, kieli: englanti, 
+aikakausi: 2000-2024     & 677                   
+\\ \hline
+ScienceDirect, haku 3  &  
+julkaisun tyyppi: research articles, kieli: englanti, 
+aikakausi: 1985-1999     & 595                  
+\\ \hline
 \end{tabular}
 }
 \caption{Hakutulosten määrä hakukohteista}
@@ -511,7 +520,7 @@ ScienceDirect, haku 2  &  hakutermi: "qualitative simulation", kieli: englanti, 
 \end{table}
 
 Laadulliset simulaatiot aiheena oli odotettua laajempi, 
-joten gradun resurssien takia haku jouduttiin rajaamaan 
+joten tutkimuksen resurssien takia haku jouduttiin rajaamaan 
 vain ScienceDirectin tutkimustietokantaan.
 
 \section{Aineiston valintaprosessi} \label{valintaprosessi}
@@ -606,10 +615,6 @@ Aineistosta kerättiin myös tutkimuksien tieteenalat, jotka näkyvät alaluvuss
 Alaluku \ref{tyokalut} käy läpi artikkeleista löydetyt 
 ja tunnistetut laadullisiin simulaatioihin liittyvät algoritmit ja ohjemistot. 
 
-\begin{comment}
-On jo parempi, että taulukoita on vähemmän mutta edelleen sisällön kuvaaminen numeroilla (kategoria N) on viestinnällisesti huono. Näille on hyvä löytää sanalliset tunnisteet.
-\end{comment}
-
 \section{Laadullisen simuloinnin tavoitteet} \label{simulaatiotulokset}
 Tässä alaluvussa on tarkoitus esittää aineiston tutkimuksista 
 löydetyt tavoitteet, joita laadullisilla simulaatioilla pyrittiin hakemaan.
@@ -690,6 +695,8 @@ nimityksellä "Social and Psychology".
 
 \begin{comment}
 Pystyykö heat mapin väräjä säätämään. Yleensä tummempi väri indikoi merkittävyyttä, joten nuo nollat vievät vusuaalisesti vähän harhaan. Saako värikartan käännettyä?
+
+Pitää tehdä varmaan kokonaan uusiksi.
 \end{comment}
 
 \begin{tikzpicture}[scale=0.8]
@@ -988,7 +995,7 @@ artikkelissa, sen lukumäärä on esitetty sulkujen sisällä.
         \item Matlab (3)
     \end{itemize} \\
     \hline
-    \caption{Ohjelmat ja ohjelmistot, tavoitekategoria 1.}
+    \caption{Ohjelmat ja ohjelmistot, järjestelmän toiminnan kuvaaminen}
     \label{table:ohjelmistot 1.}
 \end{longtable}
 
@@ -1011,7 +1018,7 @@ artikkelissa, sen lukumäärä on esitetty sulkujen sisällä.
         \item AnyLogic
     \end{itemize} \\   
     \hline
-    \caption{Ohjelmat ja ohjelmistot, tavoitekategoria 2.}
+    \caption{Ohjelmat ja ohjelmistot, vikatilojen analysointi}
     \label{table:ohjelmistot 2.}
 \end{longtable}
 
@@ -1087,7 +1094,7 @@ artikkelissa, sen lukumäärä on esitetty sulkujen sisällä.
         \item SWARM software
     \end{itemize} \\
     \hline
-    \caption{Ohjelmat ja ohjelmistot, tavoitekategoria 3.}
+    \caption{Ohjelmat ja ohjelmistot, menetelmäkehitys}
     \label{table:ohjelmistot 3.}
 \end{longtable}
 
@@ -1278,7 +1285,7 @@ Tästä oli jo edellä. Ainakin hakululosten vuosittainen jakauma ja sen trendi 
 Tietokannan hakuun olisi voinut lisätä hakusanoiksi 
 "Qualitative Reasoning" ja "Qualitative Physics" OR-ehdolla. 
 Näiden termien suureen esiintymismäärään törmättiin vasta aineiston 
-analyysin vaiheessa ja olisi vaatinut lisäaikaa gradun kirjoittamiselle.
+analyysin vaiheessa ja olisi vaatinut lisäaikaa tutkimuksen tekemiselle.
 
 Mahdollisia jatkotutkimuskohteita ovat: 
 \begin{itemize}
