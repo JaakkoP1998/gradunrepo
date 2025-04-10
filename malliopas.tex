@@ -477,7 +477,7 @@ mitä hankaloitsi Scholarin vajaat hakujen rajausvaihtoehdot.
 Testatut hakukoneet ja niiden tuloset on esillä taulukossa \ref{table: hakutulokset}.
 
 Tutkimukset aineistoon kerättiin ScienceDirect-tutkimustietokannasta \footnote{\url{https://www.sciencedirect.com/}}. 
-Hakuterminä käytettiin "qualitative simulation" 
+Hakuterminä käytettiin ''qualitative simulation'' 
 ja haun rajaamisessa artikkelit 
 rajattiin englannin kielisiin tutkimusartikkeleihin vuosina 2000-2024. 
 Vertauksen vuoksi tehtiin haut myös 
@@ -489,7 +489,7 @@ jotta saataisiin käsitys aiheen kasvusta.
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{|l|l|l|}
 \hline
-\textbf{Hakukohde} & \textbf{hakutermi: "qualitative simulation", muut hakukriteerit} & \textbf{Hakutulokset} \\ \hline
+\textbf{Hakukohde} & \textbf{hakutermi: ''qualitative simulation'', muut hakukriteerit} & \textbf{Hakutulokset} \\ \hline
 Google Scholar, haku 1 &  
 kieli: englanti    & 11300       
 \\ \hline
@@ -582,8 +582,8 @@ ScienceDirectin omat määritelmät todettiin sellaisenaan liian ylätasoisiksi,
 joten tarkempi tieteenala kerättiin artikkeleista käyttäen apuna 
 SciSpace -tekoälyohjelmaa 
 \footnote{\url{https://typeset.io/}, käytetty viimeksi 6.2.2025.}. 
-Ohjelmalta kysyttiin "Chat With PDF"-ominaisuuden 
-kautta tieteen alaa muodossa "What scientific discipline is this study?". 
+Ohjelmalta kysyttiin ''Chat With PDF''-ominaisuuden 
+kautta tieteen alaa muodossa ''What scientific discipline is this study?''. 
 Tekoäly osasi antaa vastauksen ja perustella miksi tutkimus 
 luokiteltiin kyseiseen tieteenalaan. 
 
@@ -680,54 +680,25 @@ Tieteenalat on jaettu päätutkimuskysymyksen tavoitekategorioiden mukaan.
 Koska joissain tieteenaloissa oli vain muutama artikkeli, 
 tieteenaloja yhdistettiin sopivuuden mukaan laajempiin osuuksiin.
 Yhdistämättä tieteenaloja tunnistettiin yhteensä 17.
-Tieteenalat "Chemistry" ja "chemical engineering" yhdistettiin 
-samaksi kemian tieteisiin nimellä "Chemical Sciences".
-"Biochemistry, Genetics and Molecular Biology", "Medicine and Dentistry" ja "Neuroscience"
-yhdistettiin laajempaan elämäntieteiden alaan "Lifescience" nimityksellä.
-"Earth and Planetary Science" ja "Environmental Science" yhdistettiin samaan, 
-koska "Earth and Planetary Science" on osana ympäristöntieteitä.
-"Mathematics" ja "Computer Science" yhdistettiin, 
+Tieteenalat ''Chemistry'' ja ''chemical engineering'' yhdistettiin 
+samaksi kemian tieteisiin nimellä ''Chemical Sciences''.
+''Biochemistry, Genetics and Molecular Biology'', ''Medicine and Dentistry'' ja ''Neuroscience''
+yhdistettiin laajempaan elämäntieteiden alaan ''Lifescience'' nimityksellä.
+''Earth and Planetary Science'' ja ''Environmental Science'' yhdistettiin samaan, 
+koska ''Earth and Planetary Science'' on osana ympäristöntieteitä.
+''Mathematics'' ja ''Computer Science'' yhdistettiin, 
 koska matematiikan tutkimukset koskivat myös tietotekniikan alaa tekoälyn 
 antamien tarkempien tieteenalojen mukaan 
 (menetelmä on tarkemmin kuvattu luvussa \ref{tiedon keruu}).
-"Decision Science", "Economics" ja "Social Science" yhdistettiin laajempaan alaan,
-nimityksellä "Social and Psychology".
+''Decision Science'', ''Economics'' ja ''Social Science'' yhdistettiin laajempaan alaan,
+nimityksellä ''Social and Psychology''.
 
-\begin{comment}
-Pystyykö heat mapin väräjä säätämään. Yleensä tummempi väri indikoi merkittävyyttä, joten nuo nollat vievät vusuaalisesti vähän harhaan. Saako värikartan käännettyä?
-
-Pitää tehdä varmaan kokonaan uusiksi.
-\end{comment}
-
-\begin{tikzpicture}[scale=0.8]
-    \foreach \y [count=\n] in {
-        {9,1,1,0,0,2,9,6,0},
-        {8,2,0,0,11,5,4,10,1},
-        {2,1,1,0,0,3,5,5,1},
-        {1,9,0,0,0,3,0,0,0},
-        {5,1,1,0,14,4,9,10,1},
-        {10,1,3,0,0,5,6,4,1},
-        {4,0,3,0,0,1,0,1,0},
-        {15,3,1,0,2,15,2,0,0},
-        {1,1,0,0,0,2,1,1,0},
-        {0,1,0,5,0,4,0,1,1},
-    } {
-      % column labels
-      \foreach \n [count=\i] in {1.1,1.2,1.3,2.1,2.2,3.1,3.2,3.3,3.4} {
-        \node[minimum size=8mm] at (\i,0) {\n};
-      }
-      % heatmap tiles
-      \foreach \x [count=\m] in \y {
-        \node[fill=yellow!\x!purple, minimum size=8mm, text=white] at (\m,-\n) {\x};
-      }
-    }
-
-  % row labels
-  \foreach \a [count=\i] in {Agricultural and Biological,Chemical Sciences,Computer Sciences,Energy,Engineering,Environmental Science,Lifescience,Materials Science,Physics and Astronomy,Social and Psychology} {
-    \node[minimum size=8mm] at (-3,-\i) {\a};
-  }
-\label{Heatmap tieteenalat v.2}
-\end{tikzpicture}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1.0\linewidth]{Heatmap_v1.PNG}
+    \caption{Tieteenalat}
+    \label{fig:heatmap_v1}
+\end{figure}
 
 \section{Löydetyt laadullisten simulaatioiden ohjeet ja työkalut} \label{tyokalut}
 Seuraavissa listoissa on esitetty tutkimuksista tunnistetut mallintamisen työkalut 
@@ -735,12 +706,9 @@ ja algoritmit sekä tietokoneohjelmat,
 joita käytettiin laadullisten simulaatioiden luomisessa ja ajamisessa. 
 Nämä ovat jaettu kahteen kategoriaan, mallintamisen työkalut 
 ja tietokoneohjelmistot. 
-\begin{comment}
-Heittomerkkien ja Latexin kanssapitää olla tarkkana (tuuma merkki (shift 2) ja kaksi peräkkäistä apostrfia ovat eri asia (jälkimmäistä pitäisi käyttää) ja katsoa ette seuraavaa välilyöntiä syödä.
-\end{comment}
-Kategoriaan "mallintaminen" kuuluvat metodit ja algoritmit 
+Kategoriaan ''mallintaminen'' kuuluvat metodit ja algoritmit 
 joiden avulla ollaan mallinnettu tai suunniteltu laadullisia malleja.
-Kategoriaan "ohjelmistot" kuuluvat tietokoneohjelmat ja ohjelmistot 
+Kategoriaan ''ohjelmistot'' kuuluvat tietokoneohjelmat ja ohjelmistot 
 joiden avulla ollaan joko luotu tai ajettu laadullisia simulaatioita.
 
 \subsection{Mallintaminen}
@@ -749,9 +717,6 @@ tavoitekategoriaan tieteenaloittain. Taulukossa ensimmäinen sarake merkitsee
 tieteenalaa  ja toinen mallintaminen merkitsee löydetyt ja tunnistetut 
 mallintamisen metodit ja algoritmit. Työkaluihin on suluissa merkitty 
 kuinka monta kertaa kyseinen työkalu on esiintynyt eri artikkeleissa.
-\begin{comment}
-Nyt työkaluissakin on ohjelmistoja, mikä osaltaan tekee listasta aika kirjavan. Lisäksi noita nimettyjä menetelmiä ei juuri avata, joten asioita tuntemattomalle, ne eivät kerro juuri mitään.
-\end{comment}
 
 \begin{longtable}[h]{|p{5cm}|p{8cm}|}
     \hline
@@ -971,8 +936,7 @@ artikkelissa, sen lukumäärä on esitetty sulkujen sisällä.
     \hline
     Environmental Science & \begin{itemize}
         \item EPANET software
-        \item GARP (3)
-        \item Garp3 (3)
+        \item Garp3 (6)
         \item GMS-7 software
         \item Matlab (4)
         \item MODFLOW software
@@ -1043,8 +1007,7 @@ artikkelissa, sen lukumäärä on esitetty sulkujen sisällä.
     \end{itemize} \\
     \hline
     Computer Science & \begin{itemize}
-        \item GARP (2)
-        \item Garp3 
+        \item Garp3 (3)
         \item GNA
         \item LASS (2)
         \item ns-2 simulator
@@ -1098,14 +1061,67 @@ artikkelissa, sen lukumäärä on esitetty sulkujen sisällä.
     \label{table:ohjelmistot 3.}
 \end{longtable}
 
+\subsection{Lyhyet selitykset ohjelmistoista}
+Taulukoissa \ref{table:ohjelmistot 1.}, \ref{table:ohjelmistot 2.} 
+ja \ref{table:ohjelmistot 3.} näkyvät vain ohjelmien ja ohjelmistojen nimet.
+Tästä alaluvussa on tarkoitus antaa lyhyet selitykset mitä simulaatiotyyppejä 
+on toteutettu milläkin simulaatio-ohjelmilla. 
+
+Ohjelmia Repast, SWARM ja Presage2 oltiin käytetty agenttipohjaisten simulaatioiden ajamiseen.
+Agenttipohjaisessa simulaatiossa järjestelmän toimintaa mallinetaan itsenäisesti toimivien
+agenttien ja niiden vuorovaikutusten kautta.
+Ohjelmilla OpenFOAM, FLUENT ja Flow3D simuloitiin eri nesteiden dynamiikkaa ja toimintaa.
+Molekyylien dynamiikkaa simuloitiin ohjelmilla 
+LAMMPS, Materials Studio ja GROMACS 4.5.
+
+Ohjelmia AnyLogic (?), Matlab, Maplesoft, WINEPR-Simfonia, SCAPS 1D, Pace3D ja DIOS 
+oltiin käytetty eri jatkuva-aikaisten simulaatioiden ajamisessa.
+Diskreetin elementin simulaatioita oltiin toteutettu ohjelmilla
+LIGGGHTS, OVITO, ns-2 simulator, Garp3, Idrisi GIS, SABER, Matlab ja V-REP
+\textit{Elementtimenetelmän (eng. Finite element method)} simulaatioita
+ajaettiin ohjelmilla, ANSYS, Matlab, COMSOL, Poynting ja DEAL.II.
+
+Geeniverkkojen simulointiin tarkoitettuja ohjelmia ovat
+GNA (Genetic Network Analyzer), 
+GRENS (Gene REgulatory Network Simulator),
+GINsim (Gene Interaction Network simulation) ja CellNetAnalyzer.
+Lisäksi myös Matlab-sovellusta oltiin käytetty geeniverkkojen simuloinnissa.
+
+Muita mainittavia simulaatio-ohjelmia:
+\begin{itemize}
+    \item Matlab (Signed diagraph simulations)
+    \item ReaDDy 2 simulator (Interacting particle reaction dynamic simulations)
+    \item Chemkin-Pro (Simulating decomposition pathways in the bimolecular reactions)
+    \item HyperChem 8.0 (Molecular mechanics simulator)
+    \item GMS-7 software (Simulating effects of constructing a hydraulic removal system that prevents entry and penetration of water into an aquifer)
+    \item LUX (Ray-tracing Monte-Carlo program)
+\end{itemize}
+
+Lisäksi ohjelmia, joita käytettiin pääsijaisesti mallintamisen avuksi ovat seuraavat:
+\begin{itemize}
+    \item TAM-B (biological reaction systems)
+    \item UPPAAL (gene regulatory networks)
+    \item TAM-C (structures and parameters of formal kinetics)
+    \item SIMULINK (chemical engineering fault propagation scenarios)
+    \item ThermRot (calculating bimolecular thermodynamic and kinetic data)
+    \item EcoMata (ecosystems and their behaviours)
+    \item MAGMAS3D (Model for the Analysis of General Multilayered planar and 3D Structures)
+    \item LASS (modelling environment for generating landscapes and analyzing landscape patterns and simulation results)
+    \item EPANET (tool for water distribution system analysis)
+    \item Visual-FIR (modelling and simulation of complex systems based on Fuzzy Inductive Reasoning)
+    \item SQSIM (simulator that predicts semi-quantitative behavior descriptions from the  semi-quantitative differential equations)
+\end{itemize}
+
 \chapter{Tulosten tulkitseminen ja pohdinta} \label{tulkitseminen ja pohdinta}
 
 \section{Laadullisen simulaation tavoitteet}
-Laadullinen simulaatio on kattava aihealue, joilta löytyy tutkimuksia monelta eri alalta. Tässä tutkimuksessa aineiston artikkeleista tunnistettiin 17 
+Laadullinen simulaatio on kattava aihealue, joilta löytyy tutkimuksia monelta eri alalta.
+Tässä tutkimuksessa aineiston artikkeleista tunnistettiin 17 
 eri ScienceDirectin määrittelemää tieteenalaa, 
 jotka tiivistettiin kymmeneksi alaksi taulukkoon 
 \ref{Heatmap tieteenalat v.2}.
-Käytetystä aineistosta löydettiin yhdeksän eri tavoitetta, mitä laadullisella simulaatiolla pyrittiin saavuttamaan tutkimuksessa.
+Käytetystä aineistosta löydettiin yhdeksän eri tavoitetta, 
+mitä laadullisella simulaatiolla pyrittiin saavuttamaan tutkimuksessa.
 
 Taulukosta \ref{table: tuloksien kategoriat}, voidaan havaita, 
 että eniten yksittäisistä tavoitekategoiroista 
@@ -1117,17 +1133,15 @@ Olosuhteiden muutoksien vaikusta ja järjestelmän käyttäytymisen ennustusta
 pyrittiin myös tutkimaan laadullisella simulaatioilla jonkin verran.
 
 Kaikista eniten tutkimuksissa on tutkittu menetelmiä (tavoitekategoria 3.).
-Tästä voidaan päätellä,  että laadullisien simulaatioiden käyttämistä 
+Tästä voidaan päätellä, että laadullisien simulaatioiden käyttämistä 
 tutkitaan usein, oli kyse sitten vanhojen työkalujen parantamisesta tai 
 uusien luomisesta. 
-On myös mahdollista, että laadulisten simulaatioiden käytölle ollaan 
-parhaillaan kehittämässä eri työkaluja ja metodeja, jos sen yleisyys jatkaa 
-kasvamista.
-\begin{comment}
-Ei pidä jättää sepkulatiiviseksi, 
-koska sinulla on 25 vuoden aikasarja, 
-josta näkee, miten avainsanan esiintyvyys on kehittynyt.
-\end{comment}
+Hakukoneita testatessa tehtiin lyhyt vertaus miten laadullisten simulaatioiden suosio on 
+muuttunut. Taulukon \ref{table: hakutulokset} mukaan laadullisten simulaatioiden 
+suosio on hieman kasvanut viime 20 vuoden aikana. Google Scholarin haun mukaan kasvu on ollut
+merkittävämpi kuin ScienceDirectin haun mukaan.
+Tämä on mahdollinen syy miksi työkaluja ollaan kehittämässä laadullisille simulaatioille
+niin paljon.
 
 Kohdejärjestelmien vikojen tai epätoivottujen toiminnan selvittämistä 
 oltiin tutkittu tavoitekategorioista vähiten (tavoitekategoria 2.).
@@ -1178,7 +1192,7 @@ tutkittu paljon.
 
 Fysiikan ja astronomian aloilla oli erittäin vähän tutkimuksia.
 Yksi mahdollinen teoria tälle voi olla,
-että usein laadullisesta fysiikasta käytetään termiä "Qualitative Physics", jolloinka tutkimuksia voi helposti jäädä aineiston ulkopuolelle.
+että usein laadullisesta fysiikasta käytetään termiä ''Qualitative Physics'', jolloinka tutkimuksia voi helposti jäädä aineiston ulkopuolelle.
 
 \begin{comment}
 Yhteiskuntatiede. Yksi perustavaa laatua oleva ero luonnontieteisiin voi olla se, että yhteiskunnallista interventiota ei voi kokeilla varovasti laboratoriossa, joten sen vaikutusten arviointia on ennakoitava sitäkin huolellisemmin. Tekniikassa kiinnostaa se, voiko proto toimia, koska lopulliset testit tehdään protolla ja viat tulevat sitä kautta esiin. Yhteiskunnalliset innovaatiot menevät suoraan tuotantoon (kuten globaalista politiikasta näemme päivittäin).
@@ -1204,7 +1218,7 @@ laadullisille simuloinninlle tarkoitetuista algoritmeista
 \parencite{kuipers1986qualitative}.
 Mallintamisessa on myös käytetty useita eri abstraktointiin perustuvia sumeita tapoja ja metodeja, kuten alaluvussa \ref{tyokalut} mainittua sumeaa laadullisen simulaation algoritmia.
 
-"Signed Directed graphs" ja "signed digraphs" esiintyivät myös usein, 
+''Signed Directed graphs'' ja ''signed digraphs'' esiintyivät myös usein, 
 varsinkin kemian ja tekniikan tieteenaloilla. Lyhyella katsauksella
 metodit ovat käytössä laadullisen simuloinnin, vaara- ja käytettävyysanalysoinnissa 
 ja vianselvityksessä \parencite{SDGapplication2004}.
@@ -1239,15 +1253,12 @@ usein käytettiin maatalouden ja biologisten tieteiden tutkimuksissa.
 Muita geeniverkkoihin liittyviä ohjelmistoja on esimerkiksi GINsim ja GRENS,
 jotka esiintyvät taulukossa \ref{table:ohjelmistot 3.}.
 
-\begin{comment}
-Tätä kysyinkin tuolla taulukoiden kohdalla. Kannattaisiko nämä yhdistää taulukossakin, jos kyse on oleellisesti samanlaisesta lähestymistavasta ja ohjelmistotuotteesta.
-\end{comment}
 Garp3 
 \footnote{\url{https://ivi.fnwi.uva.nl/tcs/QRgroup/QRM/help/faq/index.html\#Software}} 
 on ohjelmisto laadullisten mallien tarkastelemiseen, kehittämiseen ja 
-ajamiseen. Garp3 on uudempi versio työkaluissa mainitusta GARP-ohjelmasta.
-Garp3 sisältää sisällään myös VisiGarp ja Homer -ohjelmat, jotka myös näkyvät 
-ohjelmistojen taulukoissa. Garp3 ja aikaisempi versio GARP olivat eniten käytössä
+ajamiseen. Garp3 on uudempi versio GARP-ohjelmasta ja
+Garp3 sisältää sisällään myös VisiGarp ja Homer -työkalut. 
+Garp3 ja aikaisempi versio GARP olivat eniten käytössä
 ympäristötieteen aloilla.
 
 Ohjelmistoissa esiintyy enemmän yhtäläisyyksia eri työkalujen käytössa verrattuna
@@ -1270,7 +1281,7 @@ vaikka käytettiin vain yhtä tutkimustietokantaa.
 \begin{comment}
 esim tämä. Miten oleellista on päästä porautumaan hyvin tarkasti tieteenalojen sisälle. Riittäisikö yhteenvedossa pikemminkin yleistävä kareistus, joka pyrkii edelleen ryhmittelemään tieteenaloja niiden käyttämien lähestymistapojen kautta (onko eri aloilla yhteisiä profiileja), montako erilaista profiilia tunnistetaan.
 \end{comment}
-ScienceDirectin tieteenalojen luokitukset ovat aika laajoja, jotta niihin voitaisiin täydellisesti luottaa. Esim. "Agricultural and Biological" ja "Engineering". Myös se, että tutkimus voi olla useaa tieteenalaa samaan aikaan täytyy ottaa huomioon mahdollisessa jatkotutkimuksessa. 
+ScienceDirectin tieteenalojen luokitukset ovat aika laajoja, jotta niihin voitaisiin täydellisesti luottaa. Esim. ''Agricultural and Biological'' ja ''Engineering''. Myös se, että tutkimus voi olla useaa tieteenalaa samaan aikaan täytyy ottaa huomioon mahdollisessa jatkotutkimuksessa. 
 Tässä tutkimuksessa pyrittiin rajoittamaan tieteenaloja yksi per artikkeli.
 
 Mahdollisia kyseenalaistavia kysymyksiä tulosten tarkkuudesta ovat seuraavat:
@@ -1283,7 +1294,7 @@ Tästä oli jo edellä. Ainakin hakululosten vuosittainen jakauma ja sen trendi 
 \end{comment}
 
 Tietokannan hakuun olisi voinut lisätä hakusanoiksi 
-"Qualitative Reasoning" ja "Qualitative Physics" OR-ehdolla. 
+''Qualitative Reasoning'' ja ''Qualitative Physics'' OR-ehdolla. 
 Näiden termien suureen esiintymismäärään törmättiin vasta aineiston 
 analyysin vaiheessa ja olisi vaatinut lisäaikaa tutkimuksen tekemiselle.
 
@@ -1306,7 +1317,7 @@ menetelmä on sopiva kun halutaan saada pinnallinen katsaus laajaan aihealueesee
 laadullisten simulaatioiden käytöstä tieteellisenä tutkimusmenetelmänä.
 Koska laadulliset simulaatioit olivat aiheena odotettua suurempi, 
 kartoituksessa aineiston keruu jouduttiin rajoittamaan ScienceDirectin 
-tutkimustietokantaan. Aineistoa haettiin hakutermillä "Qualitative simulation"
+tutkimustietokantaan. Aineistoa haettiin hakutermillä ''Qualitative simulation''
 vuosilta 2000-2024. Sopivia artikkeleita valittiin lopuksi yhteensä 184 kappaletta.
 
 Systemaattisen kirjallisuuskartoituksen tuloksena saatiin pinnallinen katsaus miten 
