@@ -675,7 +675,7 @@ tai tilanteeseen. & 5 \\
 
 \section{Aineiston artikkelien tieteenalat} \label{tieteenalat}
 Löydetyt tieteenalat ja artikkelien lukumäärät on esitetty taulukossa 
-\ref{Heatmap tieteenalat v.2}.
+\ref{fig:heatmap_v1}.
 Tieteenalat on jaettu päätutkimuskysymyksen tavoitekategorioiden mukaan.
 Koska joissain tieteenaloissa oli vain muutama artikkeli, 
 tieteenaloja yhdistettiin sopivuuden mukaan laajempiin osuuksiin.
@@ -695,7 +695,7 @@ nimityksellä ''Social and Psychology''.
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=1.0\linewidth]{Heatmap_v1.PNG}
+    \includegraphics[width=1.0\linewidth]{Heatmap_v3.PNG}
     \caption{Tieteenalat}
     \label{fig:heatmap_v1}
 \end{figure}
@@ -1061,7 +1061,7 @@ artikkelissa, sen lukumäärä on esitetty sulkujen sisällä.
     \label{table:ohjelmistot 3.}
 \end{longtable}
 
-\subsection{Lyhyet selitykset ohjelmistoista}
+\subsection{Lyhyet selitykset ohjelmistoista} \label{selitys}
 Taulukoissa \ref{table:ohjelmistot 1.}, \ref{table:ohjelmistot 2.} 
 ja \ref{table:ohjelmistot 3.} näkyvät vain ohjelmien ja ohjelmistojen nimet.
 Tästä alaluvussa on tarkoitus antaa lyhyet selitykset mitä simulaatiotyyppejä 
@@ -1074,7 +1074,7 @@ Ohjelmilla OpenFOAM, FLUENT ja Flow3D simuloitiin eri nesteiden dynamiikkaa ja t
 Molekyylien dynamiikkaa simuloitiin ohjelmilla 
 LAMMPS, Materials Studio ja GROMACS 4.5.
 
-Ohjelmia AnyLogic (?), Matlab, Maplesoft, WINEPR-Simfonia, SCAPS 1D, Pace3D ja DIOS 
+Ohjelmia AnyLogic, Matlab, Maplesoft, WINEPR-Simfonia, SCAPS 1D, Pace3D ja DIOS 
 oltiin käytetty eri jatkuva-aikaisten simulaatioiden ajamisessa.
 Diskreetin elementin simulaatioita oltiin toteutettu ohjelmilla
 LIGGGHTS, OVITO, ns-2 simulator, Garp3, Idrisi GIS, SABER, Matlab ja V-REP
@@ -1119,7 +1119,7 @@ Laadullinen simulaatio on kattava aihealue, joilta löytyy tutkimuksia monelta e
 Tässä tutkimuksessa aineiston artikkeleista tunnistettiin 17 
 eri ScienceDirectin määrittelemää tieteenalaa, 
 jotka tiivistettiin kymmeneksi alaksi taulukkoon 
-\ref{Heatmap tieteenalat v.2}.
+\ref{fig:heatmap_v1}.
 Käytetystä aineistosta löydettiin yhdeksän eri tavoitetta, 
 mitä laadullisella simulaatiolla pyrittiin saavuttamaan tutkimuksessa.
 
@@ -1147,9 +1147,10 @@ Kohdejärjestelmien vikojen tai epätoivottujen toiminnan selvittämistä
 oltiin tutkittu tavoitekategorioista vähiten (tavoitekategoria 2.).
 Toteutuneen vian vaikutuksia tutkittiin aika vähän 
 verrattuna muihin kategorioihin. 
-\begin{comment}
-Tässä taisi olla isoja eroja eri alojen kesken. Onko siitä mitään sanottavaa.
-\end{comment}
+Ainoat alat missä oltiin kiinnostuneita toteutuneen vian tai haitan vaikutuksesta
+oli yhteiskunta ja psykologiset alat. 
+Muilla aloilla oltiin selkeästi enemmän kiinnostuneita
+vian tai haitan esiintymisen mahdollisuuksista.
 Mahdollinen teoria tälle on, että muissa tutkimuksissa, 
 jotka liittyivät vikoihin tutkittavissa kohteissa, 
 oltiin kiinnostuneempia vian ennaltaehkäisemisestä.
@@ -1168,7 +1169,7 @@ Eniten laadullisia simulaatioita käytettiin kemian tieteen (chemical science),
 tekniikan (engineering), ympäristön (environmental) ja materiaalien tieteen  (materials science) tieteenaloilla. 
 Vähiten laadullisia simulaatioita käytettiin elämäntieteiden (lifescience),
 fysiikan ja astronomian  (Physics and Astronomy) sekä 
-sosiaalisten ja psykologisten (Social and Psychology) tieteiden aloilla.
+yhteiskunnallisten ja psykologisten (Social and Psychology) tieteiden aloilla.
 
 Maatalouden ja biologisten (agricultural and biological) tieteiden aloilla
 tutkittiin kohdejärjestelmien koskevien tietojen aukkoja ja myös pyrittiin
@@ -1194,17 +1195,21 @@ Fysiikan ja astronomian aloilla oli erittäin vähän tutkimuksia.
 Yksi mahdollinen teoria tälle voi olla,
 että usein laadullisesta fysiikasta käytetään termiä ''Qualitative Physics'', jolloinka tutkimuksia voi helposti jäädä aineiston ulkopuolelle.
 
-\begin{comment}
-Yhteiskuntatiede. Yksi perustavaa laatua oleva ero luonnontieteisiin voi olla se, että yhteiskunnallista interventiota ei voi kokeilla varovasti laboratoriossa, joten sen vaikutusten arviointia on ennakoitava sitäkin huolellisemmin. Tekniikassa kiinnostaa se, voiko proto toimia, koska lopulliset testit tehdään protolla ja viat tulevat sitä kautta esiin. Yhteiskunnalliset innovaatiot menevät suoraan tuotantoon (kuten globaalista politiikasta näemme päivittäin).
-\end{comment}
 Yhteiskuntatieteessä (Social Science) löytyi suurimmalta osalta tutkimuksia, 
-jotka pyrkivät selvittämään miten mahdollinen haitallinen käyttäytyminen voi vaikuttaa tilanteeseen. Tämä Voi mahdollisesti johtua Science Directin määritelmistä, esimerkiksi
-Päätösteoria (Decision Science) on osittain myös osa sosiaalisia tieteitä. 
-Yksi syy tavoitekategorian 2.1. taulukossa \ref{Heatmap tieteenalat v.2}
+jotka pyrkivät selvittämään miten mahdollinen haitallinen käyttäytyminen voi vaikuttaa
+tilanteeseen. Tämä Voi mahdollisesti johtua Science Directin määritelmistä, esimerkiksi
+Päätösteoria (Decision Science) on osittain myös osa sosiaalista alaa. 
+Yksi syy tavoitekategorian 2.1. taulukossa \ref{fig:heatmap_v1}
 vähäiselle esiintymiselle voi olla, 
 että muilla aloilla ei olla kiinnostuneita haittojen vaikutuksista,
 vaan ainoastaan niiden esiintymismahdollisuuksista, 
 jos verrataan tavoitekategoriaan 2.2.
+Toinen mahdollinen teoria tälle voi olla, 
+että ihmisten käyttäytymistä tai toimintaa ei voi kokeilla ennakkoon laboratoriossa, 
+joten tapahtumien vaikutusten arviointia on ennakoitava huolellisesti.
+Vertauksena taas esimerkiksi tekniikan alalla kiinnostaa se, 
+voiko esimerkiksi uusi prototyppi toimia, koska lopulliset testit tehdään protolla 
+ja viat tulevat sitä kautta esiin \textbf{TODO: sanasto.}.
 
 \section{Laadullisen simulaation työkalut}
 \begin{comment}
@@ -1287,11 +1292,9 @@ Tässä tutkimuksessa pyrittiin rajoittamaan tieteenaloja yksi per artikkeli.
 Mahdollisia kyseenalaistavia kysymyksiä tulosten tarkkuudesta ovat seuraavat:
 \begin{itemize}
     \item Muuttaako useamman hakukoneen tai tutkimustietokannan käyttäminen näitä tuloksia? 
-    \item Voiko aikavälin rajaaminen haussa väärentää tuloksia?
+    \item Voiko aikavälin rajaaminen haussa muuttaa tuloksia? Taulukosta \ref{table: hakutulokset} Nähdään, että laadullisten simulaatioiden suosio on hieman kasvanut
+    viimevuosina, mutta ovatko aikavälien sisäiset trendit muuttuneet?
 \end{itemize}
-\begin{comment}
-Tästä oli jo edellä. Ainakin hakululosten vuosittainen jakauma ja sen trendi pitäisi olla helposti tuotettavissa, jos data on laitettu hyvin tietokantaan. Toki aloijen sisäiset trendit tai ohjemistotrendit vaatisivat lisää analyysiä (jollainen on ihan tyypillistä kartoituskamaa).
-\end{comment}
 
 Tietokannan hakuun olisi voinut lisätä hakusanoiksi 
 ''Qualitative Reasoning'' ja ''Qualitative Physics'' OR-ehdolla. 
@@ -1300,7 +1303,7 @@ analyysin vaiheessa ja olisi vaatinut lisäaikaa tutkimuksen tekemiselle.
 
 Mahdollisia jatkotutkimuskohteita ovat: 
 \begin{itemize}
-    \item Kirjallisuuskartoituksen parantaminen  (laajempi haku, tarkemmat tieteenalat)
+    \item Kirjallisuuskartoituksen parantaminen, kuten laajempi haku ja tieteenalojen tarkempi kategorisointi.
     \item Mahdollisemmat syvällisemmät kirjallisuuskatsaukset eri tieteenaloihin ja työkaluihin.
 \end{itemize}
 
@@ -1325,7 +1328,7 @@ laadulliset simulaatioit ovat käytössä eri tieteenaloilla.
 Laadullisia simulaatioita oltiin eniten käytetty kemian tieteiden, 
 tekniikan ja ympäristötieteiden aloilla. Tutkimuksia löytyi kiitettävästi myös
 maatalouden ja biologian, sekä energian ja tietotekniikan aloilla. 
-Vähiten tutkimuksia löytyi sosiaalisten ja psykologisteb tieteiden aloista, sekä 
+Vähiten tutkimuksia löytyi yhteiskunnan ja psykologisten tieteiden aloista, sekä 
 fysikaan ja astronomian aloilta.
 
 Eniten laadullisilla simulaatioilla pyrittiin
