@@ -353,7 +353,7 @@ Yksi mahdollinen tapa puolilaadulliselle simulaatiolle on yksinkertaisimmillaan
 määrällinen simulaatio, jossa käytetään numeerisia välejä ominaisuuksissa, 
 joista ei ole täydellistä määrällistä tietoa \parencite{semiHybrid1997qualitative}.
 
-\subsection{Yleisiä menetelmiä}
+\subsection{Yleisiä menetelmiä} \label{yleiset menetelmat}
 Laadullisten simulaatioiden luonttin löytyy useita eri metodeja ja työkaluja.
 Esimerkiksi \textit{Qsim} on algoritmi, jolla voidaan luoda laadullisia malleja simulaatioille
 \parencite{kuipers1986qualitative}. 
@@ -1231,17 +1231,6 @@ voiko esimerkiksi uusi laiteen prototyyppi toimia.
 Lopulliset testit tehdään prototyypilla ja näin viat tulevat sitä kautta esiin.
 
 \section{Laadullisen simulaation työkalut}
-\begin{comment}
-Tässä on selkeästi laadulliseen simulointiin tehtyjä (QSIM, GARP-perhe), 
-
-selkeästi jatkuva-aikaisten ilmiöiden määrällisen simuloinnin työkaluja (COMSOL, OpenFOAM, Matlab, muut elementtimentelmä ja vastaavat), 
-
-verkkoteoreettiset mallit (x graph). 
-
-Sitten on selkeästi sovellusaluekohtaisia (geenit). 
-
-Näistä varisnkin laadullisen simuloinnin yleisohjelmistot (QSIM, GARP ja ehkä sumea logiikka) olisi hyvä avata niin, että lukijalle jää käsitys siitä, mihin ne perustuvat ja millaisilla harteilla niitä pidetään yllä.
-\end{comment}
 Löydetyistä mallintamisen työkaluista taulukoista \ref{table:mallintaminen 1.},
 \ref{table:mallintaminen 2.} ja \ref{table:mallintaminen 3.} voidaan päätellä, 
 että QSIM on yleisin käytetty tapa mallintaa laadullisia simulaatioita.
@@ -1263,7 +1252,7 @@ jotta toimivaa mallia pystyttäisiin luomaan. Tästä johtuen havainnot
 mallintamisen metodeista ja algoritmeista ei ole niin tärkeä, sillä
 mallintamiseen ei ole yleistä, kaikkeen toimivaa tapaa.
 
-Taulukoista \ref{table:ohjelmistot 1.}, \ref{table:mallintaminen 2.} ja 
+Taulukoista \ref{table:ohjelmistot 1.}, \ref{table:ohjelmistot 2.} ja 
 \ref{table:ohjelmistot 3.} löytyvät aineiston tutkimuksista löydetyt 
 laadullisiin simulaatioihin liittyvät ohjelmistot ja ohjelmat.
 Ohjelmistoissa yleisiä ovat Matlab, GNA, Garp3, COMSOL ja OpenFOAM. 
@@ -1288,8 +1277,8 @@ jotka esiintyvät taulukossa \ref{table:ohjelmistot 3.}.
 Garp3 
 \footnote{\url{https://ivi.fnwi.uva.nl/tcs/QRgroup/QRM/help/faq/index.html\#Software}} 
 on ohjelmisto laadullisten mallien tarkastelemiseen, kehittämiseen ja 
-ajamiseen. Garp3 on uudempi versio GARP-ohjelmasta ja
-Garp3 sisältää sisällään myös VisiGarp ja Homer -työkalut. 
+ajamiseen. Garp3 on uudempi versio GARP-ohjelmasta, jonka ilmentyminen
+yhdistettiin taulukoissa.
 Garp3 ja aikaisempi versio GARP olivat eniten käytössä
 ympäristötieteen aloilla.
 
@@ -1299,18 +1288,39 @@ valitseminen on vähemmän kriittistä kuin mallin luominen.
 Kun on malli saatu luotua, simulaation ajamiselle löytyy yleiskäyttöisiä 
 työkaluja, kuten Matlab.
 
+Alaluvussa \ref{selitys} kerrottiin lyhyesti minkä tyyppisiä 
+simulaatioita ohjelmistoilla 
+toteutettiin. Näistä laadulliseen simulointiin ensisijaisesti tarkoittettuja
+menetelmiä ovat QSIM, sumeat algoritmit ja Garp3, mitkä todettiin yleisiksi
+menetelmiksi jo ennen kartoituksen toteuttamista. Näistä avattiin enemmän 
+alaluvussa \ref{yleiset menetelmat}.
+
 \section{Vastaukset tutkimuskysymyksiin}
+Kysymykseen 
+''Millaisia tuloksia laadullisilla simulaatioilla pyritään hakemaan?''
+vastauksena aineistosta on tunnistettu 9 eri yhtenevää tavoitetta, 
+mitä laadullisilla simulaatioilla on pyritty hakemaan. Nämä tavoitteet
+koostuvat järjestelmän toiminnan tutkimisesta, 
+vikojen ja haittojen selvityksestä ja laadullisten simulaatioiden menetelmien kehittämisestä.
 
-Millaisia tuloksia laadullisilla simulaatioilla pyritään hakemaan?
+Toinen tutkimuskysymys oli
+''Minkä alan tutkimuksissa on eniten käytetty laadullisia simulaatioita?''.
+Tähän kysymykseen aineistosta löydettiin 17 eri ScienceDirectin määrittelemää
+tieteenalaa, jotka tiivistettiin 9 koostumukseen alaluvussa \ref{tieteenalat}.
+Aineistossa aloista eniten esiintyivät tekniikan, kemian tieteiden, ympäristötieteiden ja materiaalitieteiden alat.
 
-Minkä alan tutkimuksissa on eniten käytetty laadullisia simulaatioita?
-
-Mitä eri työkaluja löytyy laadullisten simulaatioiden luomiseen?
+Viimeinen tutkimuskysymys oli, että
+''Mitä eri työkaluja löytyy laadullisten simulaatioiden luomiseen?''
+Tätä varten artikkeleista kerättiin nimetyt laadullisiin simulaatioihin liittyvät
+metodit, algoritmit ja ohjelmistot taulukkoihin \ref{table:mallintaminen 1.},
+\ref{table:mallintaminen 2.}, \ref{table:mallintaminen 3.},
+\ref{table:ohjelmistot 1.}, \ref{table:ohjelmistot 2.} ja 
+\ref{table:ohjelmistot 3.}. Näistä useimmin esiintyneet mallintamisen työkalut
+ovat QSIM-algoritmi, ''Signed Directed Graph'' ja ''Signed Digraph'' mallit
+ja eri sumeaan teoriaan perustuvat menetelmät.
+Ohjelmistoista yleisimmät ovat Matlab, GNA ja Garp3 sovellukset.
 
 \section{Tutkimuksen huomiot ja jatkotutkimusehdotukset}
-\begin{comment}
-Nyt tätä lukua edeltää pitkälit toteavat alaluvut, jossa on paljon yksityiskohtia mutta ei varsinaista yhteenvetävää analyysia joka pyrkisi tiivistämään vastauksia tutkimuskysymyksiin. Tällaine olisi hyvä muotoilla ensin, koska huomiot ja varaumat kirjotietan sitten suhteessa noihin tiivistettyihin tuloksiin. ts miltä osin johtopäätökset ovat luotettavia ja miltä osin pitää tehdä varaumia.
-\end{comment}
 Kartoituksen tieteenaloihin luottaminen tarvitsee sen, 
 että luotetaan ScienceDirectin  ja tekoälyn määritelmiin. 
 Näistä voidaan kuitenkin luoda alustavia päätelmiä, mutta tarkempia
