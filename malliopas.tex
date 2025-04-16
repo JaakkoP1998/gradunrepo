@@ -63,22 +63,21 @@ aloilla. Yleisimpiä työkaluja simulaatioiden toteutuksessa
 ovat QSIM algoritmi ja Matlab-sovellus. 
 }
 \abstract{%
-TODO: Päivitä käännös.
-Quantitative simulation needs a lot of numerical information about the system's operations,
-while qualitative simulation allows simulation even if there is a lack of precise information about the system's operation. 
-This study conducted a systematic literature mapping study 
+Quantitative simulation requires a lot of numerical information about the system's operations,
+while qualitative simulation allows simulation even if there is a lack of precise information about the system's operations. 
+This study conducted a systematic literature mapping study
 on the use of qualitative simulations as
-a scientific method and how qualitative simulations were used in scientific studies. 
-The systematic literature mapping study resulted in a superficial description of the use of
+a scientific method and how qualitative simulations were used in these studies. 
+The systematic literature mapping study resulted in 
+a comprehensive description of the use of
 qualitative simulations in different scientific disciplines. 
-The literature mapping study identified a total of 17 different scientific disciplines and 
-9 different objectives that simulations were designed to achieve. Also in addition a wide range of tools for creating qualitative simulations was found. 
-The main findings were that qualitative simulations often aim to reduce gaps 
-in the knowledge of the target system
-and that simulations have been most widely used in 
-the chemical sciences, engineering and materials sciences. 
-The most common tools used to implement simulations are the QSIM
-algorithm and the Matlab application.
+The literature mapping study identified a total of 17 different disciplines and different objectives pursued by qualitative simulations. 
+In addition, the mapping data identified a wide range of tools
+for creating qualitative simulations. 
+The main findings were that qualitative simulations often aim to reduce gaps in the knowledge of the target system.
+Simulations have been most widely used in the fields of chemical sciences, engineering and material sciences. 
+The most common tools used to implement simulations
+are the QSIM algorithm and the Matlab application.
 }
 
 \author{Jaakko Palm}
@@ -663,8 +662,8 @@ tai tilanteeseen. & 5 \\
 
 \section{Aineiston artikkelien tieteenalat} \label{tieteenalat}
 Löydetyt tieteenalat ja artikkelien lukumäärät on esitetty taulukossa 
-\ref{fig:heatmap_v1}.
-Tieteenalat on jaettu päätutkimuskysymyksen tavoitekategorioiden mukaan.
+\ref{tab:tieteenalat lkm}. Kuviossa \ref{fig:heatmap_v1} on esitetty
+tavoitekategorioiden ilmentyminen tieteenaloittain.
 Koska joissain tieteenaloissa oli vain muutama artikkeli, 
 tieteenaloja yhdistettiin sopivuuden mukaan laajempiin osuuksiin.
 Yhdistämättä tieteenaloja tunnistettiin yhteensä 17.
@@ -1090,7 +1089,7 @@ on toteutettu milläkin simulaatio-ohjelmilla.
 Ohjelmia Repast, SWARM ja Presage2 oltiin käytetty agenttipohjaisten simulaatioiden ajamiseen.
 Agenttipohjaisessa simulaatiossa järjestelmän toimintaa mallinetaan itsenäisesti toimivien
 agenttien ja niiden vuorovaikutusten kautta.
-Ohjelmilla OpenFOAM, FLUENT ja Flow3D simuloitiin eri nesteiden dynamiikkaa ja toimintaa.
+Ohjelmilla OpenFOAM, FLUENT, GMS-7 ja Flow3D simuloitiin eri nesteiden dynamiikkaa ja toimintaa.
 Molekyylien dynamiikkaa simuloitiin ohjelmilla 
 LAMMPS, Materials Studio ja GROMACS 4.5.
 
@@ -1109,27 +1108,27 @@ Lisäksi myös Matlab-sovellusta oltiin käytetty geeniverkkojen simuloinnissa.
 
 Muita mainittavia simulaatio-ohjelmia:
 \begin{itemize}
-    \item Matlab (Signed diagraph simulations)
-    \item ReaDDy 2 simulator (Interacting particle reaction dynamic simulations)
-    \item Chemkin-Pro (Simulating decomposition pathways in the bimolecular reactions)
-    \item HyperChem 8.0 (Molecular mechanics simulator)
-    \item GMS-7 software (Simulating effects of constructing a hydraulic removal system that prevents entry and penetration of water into an aquifer)
-    \item LUX (Ray-tracing Monte-Carlo program)
+    \item Matlab oli käytössä myös ''Signed Directed Graph'' pohjaisissa simulaatioissa.
+    \item ReaDDy 2 simulaattorilla simuloitiin partikkelien vuorovaikutusten dynamiikkaa.
+    \item Chemkin-Pro ohjelmalla simuloitiin hajoamisreittejä bimolekulaarisissa reaktioissa
+    \item HyperChem 8.0 simulaattoria käytettiin molekyylien mekaniikkojen tutkimisessa.
+    \item LUX ohjelmaa käytettiin Monte Carlo -pohjaisessa valon säteilyn simuloinnissa.
 \end{itemize}
 
-Lisäksi ohjelmia, joita käytettiin pääsijaisesti mallintamisen avuksi ovat seuraavat:
+Lisäksi oli useampi ohjelma, jota käytettiin ainoastaan mallin luomisessa.
+Ohjelmiin on merkitty suluissa miten niitä ollaan käytetty mallintamisessa:
 \begin{itemize}
-    \item TAM-B (biological reaction systems)
-    \item UPPAAL (gene regulatory networks)
-    \item TAM-C (structures and parameters of formal kinetics)
-    \item SIMULINK (chemical engineering fault propagation scenarios)
-    \item ThermRot (calculating bimolecular thermodynamic and kinetic data)
-    \item EcoMata (ecosystems and their behaviours)
-    \item MAGMAS3D (Model for the Analysis of General Multilayered planar and 3D Structures)
-    \item LASS (modelling environment for generating landscapes and analyzing landscape patterns and simulation results)
-    \item EPANET (tool for water distribution system analysis)
-    \item Visual-FIR (modelling and simulation of complex systems based on Fuzzy Inductive Reasoning)
-    \item SQSIM (simulator that predicts semi-quantitative behavior descriptions from the  semi-quantitative differential equations)
+    \item TAM-B (biologisten järjestelmien reaktioit)
+    \item UPPAAL (geenien rekulaariverkkot).
+    \item TAM-C (kinetiikan parametrit ja rakenteet)
+    \item SIMULINK (kemiantekniikan vikojen leviämisskenaariot).
+    \item ThermRot (molekulaarien termodynaamisen ja kineettisten tietojen laskeminen)
+    \item EcoMata (ecojärjestelmät ja niiden käyttäytymiset)
+    \item MAGMAS3D (yleisten monikerroksisten taso- ja 3D-rakenteiden analysointi)
+    \item LASS (mallinnusympäristö maisemien ja maisemakuvioiden luomiseksi sekä analyysiin)
+    \item EPANET (vedenjakelujärjestelmän analyysi)
+    \item Visual-FIR (sumeaan induktiiviseen päättelyyn (eng. Fuzzy Inductive Reasoning) perustuva monimutkaisten järjestelmien mallintaminen ja simulointi)
+    \item SQSIM (simulaattori, joka ennustaa puoli-määrällisiä käyttäytymiskuvauksia puoli-määrällisistä differentiaaliyhtälöistä)
 \end{itemize}
 
 \chapter{Tulosten tulkitseminen ja pohdinta} \label{tulkitseminen ja pohdinta}
@@ -1225,15 +1224,23 @@ että muilla aloilla ei olla kiinnostuneita haittojen vaikutuksista,
 vaan ainoastaan niiden esiintymismahdollisuuksista, 
 jos verrataan tavoitekategoriaan 2.2.
 Toinen mahdollinen teoria tälle voi olla, 
-että ihmisten käyttäytymistä tai toimintaa ei voi kokeilla ennakkoon laboratoriossa, 
+että ihmisten käyttäytymistä tai toimintaa on vaikea testata ennakkoon valvotussa olosuhteissa, 
 joten tapahtumien vaikutusten arviointia on ennakoitava huolellisesti.
 Vertauksena taas esimerkiksi tekniikan alalla kiinnostaa se, 
-voiko esimerkiksi uusi prototyppi toimia, koska lopulliset testit tehdään protolla 
-ja viat tulevat sitä kautta esiin \textbf{TODO: sanasto.}.
+voiko esimerkiksi uusi laiteen prototyyppi toimia. 
+Lopulliset testit tehdään prototyypilla ja näin viat tulevat sitä kautta esiin.
 
 \section{Laadullisen simulaation työkalut}
 \begin{comment}
-Tässä on selkeästi laadulliseen simulointiin tehtyjä (QSIM, GARP-perhe), selkeästi jatkuva-aikaisten ilmiöidne määrällisen simuloinnin työkaluja (COMSOL, OpenFOAM, Matlab, muut elementtimentelmä ja vastaavat), verkkoteoreettiset mallit (x graph). Sitten on selkeästi sovellusaluekohtaisia (geenit). Näistä varisnkin laadullisen simuloinnin yleisohjelmistot (QSIM, GARP ja ehkä sumea logiikka) olisi hyvä avata niin, että lukijalle jää käsitys siitä, mihin ne perustuvat ja millaisilla harteilla niitä pidetään yllä.
+Tässä on selkeästi laadulliseen simulointiin tehtyjä (QSIM, GARP-perhe), 
+
+selkeästi jatkuva-aikaisten ilmiöiden määrällisen simuloinnin työkaluja (COMSOL, OpenFOAM, Matlab, muut elementtimentelmä ja vastaavat), 
+
+verkkoteoreettiset mallit (x graph). 
+
+Sitten on selkeästi sovellusaluekohtaisia (geenit). 
+
+Näistä varisnkin laadullisen simuloinnin yleisohjelmistot (QSIM, GARP ja ehkä sumea logiikka) olisi hyvä avata niin, että lukijalle jää käsitys siitä, mihin ne perustuvat ja millaisilla harteilla niitä pidetään yllä.
 \end{comment}
 Löydetyistä mallintamisen työkaluista taulukoista \ref{table:mallintaminen 1.},
 \ref{table:mallintaminen 2.} ja \ref{table:mallintaminen 3.} voidaan päätellä, 
@@ -1291,6 +1298,14 @@ mallintamisen työkaluihin. Tämä voi johtua siitä, että simulaatio-ohjelman
 valitseminen on vähemmän kriittistä kuin mallin luominen. 
 Kun on malli saatu luotua, simulaation ajamiselle löytyy yleiskäyttöisiä 
 työkaluja, kuten Matlab.
+
+\section{Vastaukset tutkimuskysymyksiin}
+
+Millaisia tuloksia laadullisilla simulaatioilla pyritään hakemaan?
+
+Minkä alan tutkimuksissa on eniten käytetty laadullisia simulaatioita?
+
+Mitä eri työkaluja löytyy laadullisten simulaatioiden luomiseen?
 
 \section{Tutkimuksen huomiot ja jatkotutkimusehdotukset}
 \begin{comment}
