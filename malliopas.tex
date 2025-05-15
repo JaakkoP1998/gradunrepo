@@ -302,9 +302,8 @@ laadullisella tai puutteellisella tiedolla \parencite{kuipers1986qualitative}.
 Laadullinen simulointi on tapa käsitellä järjestelmän tiedon syöttämistä, 
 mallinnusta, käyttäytymisanalyysiä ja simulointia järjestelmän 
 laadullisen kuvauksen kautta \parencite{QualSimTheoryApplications2013}.
-Laadullisella simulaatiolla voidaan tutkia tietyn järjestelmän dynamiikkaa 
+Laadullisella simulaatiolla voidaan tutkia järjestelmän dynamiikkaa 
 ilman tarkkoja parametriarvoja \parencite{cosme2023history}. 
-
 Laadullinen simulointi vaatii mallinnustavan, 
 joka korostaa järjestelmän käyttäytymisen laadullisia näkökohtia 
 tarkkojen numeeristen arvojen sijaan. 
@@ -800,7 +799,6 @@ mallintamisen metodit ja algoritmit. Kolmas sarake on ohjelmistoille.
 Työkaluihin on suluissa merkitty 
 kuinka monta kertaa kyseinen työkalu on esiintynyt eri artikkeleissa.
 
-\pagebreak
 
 \begin{longtable}[h]{|p{4cm}|p{5cm}|p{5cm}|}
     \hline
@@ -1128,12 +1126,18 @@ Kaikista eniten tutkimuksissa on tutkittu menetelmiä (tavoitekategoria 3.).
 Tästä voidaan päätellä, että laadullisien simulaatioiden käyttämistä 
 tutkitaan usein, oli kyse sitten vanhojen työkalujen parantamisesta tai 
 uusien luomisesta. 
-Jotta tälle saataisiin tarkempaa syytä, olisi tarpeen tehdä suhteutus
-yleiseen julkaisumäärien kehitykseen. RELX-reportin mukaan Elsevier, 
-julkisti vuonna 2022 600 000 artikkelia tutkimustietokannassaan
-\footnote{\url{https://www.relx.com/investors/annual-reports/2022}, käyty 1.5.2025}. 
-Pelkästään tästä luvustä nähdään, että kerätty aineisto on erittäin pieni verrattuna
-kokonaisjulkaisumäärän kokoon, mikä tekee vahvojen johtopäätöksien tekemisestä hankalaa.
+Laadullisien simulaatioiden levinneisyyden muuttuminen vuosien aikana voisi antaa
+tälle tarkempaa selitystä. ScienceDirect hakukoneen avulla nopeasti 
+katsottuna nähdään, että julkastujen artikkeleiden kokonaisluku määrä on kasvanut 
+vuonna 2000 julkaistuista 201,163 englanninkielisestä tutkimusartikkelista 
+668,276 julkaistuun tutkimusartikkeliin vuonna 2024. 
+Eli julkaistujen tutkimusartikkelien määrä on yli kolminkertainen
+Verrattuna käyttäen haussa hakutermiä "qualitative simulation", 
+vuodesta 2000 saatiin hausta 27 tutkimusartikkelia 
+ja vuodesta 2024 saatiin 40 tutkimusartikkelia. 
+Näistä luvuista nähdään, että laadullisten simulaatioiden suosion kasvu
+on ollut hitaampaa suhteellisesti verrattuna koko tutkimustietokannan kasvuun.
+
 
 Kohdejärjestelmien vikojen tai epätoivottujen toiminnan selvittämistä 
 oli tutkittu tavoitekategorioista vähiten (tavoitekategoria 2.).
@@ -1162,6 +1166,15 @@ fysiikan ja astronomian  (Physics and Astronomy) sekä
 yhteiskunnallisten ja psykologisten (Social and Psychology) tieteiden aloilla.
 Taulukossa \ref{tab:tieteenalat lkm} näkyvät paljonko mitäkin tieteenalaa
 löytyi aineistosta.
+
+ScienceDirect tietokannan käyttämistä tieteenaloista kokonaan aineiston ulkopuolelle jäivät
+elintarviketieteet (Food Science), Immunologia ja Microbiologia (Immunology and Microbiology),
+hoitotyö ja terveydenhuolto (Nursing and Health Professions) 
+sekä eläinlääketiede (Veterinary Science and Medicine). 
+Tälle mahdollisia syitä voivat olla, 
+että alat voivat kuulua useaan eri alaan, joista tutkimuksen 
+pääalaksi nousi vain toinen tai alalla 
+on vaikea toteuttaa tutkimuksia tietokonesimulaatioita käyttäen.
 
 Maatalouden ja biologisten (agricultural and biological) tieteiden aloilla
 tutkittiin kohdejärjestelmien koskevien tietojen aukkoja ja myös pyrittiin
@@ -1216,14 +1229,18 @@ laadullisille simuloinnille tarkoitetuista algoritmeista
 \parencite{kuipers1986qualitative}.
 Mallintamisessa on myös käytetty useita eri abstraktointiin perustuvia sumeita tapoja ja metodeja, kuten alaluvussa \ref{tyokalut} mainittua sumeaa laadullisen simulaation algoritmia.
 
-Signeeratun graafin (eng. signed graph) menetelmiä 
+Etumerkillisen kaavion (eng. signed graph) menetelmiä 
 ''Signed Directed graphs'' ja ''signed digraphs'' 
 esiintyivät myös usein, 
 varsinkin kemian ja tekniikan tieteenaloilla. Lyhyella katsauksella
 metodit ovat käytössä laadullisen simuloinnin, vaara- ja käytettävyysanalysoinnissa 
 ja vianselvityksessä \parencite{SDGapplication2004}.
-Signeeratun graafin menetelmissä pyritään toteuttamaan syy-seuraus kaavioita, 
-jotka perustuvat järjestelmän laadulliseen käyttäytymiseen.
+Laadullisen simuloinnin näkökulmasta etumerkillisen kaavion 
+menetelmissä pyritään toteuttamaan syy-seuraus kaavioita, 
+jotka perustuvat järjestelmän laadulliseen käyttäytymiseen. 
+Kaavioissa mallinnetaan järjestelmän osien väliset vuorovaikutukset, 
+jossa osien välisille suhteille 
+määritellään vuorovaikutusten laatu joko positiivisena tai negatiivisena.
 
 Mallintamisesta löytyy useita eri yksittäisiä metodeja ja algoritmeja. 
 Mallintamisessa täytyy tietää tutkittava kohdejärjestelmä hyvin tarkasti, 
@@ -1289,7 +1306,7 @@ Tätä varten artikkeleista kerättiin nimetyt laadullisiin simulaatioihin liitt
 metodit, algoritmit ja ohjelmistot taulukkoihin \ref{table:mallintaminen 1.},
 \ref{table:mallintaminen 2.} ja \ref{table:mallintaminen 3.}. 
 Näistä useimmin esiintyneet mallintamisen työkalut
-ovat QSIM-algoritmi, ''Signed Directed Graph'' ja ''Signed Digraph'' mallit
+ovat QSIM-algoritmi, etumerkilliset kaaviot
 ja eri sumeaan teoriaan perustuvat menetelmät.
 Ohjelmistoista yleisimmät ovat Matlab, GNA ja Garp3 sovellukset.
 
@@ -1315,6 +1332,8 @@ Tietokannan hakuun olisi voinut lisätä hakusanoiksi
 ''Qualitative Reasoning'' ja ''Qualitative Physics'' OR-ehdolla. 
 Näiden termien suureen esiintymismäärään törmättiin vasta aineiston 
 analyysin vaiheessa ja olisi vaatinut lisäaikaa tutkimuksen tekemiselle.
+Tuloksissa on pidettävä huomiona, jos on enemmän aloja, joilla on vastaavia
+termejä käytössä laadullisesta simuloinnista alan sisällä.
 
 Mahdollisia jatkotutkimuskohteita ovat: 
 \begin{itemize}
