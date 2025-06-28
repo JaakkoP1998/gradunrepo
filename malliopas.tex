@@ -39,21 +39,22 @@
   }
 \keywords{Qualitative research, Simulation, Qualitative simulation, Systematic mapping study}
 \tiivistelma{%
-Määrällinen simulaatio edellyttää huomattavaa määrää numeerista 
-taustatietoa järjestelmän toiminnasta, 
-kun taas laadullinen simulaatio mahdollistaa simuloinnin myös silloin, 
-kun järjestelmän toiminnan tarkasta tiedosta on puutteita. 
+Määrällinen simulaatio edellyttää huomattavaa määrää numeerista taustatietoa 
+järjestelmän toiminnasta, kun taas laadullinen simulaatio mahdollistaa simuloinnin myös
+silloin, kun järjestelmän toiminnan tarkasta tiedosta on puutteita. 
 Tässä tutkimuksessa toteutettiin systemaattinen kirjallisuuskartoitus laadullisten
 simulaatioiden käytöstä tieteellisenä menetelmänä sekä tarkasteltiin,
-miten laadullisia simulaatioita pyrittiin hyödyntämään kerätyn aineiston tutkimuksissa. Kirjallisuuskartoituksen tuloksena tuotettiin 
-laaja kuvaus laadullisten simulaatioiden käytöstä eri tieteenaloilla.
-Kartoituksessa tunnistettiin yhteensa 17 eri tieteenalaa ja 
+miten laadullisia simulaatioita pyrittiin hyödyntämään kerätyn aineiston tutkimuksissa.
+Kirjallisuuskartoituksen tuloksena tuotettiin laaja kuvaus laadullisten simulaatioiden
+käytöstä eri tieteenaloilla. Kartoituksessa tunnistettiin yhteensa 17 eri tieteenalaa ja 
 9 erilaista laadullisilla simulaatioilla haettua tavoitetta. 
 Lisäksi kartoituksen aineistosta löydettiin lukuisia eri työkaluja
 laadullisten simulaatioiden luomiseen. Keskeisimpinä havaintona todettiin, että laadullisilla
-simulaatioilla pyritään usein vähentämään kohdejärjestelmän tietoisuuden aukkoja. Eniten simulaatioita on käytetty kemian tieteiden, tekniikan ja materiaalitieteiden 
-aloilla. Yleisimpiä työkaluja simulaatioiden toteutuksessa
-ovat QSIM algoritmi ja Matlab-sovellus. 
+simulaatioilla pyritään usein lisäämään ymmärrystä kohdejärjestelmän toiminnasta. 
+Eniten simulaatioita on käytetty kemian tieteiden, tekniikan ja materiaalitieteiden 
+aloilla. Laadullisten simulaatoiden toteutuksessa on käytetty niin yleisluontoisia
+mallinnustyökaluja (kuten Matlab) kuin laadullisen simuloinnin erityisohjelmistoja 
+(kuten QSIM).
 }
 \abstract{%
 Quantitative simulation requires a considerable amount of numerical 
@@ -70,10 +71,9 @@ qualitative simulations in different scientific disciplines.
 The literature mapping study identified a total of 17 different disciplines and different objectives pursued by qualitative simulations. 
 In addition, the mapping data identified a wide range of tools
 for creating qualitative simulations. 
-The main findings were that qualitative simulations often aim to reduce gaps in the knowledge of the target system.
+The main findings were that qualitative simulations are often used to increase understanding of how the target system works.
 Simulations have been most widely used in the fields of chemical sciences, engineering and material sciences. 
-The most common tools used to implement simulations
-are the QSIM algorithm and the Matlab application.
+Both generic modelling tools (such as Matlab) and specific qualitative simulation software (such as QSIM) have been used to implement qualitative simulations.
 }
 
 \author{Jaakko Palm}
@@ -93,13 +93,13 @@ ja mitataan tutkimuksen kohteena olevaa tapahtumaa tai järjestelmää.
 Tutkimusmenetelmät empiirisille tutkimuksille voivat olla 
 tyypiltään \textit{laadullisia (eng. qualitative)} 
 tai \textit{määrällisiä (eng. quantitative)}. 
-Vertauksena teoreettisessa tutkimuksessa pyritään hahmottamaan 
+Vastaavasti teoreettisessa tutkimuksessa pyritään hahmottamaan 
 malleja ja rakenteita aiemman tutkimuskirjallisuuden pohjalta. 
 Tämän tutkimuksen kannalta oleellisin ero määrällisen ja laadullisen tutkimuksen 
-välillä on tutkimuksesta saatu tulos.
+välillä on tutkimuksesta tavoiteltu tulos.
 Määrällisessä tutkimuksessa tulos pyritään esittämään lukuina ja niiden virherajoina,
 eli puhutaan \textit{määrällisestä datasta (eng. quantitative data)}. 
-Laadullisessa tuloksesta saatua tai koostettua dataa ei taas kyetä esittämään 
+Laadullisessa tutkimuksessa saatua tai koostettua dataa ei taas kyetä esittämään 
 lukuina tai niiden virherajoina. Näissä tapauksissa puhutaan 
 \textit{laadullisesta datasta (eng. qualitative data)}.
 
@@ -223,7 +223,7 @@ Lopuksi mallin toiminta ja logiikka dokumentoidaan myöhempää käyttöä varte
 \section{Simulaatio} \label{simulaatio}
 Simulaatio viittaa reaalimaailman prosessin tai 
 järjestelmän jäljittelyyn \parencite{banks1999introduction}. 
-Käsitteenä simulaatio on ollut jo useampaa sataa vuotta 
+Käsitteenä simulaatio on tunnettu jo satoja vuosia
 \parencite{HistoryOfSimulation}, 
 mutta tässä tutkimuksessa keskitytään tietokonesimulointiin, 
 joka on saanut alkunsa 1950-luvulla. 
@@ -255,7 +255,7 @@ Aikaa käsitteleviä simulaatiomenetelmiä ovat
 ja \textit{jatkuva-aikaiset simulaatiot  (eng. continuous simulations)}
 \parencite{historyOfSimulation1996}.
 Diskreetin tapahtuman simulaatiot pohjautuvat matemaattiseen tai loogiseen
-malliin järjestelmästä, joka kuvaa tilan muutoksia täsmällisissä kohdissa
+malliin järjestelmästä, joka kuvaa tilan muutoksia yksittäisinä ajanhetkinä
 \parencite{historyOfSimulation1996}. 
 Diskreetin tapahtuman simulaatiossa jokainen tapahtuma tapahtuu tietyllä 
 hetkellä ja laukaisee tilan muuttumisen järjestelmän osiossa.
@@ -266,8 +266,6 @@ yhtälöitä \parencite{historyOfSimulation1996}.
 Jatkuva-aikaisissa simulaatioissa järjestelmän muuttujat muuttuvat 
 jatkuvasti simulaatiomallin differentiaaliyhtälöiden mukaan.
 Simulaatiolle toimivin tyyppi katsotaan mallin mukaan. 
-Jos mallissa aikaa seurataan tapahtumien kautta, 
-diskreetin tapahtuman simulaatio on toteutukseltaan muita oleellisempi.
 
 \cite{banks1999introduction} mukaan simulaatioita voidaan 
 käyttää tutkimuksessa hyödyksi monella eri tavalla.
@@ -279,7 +277,7 @@ Lisäksi simulaatioilla voidaan helposti analysoida miten eri muuttuvat tekijät
 
 \section{Laadullinen simulaatio} \label{laadullinen simulaatio}
 \textit{Laadullinen päättely (eng. qualitative reasoning)} 
-tieteellisenä käsityksenä viittaa menetelmiin, joilla
+tieteellisenä käsitteenä viittaa menetelmiin, joilla
 voidaan tehdä ennustuksia ja johtopäätöksiä fyysisestä järjestelmästä puutteellisen tai laadullisesta tiedon perusteella
 \parencite{QualitativeReasoning1997}. 
 Laadullinen päättely on käytössä usealla eri tieteenalalla, kuten teköälyn \parencite[luku~35]{qualitativeReasoning2014} tai fysiikan aloilla \parencite{QualitativePhysics1988}.
@@ -322,12 +320,12 @@ Näistä simulaatioista käytetään termiä hybridimalli, tai
 \textit{ puolimäärällinen simulaatio 
 (eng.semi-quantitative simulation)}. 
 Puolimäärällinen simulaatio yhdistää laadullisen ja määrällisen simulaatiot
-kompensoidakseen näiden heikkouksia \parencite{semiHybrid1997qualitative}.
+kompensoidakseen näiden rajoituksia \parencite{semiHybrid1997qualitative}.
 
 \subsection{Laadullisen simulaation hyödyt}
 Laadullisella simuloinnilla on tietysti samat yleiset hyödyt 
 kuin muilla simulaatiolla, mainittuna luvussa \ref{simulaatio}. 
-Laadulliset simulaatiot toimivat hyvin tapauksissa, 
+Laadulliset simulaatiot soveltuvat tapauksiin, 
 joissa simuloitavan kohteen tai järjestelmän toiminnasta 
 ei ole täydellistä tietoa tai tarvittava tieto on 
 muuten aukollinen \parencite{kuipers1986qualitative}. 
@@ -381,15 +379,17 @@ laadulliseen mallintamiseen perustuva tapa.
 Esimerkkinä \textit{Qsim} on algoritmi, 
 jolla voidaan luoda laadullisia malleja simulaatioille
 \parencite{kuipers1986qualitative}. 
-QSIM:illa mallinnettu laadullinen simulaatio voi mahdollisesti ennustaa 
-järjestelmän mahdollista käyttäytymistä perustuen käytettyihin rajoitusyhtälöihin 
-ja järjestelmän alkutilaan \parencite{kuipers1986qualitative}, mikä mahdollistaa
-monimutkaisempien järjestelmien mallintamisen ja simuloinnin.
-Yksinkertaisesti sanottua QSIM-algoritmilla pyritään kuvaamaan mihin tiloihin
+QSIM-algoritmilla pyritään kuvaamaan mihin tiloihin
 järjestelmä voi mennä tai joutua annetusta aloitustilasta 
 perustuen järjestelmän toimintaa laadullisesti kuvaavista 
 \textit{ tavallisista differentiaaliyhtälöistä 
 (eng. ordinary differential equations)}.
+QSIM:illa mallinnettu laadullinen simulaatio voi mahdollisesti ennustaa 
+järjestelmän mahdollista käyttäytymistä perustuen käytettyihin rajoitusyhtälöihin 
+ja järjestelmän alkutilaan \parencite{kuipers1986qualitative}, mikä mahdollistaa
+monimutkaisempien järjestelmien mallintamisen ja simuloinnin.
+
+
 
 
 \chapter{Tutkimusasetelma}
@@ -540,7 +540,7 @@ simulaatioilla haluttiin. Tämän jälkeen etsittiin yhtäläisyykset ja näist�
 alustavat kategoriat. 20 artikkelin testierästä saatiin taulukossa 
 \ref{table: testausera} esittämät kategoriat. Tiedon keruun edetessä kategoriat 1
 ja 3 yhdistettiin samaksi kategoriaksi. Lisäksi uusia kategorioita jouduttiin
-keksimään, kun ei löydetty sopivaa. Kappaleen \ref{simulaatiotulokset} taulukosta
+keksimään, kun ei löydetty sopivaa. Alaluvun \ref{simulaatiotulokset} taulukosta
 \ref{table: tuloksien kategoriat} on esitetty tutkimusten tuloksista valitut
 lopulliset kategoriat.
 
@@ -562,19 +562,14 @@ lopulliset kategoriat.
 
 Ensimmäistä sivukysymystä varten tieteenalat kerättiin aluksi 
 pelkästään ScienceDirectin omista määritelmistä. 
-ScienceDirectin omat määritelmät todettiin sellaisenaan liian ylätasoisiksi, 
-joten tarkempi tieteenala kerättiin artikkeleista käyttäen apuna 
-SciSpace -tekoälyohjelmaa 
-\footnote{\url{https://typeset.io/}, käytetty viimeksi 6.2.2025.}. 
+ScienceDirectin luokitusta ei voinut kuitenkaan käyttää sellaisenaan, 
+koska kaikilla artikkeleilla ei ollut luokitusta laisinkaan tai oli useampi luokitus. 
+Näiden korjaamiseksi käytettiin SciSpace -tekoälyohjelmaa 
+\footnote{\url{https://typeset.io/}, käytetty viimeksi 6.2.2025.} apuna.
 Ohjelmalta kysyttiin ''Chat With PDF''-ominaisuuden 
 kautta tieteen alaa muodossa ''What scientific discipline is this study?''. 
 Tekoäly osasi antaa vastauksen ja perustella miksi tutkimus 
 luokiteltiin kyseiseen tieteenalaan. 
-
-Tieteenalojen luokittelussa käytettiin ScienceDirectin luokitusta, mutta
-luokitusta ei voinut käyttää sellaisenaan, 
-koska kaikilla artikkeleilla ei ollut luokitusta laisinkaan tai oli useampi luokitus. 
-Näiden korjaamiseksi käytettiin tekoälyn antamia tarkempia tieteenaloja.
 Tapauksissa, joissa luokitusta ei ollut laisinkaan artikkeli merkittiin osioon,
 joka oli tekoälyn antamaan tarkempaan tieteenaloihin verrattuna sopivin.
 Tapauksissa, joissa ScienceDirectilla oli useampi tieteenala, valittiin näistä
@@ -731,11 +726,11 @@ ovat nesteiden dynamiikan ja toiminnan simulaattoreita.
 Elementtimenetelmän simulaatioita toteutettiin ohjelmilla 
 ANSYS, COMSOL, Poynting ja DEAL.II.
 
-Myös diskreetin elementin simulaatioita oli tunnistettu aineiston artikkeleista.
-LIGGGHTS on diskreetin elementin simulaatio partikkeleille ja materiaaleille. 
-Ns-2 on diskreetin elementtiin pohjautuva tietoverkkojen simulaattori.
+Myös diskreetiaikaisia simulaatioita oli tunnistettu aineiston artikkeleista.
+LIGGGHTS on diskreettiin tapahtumaan perustuva simulaattori partikkeleille ja materiaaleille. 
+Ns-2 on diskreetin tapahtuman simulaatioon pohjautuva tietoverkkojen simulaattori.
 SABER on yleiskäyttöinen simulaatio-ohjelmisto, 
-jota käytettiin aineistossa laadullisen diskreetin elementin simulaation toteutuksessa.
+jota käytettiin aineistossa laadullisen diskreetin tapahtuman simulaation toteutuksessa.
 
 Populaatiopohjaisiin simulaatioihin kuuluvat agenttipohjaiset simulaatiot.
 Agenttipohjaisessa simulaatiossa järjestelmän toimintaa mallinnetaan itsenäisesti toimivien
@@ -1104,7 +1099,7 @@ kuinka monta kertaa kyseinen työkalu on esiintynyt eri artikkeleissa.
 
 \chapter{Tulosten tulkitseminen ja pohdinta} \label{tulkitseminen ja pohdinta}
 
-\section{Laadullisen simulaation tavoitteet}
+\section{Laadullisen simulaation tavoitteet} \label{tulokset: simulaation tavoitteet}
 Laadullinen simulaatio on kattava aihealue, joilta löytyy tutkimuksia monelta eri alalta.
 Tässä tutkimuksessa aineiston artikkeleista tunnistettiin 17 
 eri ScienceDirectin määrittelemää tieteenalaa, 
@@ -1115,17 +1110,16 @@ mitä laadullisella simulaatiolla pyrittiin saavuttamaan tutkimuksessa.
 
 Taulukosta \ref{table: tuloksien kategoriat}, voidaan havaita, 
 että eniten yksittäisistä tavoitekategorioista 
-laadullisilla simulaatioilla pyrittiin vähentämään tutkittavan 
-kohteen tietoisuuden aukkoja (kategoria 1.1.). 
+laadullisilla simulaatioilla pyrittiin lisäämään 
+ymmärrystä kohdejärjestelmän toiminnasta (kategoria 1.1.). 
 Tämä vastaa hyvin laadullisen simulaation määritelmää
 työkaluna, jolla voidaan simuloida järjestelmiä ilman täydellistä tietoa.
 Olosuhteiden muutoksien vaikusta ja järjestelmän käyttäytymisen ennustusta
 pyrittiin myös tutkimaan laadullisilla simulaatioilla jonkin verran.
 
 Kaikista eniten tutkimuksissa on tutkittu menetelmiä (tavoitekategoria 3.).
-Tästä voidaan päätellä, että laadullisien simulaatioiden käyttämistä 
-tutkitaan usein, oli kyse sitten vanhojen työkalujen parantamisesta tai 
-uusien luomisesta. 
+Tästä voidaan päätellä, että laadullista simulointia tuodaan käsitteenä esille
+erityisesti silloin, kun keskitytään simulointimenetelmiin ja niiden kehitykseen.
 Laadullisien simulaatioiden levinneisyyden muuttuminen vuosien aikana voisi antaa
 tälle tarkempaa selitystä. ScienceDirect hakukoneen avulla nopeasti 
 katsottuna nähdään, että julkastujen artikkeleiden kokonaisluku määrä on kasvanut 
@@ -1137,7 +1131,6 @@ vuodesta 2000 saatiin hausta 27 tutkimusartikkelia
 ja vuodesta 2024 saatiin 40 tutkimusartikkelia. 
 Näistä luvuista nähdään, että laadullisten simulaatioiden suosion kasvu
 on ollut hitaampaa suhteellisesti verrattuna koko tutkimustietokannan kasvuun.
-
 
 Kohdejärjestelmien vikojen tai epätoivottujen toiminnan selvittämistä 
 oli tutkittu tavoitekategorioista vähiten (tavoitekategoria 2.).
@@ -1201,8 +1194,9 @@ Yksi mahdollinen selitys tälle voi olla,
 että usein laadullisesta fysiikasta käytetään termiä ''Qualitative Physics'', jolloin tutkimuksia voi helposti jäädä aineiston ulkopuolelle. Nopealla hakuvertauksella
 ScienceDirect tietokannasta hakutermeillä "Qualitative physics" ja "simulation" AND-ehdolla
 antoi vuosilta 2000–2024 138 tutkimusartikkelia. 
-Tämä on huomattava määrä verrattuna aineistossa käytettyyn 184 artikkeliin, 
-mikä voi ehdottaa, että aineiston ulkopuolelle on jäänyt sopivia artikkeleja fysiikan alalta.
+Verrattuna aineistossa käytetystä 184 artikkelista 
+vain viisi artikkelia tieteenalojen mukaan kuuluivat fysiikan alalle,
+mikä ehdottaa, että aineiston ulkopuolelle on jäänyt sopivia artikkeleja fysiikan alalta.
 
 Yhteiskuntatieteessä (Social Science) löytyi suurimmalta osalta tutkimuksia, 
 jotka pyrkivät selvittämään miten mahdollinen haitallinen käyttäytyminen voi vaikuttaa
@@ -1324,8 +1318,8 @@ Tässä tutkimuksessa pyrittiin rajoittamaan tieteenaloja yksi per artikkeli.
 Mahdollisia kyseenalaistavia kysymyksiä tulosten tarkkuudesta ovat seuraavat:
 \begin{itemize}
     \item Muuttaako useamman hakukoneen tai tutkimustietokannan käyttäminen näitä tuloksia? 
-    \item Voiko aikavälin rajaaminen haussa muuttaa tuloksia? Taulukosta \ref{table: hakutulokset} Nähdään, että laadullisten simulaatioiden suosio on hieman kasvanut
-    viimevuosina, mutta ovatko aikavälien sisäiset trendit muuttuneet?
+    \item Voiko aikavälin rajaaminen haussa muuttaa tuloksia? Taulukosta \ref{table: hakutulokset} Nähdään, että laadullisten simulaatioiden suosio on mahdollisesti hieman kasvanut viimevuosina, mutta ovatko aikavälien sisäiset trendit muuttuneet? 
+    Nopea vertaus alaluvussa \ref{tulokset: simulaation tavoitteet} ScienceDirectin hakukoneen tuloksista kertoi, että laadullisen simuloinnin suhteellinen yleisyys kyseisessä tutkimustietokannassa on laskenut, mutta pitääkö tämä paikkansa muuallakin?
 \end{itemize}
 
 Tietokannan hakuun olisi voinut lisätä hakusanoiksi 
@@ -1338,7 +1332,7 @@ termejä käytössä laadullisesta simuloinnista alan sisällä.
 Mahdollisia jatkotutkimuskohteita ovat: 
 \begin{itemize}
     \item Kirjallisuuskartoituksen parantaminen, kuten laajempi haku ja tieteenalojen tarkempi kategorisointi.
-    \item Mahdollisemmat syvällisemmät kirjallisuuskatsaukset eri tieteenaloihin ja työkaluihin.
+    \item Syvällisemmät kirjallisuuskatsaukset eri tieteenaloihin ja työkaluihin.
 \end{itemize}
 
 \chapter{Yhteenveto}
@@ -1364,7 +1358,10 @@ Laadullisia simulaatioita oltiin eniten käytetty kemian tieteiden,
 tekniikan ja ympäristötieteiden aloilla. Tutkimuksia löytyi kiitettävästi myös
 maatalouden ja biologian, sekä energian ja tietotekniikan aloilla. 
 Vähiten tutkimuksia löytyi yhteiskunnan ja psykologisten tieteiden aloista, sekä 
-fysikaan ja astronomian aloilta.
+fysikaan ja astronomian aloilta. Näissä tuloksissa on kuitenkin otettava huomioon,
+että hakuterminä käytettiin vain termiä "Qualitative Simulation" joka mahdollisesti
+jätti tutkimuksia aineiston ulkopuolelle, 
+varsinkin jos eri aloilla ovat käytössä vastaavia termejä, kuten "Qualitative Physics".
 
 Eniten laadullisilla simulaatioilla pyrittiin
 selvittämään enemmän kohdejärjestelmän toiminnasta, eli korjaamaan tietoisuuden aukkoja
